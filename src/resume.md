@@ -7,7 +7,7 @@ title: Resume
 
 - Email: <john@jambalong.com>
 - Walla Walla, Washington, USA
-- [GitHub](https://github.com/jambalong) -- [LinkedIn](www.linkedin.com/in/jambalong)
+- [GitHub](https://github.com/jambalong) -- [LinkedIn](https://linkedin.com/in/jambalong) -- [YouTube](https://youtube.com/@SimplyJustDev)
 
 Self-taught and determined, I'm a junior-level Full Stack developer seeking an opportunity to grow with a team and continue to build my skills. I'm experienced in Ruby/Rails, Hotwire, and JavaScript. Passionate about learning and embracing new challenges. Strong communicator dedicated to sharing knowledge. I dabble in game development in my spare time.
 
