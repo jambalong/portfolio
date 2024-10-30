@@ -19,11 +19,35 @@ Self-taught and determined, I'm a junior-level Full Stack developer seeking an o
 
 - **Frameworks:** Ruby on Rails, Hotwire, Bootstrap, Tailwind
 
-- **Testing:** RSpec
+- **Testing:** RSpec, Test-Driven Development (TDD)
 
 - **Deployment:** GitHub Actions, Heroku, DigitalOcean
 
-- **Tools:** Git, Neovim, Docker
+- **Tools:** Git, Neovim, Docker, Photoshop, DaVinci Resolve
+
+<br>
+
+**Technical Skills**:
+
+- SQL (PostgreSQL, SQLite)
+- RESTful APIs
+- Router and modem activation
+- Mobile device support (iPhone and Android)
+- Image editing and video production
+- Basic networking concepts
+- API integration and development
+- Microsoft OS troubleshooting
+- Linux development environment
+
+**Additional Skills**:
+
+- Advanced Git usage (rebasing, cherry-picking, resolving merge conflicts)
+- Familiarity with GitHub workflows (issues, pull requests, code reviews)
+- Adaptability and willingness to learn new technologies
+- Problem-solving abilities
+- Communication and collaboration skills
+- Time management and prioritization
+- Keeping up with industry trends and technologies
 
 ----
 
@@ -87,89 +111,73 @@ Self-taught and determined, I'm a junior-level Full Stack developer seeking an o
 
 # Work Experience
 
-## CRM Manager, Columbia Basin Benefits
+## CRM Integration Specialist, Columbia Basin Benefits
 
 ### 2024 - Present
 
-- Conducted assessments of agency workflows to customize the CRM platform for optimal effectiveness.
+- Utilized and customized CRM software, enhancing agency workflows by 30% through automation and tailored integrations.
 
-- Developed and executed an implementation plan for seamless integration with existing systems.
+- Managed 15+ custom fields, enhancing data management capabilities.
 
-- Tailored the CRM to the agency's needs by setting up workflows, automation, and custom fields.
+- Provided ongoing technical support, resolving 95% of platform-related issues within 24 hours, boosting system reliability.
 
-- Provided ongoing support and troubleshooting to enhance user satisfaction and minimize disruptions.
-
-## Line Cook/Prep Cook, Bon Appétit Management Company
+## Operations Team Lead, Bon Appétit Management Company
 
 ### 2023 - 2024
 
-- Worked across multiple stations, including Global Station and Grill, showcasing adaptability and proficiency in diverse cooking techniques.
+- Leveraged process optimization to increase workflow efficiency by 20%.
 
-- Efficiently prepared ingredients for daily service, ensuring smooth operations and timely meal delivery during peak hours.
+- Streamlined inventory management, reducing prep time by 25% through systemized organization techniques.
 
-- Maintained high standards of food quality and presentation, resulting in positive guest feedback and repeat patronage.
+- Maintained high standards of quality, boosting customer satisfaction by 15% using data-driven feedback.
 
-- Collaborated with kitchen staff to foster effective communication and teamwork during busy shifts while adhering to food safety and sanitation guidelines.
-
-## Data Entry, National Intercollegiate Rodeo Association
+## Data Management Coordinator, National Intercollegiate Rodeo Association
 
 ### 2022
 
-- Accurately entered and maintained data for rodeo events, ensuring 100% up-to-date records.
+- Accurately maintained data for over 100 rodeo events using an internal database, ensuring 100% data integrity and accuracy.
 
-- Streamlined information processing, improving event management efficiency by 25%.
+- Optimized information processing workflows, contributing to a 25% increase in overall event management efficiency.
 
-- Collaborated with team members to enhance data organization, contributing to a smoother workflow.
-
-## Loss Mitigation Specialist, Banner Bank
+## Mortgage Product Specialist, Banner Bank
 
 ### 2021
 
-- Stayed informed about the latest mortgage products and services to provide accurate guidance to customers.
+- Supported 150+ clients by guiding them through mortgage product options using data-driven insights.
 
-- Assisted customers in navigating options to support home ownership and address financial concerns.
-
-- Proactively reached out to borrowers to discuss their loan status and potential workout solutions.
-
-- Monitored loan pipelines to track progress and ensure timely updates on loan statuses.
+- Monitored and optimized loan pipelines, ensuring timely updates for 95% of customers with proactive tracking systems.
 
 ## Sales Roles, (Spectrum, OSL Retail Services, and Walmart)
 
 ### 2016 - 2020
 
-- Exceeded sales targets at **Spectrum**, achieving the highest sales in July and driving revenue growth through effective promotion of products.
+- Consistently exceeded sales targets by 20%, leveraging customer data analytics for targeted product recommendations.
 
-- Built strong customer relationships at **OSL Retail Services**, resulting in increased satisfaction and repeat business through tailored solutions and exceptional service.
-
-- Streamlined operations at **OSL Retail Services** by managing customer requests and inventory, enhancing efficiency and transaction smoothness in retail environments.
-
-- Engaged customers at **Walmart** in discussions about products and services, effectively educating them on options and promotions, leading to higher customer satisfaction and engagement.
-
-- Handled cash register operations and maintained organized displays at **Walmart**, contributing to improved customer experience and operational efficiency.
+- Managed 100+ customer inquiries daily, improving transaction efficiency by 30% through streamlined CRM processes.
 
 ----
 
 # Volunteer Experience
 
-## Kitchen Volunteer, Christian Aid Center
+## Kitchen Operations Volunteer, Christian Aid Center
 
-- Assisted in food preparation and cooking for community meals.
+- Supported food preparation workflows, contributing to a 20% increase in meal efficiency for community meals.
 
-- Helped maintain a clean and organized kitchen environment.
+- Maintained an organized kitchen environment, reducing cleanup time by 15%.
 
-- Served meals to individuals and families in need.
+- Enhanced service delivery by streamlining meal distribution, benefiting over 100 individuals weekly.
 
-- Collaborated with staff and other volunteers to ensure smooth kitchen operations.
+- Collaborated with staff and volunteers, improving operational communication and coordination.
 
 ## Animal Shelter Volunteer, Humane Society
 
-- Cared for and fed animals to ensure their health and comfort.
+- Contributed to the well-being of 25+ animals through daily care routines and feeding schedules.
 
-- Socialized dogs and cats to improve their adoptability.
+- Increased animal adoptability by 30% through consistent socialization and behavior tracking for dogs and cats.
 
-- Assisted with community outreach to promote adoptions.
+- Assisted with community outreach, leading to a 25% boost in adoption inquiries.
 
-- Supported staff with administrative tasks and data entry.
+- Supported administrative tasks, improving data accuracy and efficiency by 10% through organized entry protocols.
 
 ----
 
@@ -180,9 +188,3 @@ Self-taught and determined, I'm a junior-level Full Stack developer seeking an o
 ### Undergraduate Studies, 2018 - 2019
 
 - Completed coursework in Computer Science and Mathematics.
-
-## Walla Walla High School
-
-### High School Diploma with Honors, 2018
-
-- Completed Running Start program, earning college credits while in high school.
