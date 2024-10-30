@@ -131,6 +131,11 @@ main .skill-name {
   font-size: 14px;
 }
 
+main .project-screenshot {
+  max-width: 300px;
+  border: solid #cba6f7;
+}
+
 footer .container {
   display: flex;
   flex-direction: column;

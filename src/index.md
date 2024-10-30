@@ -18,6 +18,10 @@ github_actions: github_actions.svg
 docker: docker.svg
 linux: linux.svg
 
+portfolio: portfolio_website.png
+pounce: project_pounce.png
+chess: chess_cli.png
+
 ---
 
 # Ruby & Rails Expert â€¢ Washington, USA
@@ -38,59 +42,59 @@ Outside of development, I enjoy reading books ðŸ“š and cooking in the kitchen ðŸ
 
 <div class="skills-container">
   <div class="skill">
-    <img src="/images/{{ data.ruby }}" alt="Ruby" class="skill-icon">
+    <img src="/images/logos/{{ data.ruby }}" alt="Ruby" class="skill-icon">
     <span class="skill-name">Ruby</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.ruby_on_rails }}" alt="Ruby on Rails" class="skill-icon">
+    <img src="/images/logos/{{ data.ruby_on_rails }}" alt="Ruby on Rails" class="skill-icon">
     <span class="skill-name">Ruby on Rails</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.hotwire }}" alt="Hotwire" class="skill-icon">
+    <img src="/images/logos/{{ data.hotwire }}" alt="Hotwire" class="skill-icon">
     <span class="skill-name">Hotwire</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.javascript }}" alt="JavaScript" class="skill-icon">
+    <img src="/images/logos/{{ data.javascript }}" alt="JavaScript" class="skill-icon">
     <span class="skill-name">JavaScript</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.html }}" alt="HTML" class="skill-icon">
+    <img src="/images/logos/{{ data.html }}" alt="HTML" class="skill-icon">
     <span class="skill-name">HTML</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.css }}" alt="CSS" class="skill-icon">
+    <img src="/images/logos/{{ data.css }}" alt="CSS" class="skill-icon">
     <span class="skill-name">CSS</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.tailwind }}" alt="Tailwind" class="skill-icon">
+    <img src="/images/logos/{{ data.tailwind }}" alt="Tailwind" class="skill-icon">
     <span class="skill-name">Tailwind</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.godot_engine }}" alt="Godot Engine" class="skill-icon">
+    <img src="/images/logos/{{ data.godot_engine }}" alt="Godot Engine" class="skill-icon">
     <span class="skill-name">Godot Engine</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.rspec }}" alt="RSpec" class="skill-icon">
+    <img src="/images/logos/{{ data.rspec }}" alt="RSpec" class="skill-icon">
     <span class="skill-name">RSpec</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.git }}" alt="Git" class="skill-icon">
+    <img src="/images/logos/{{ data.git }}" alt="Git" class="skill-icon">
     <span class="skill-name">Git</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.neovim }}" alt="Neovim" class="skill-icon">
+    <img src="/images/logos/{{ data.neovim }}" alt="Neovim" class="skill-icon">
     <span class="skill-name">Neovim</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.github_actions }}" alt="GitHub Actions" class="skill-icon">
+    <img src="/images/logos/{{ data.github_actions }}" alt="GitHub Actions" class="skill-icon">
     <span class="skill-name">GitHub Actions</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.docker }}" alt="Docker" class="skill-icon">
+    <img src="/images/logos/{{ data.docker }}" alt="Docker" class="skill-icon">
     <span class="skill-name">Docker</span>
   </div>
   <div class="skill">
-    <img src="/images/{{ data.linux }}" alt="Linux" class="skill-icon">
+    <img src="/images/logos/{{ data.linux }}" alt="Linux" class="skill-icon">
     <span class="skill-name">Linux</span>
   </div>
 </div>
@@ -99,18 +103,62 @@ Outside of development, I enjoy reading books ðŸ“š and cooking in the kitchen ðŸ
 
 # Projects
 
-## Fast Bunny
+## Portfolio Website
 
-Work in Progress - MVP Fasting Web App built using Rails + Hotwire
+#### _Bridgetown, Ruby, HTML, CSS, JavaScript_
 
-## Simply Just Dev
+<img src="/images/projects/{{ data.portfolio }}" class="project-screenshot">
 
-Work in Progress - Personal Blog for my YouTube brand, Simply Just Dev
+**Live:** [https://jambalong.com/](https://jambalong.com/)
+
+**[Repository](https://github.com/jambalong/portfolio)**
+
+- Developed a personal portfolio website using Bridgetown for modern static site generation.
+
+- Utilized Ruby and Markdown for content management and dynamic generation.
+
+- Implemented HTML and CSS for structured layout and styling, ensuring a responsive design.
+
+- Utilized JavaScript to implement a hamburger menu for improved navigation on mobile screens.
+
+- Managed version control with Git and hosted the site on DigitalOcean.
 
 ## Project Pounce
 
-Work in Progress - Celeste-like Kitty platformer built with Godot Engine
+#### _GDScript, Godot Engine_
+
+<img src="/images/projects/{{ data.pounce }}" class="project-screenshot">
+
+**[Repository](https://github.com/jambalong/project_pounce)**
+
+- In-development Celeste-like platformer built in Godot 4.2 using GDScript.
+
+- Players control a cat navigating through basic puzzle levels.
+
+- Features a custom platformer physics system for smooth, responsive gameplay.
+
+- Includes a level change system for seamless transitions.
+
+- Aims to create an enjoyable feline adventure with charming visuals and playful mechanics.
 
 ## Chess CLI
 
-Work in Progress - A Chess game built using pure Ruby for the terminal
+#### _Ruby, RSpec_
+
+<img src="/images/projects/{{ data.chess }}" class="project-screenshot">
+
+**Live:** [https://replit.com/@jambalong/chess](https://replit.com/@jambalong/chess)
+
+**[Repository](https://github.com/jambalong/chess)**
+
+- Command-line chess game designed for one player against a computer.
+
+- Enforces proper constraints by preventing illegal moves.
+
+- Correctly declares check and checkmate situations.
+
+- Emphasizes modular class design and single-responsibility methods.
+
+- Utilizes object-oriented programming principles to enhance code maintainability.
+
+- Includes RSpec tests for critical components to facilitate debugging.
