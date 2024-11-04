@@ -113,9 +113,9 @@ Self-taught and determined, I'm a junior-level Full Stack developer seeking an o
 
 ## CRM Integration Specialist, Columbia Basin Benefits
 
-### 2024 - Present
+### SEPTEMBER 2024 - Present
 
-- Utilized and customized CRM software, enhancing agency workflows by 30% through automation and tailored integrations.
+- Utilized and customized a CRM software, enhancing agency workflows by 30% through automation and tailored integrations.
 
 - Managed 15+ custom fields, enhancing data management capabilities.
 
@@ -123,37 +123,43 @@ Self-taught and determined, I'm a junior-level Full Stack developer seeking an o
 
 ## Operations Team Lead, Bon Appétit Management Company
 
-### 2023 - 2024
+### SEPTEMBER 2023 - MAY 2024
 
 - Leveraged process optimization to increase workflow efficiency by 20%.
 
-- Streamlined inventory management, reducing prep time by 25% through systemized organization techniques.
+- Streamlined inventory management, reducing prep time by 25% through systematized organization techniques.
 
 - Maintained high standards of quality, boosting customer satisfaction by 15% using data-driven feedback.
 
 ## Data Management Coordinator, National Intercollegiate Rodeo Association
 
-### 2022
+### JULY 2021 - SEPTEMBER 2021
 
 - Accurately maintained data for over 100 rodeo events using an internal database, ensuring 100% data integrity and accuracy.
 
 - Optimized information processing workflows, contributing to a 25% increase in overall event management efficiency.
 
+- Improved the efficiency of filing applications for over 100 rodeo events by 30%, ensuring timely submissions and adherence to organizational requirements.
+
 ## Mortgage Product Specialist, Banner Bank
 
-### 2021
+### JANUARY 2021 - MARCH 2021
 
 - Supported 150+ clients by guiding them through mortgage product options using data-driven insights.
 
 - Monitored and optimized loan pipelines, ensuring timely updates for 95% of customers with proactive tracking systems.
 
-## Sales Roles, (Spectrum, OSL Retail Services, and Walmart)
+- Increased client interaction efficiency by 25% by utilizing CRM tools to track customer inquiries and follow-ups, resulting in improved satisfaction ratings.
 
-### 2016 - 2020
+## Sales Operations Associate, (Spectrum, OSL Retail Services, and Walmart)
 
-- Consistently exceeded sales targets by 20%, leveraging customer data analytics for targeted product recommendations.
+### YEAR 2016 - YEAR 2020
 
-- Managed 100+ customer inquiries daily, improving transaction efficiency by 30% through streamlined CRM processes.
+- Promoted and sold products at Spectrum, recognized for the highest team sales in July, contributing to a 15% increase in revenue.
+
+- Improved transaction efficiency by 30% at OSL Retail Services through effective management of customer requests and inventory.
+
+- Delivered exceptional customer service by promptly addressing inquiries and resolving issues, leading to a 15% increase in customer satisfaction ratings.
 
 ----
 
