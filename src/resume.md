@@ -111,7 +111,7 @@ Self-taught and determined, I'm a junior-level Full Stack developer seeking an o
 
 # Work Experience
 
-## CRM Integration Specialist, Columbia Basin Benefits
+## CRM Automation Specialist, Columbia Basin Benefits
 
 ### SEPTEMBER 2024 - Present
 
