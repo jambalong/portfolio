@@ -9,45 +9,56 @@ title: Resume
 - Walla Walla, Washington, USA
 - [GitHub](https://github.com/jambalong) -- [LinkedIn](https://linkedin.com/in/jambalong) -- [YouTube](https://youtube.com/@SimplyJustDev)
 
-Self-taught and determined, I'm a junior-level Full Stack developer seeking an opportunity to grow with a team and continue to build my skills. I'm experienced in Ruby/Rails, Hotwire, and JavaScript. Passionate about learning and embracing new challenges. Strong communicator dedicated to sharing knowledge. I dabble in game development in my spare time.
+Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, JavaScript, and CRM automation. Passionate about streamlining workflows and enhancing client experiences. Self-taught, eager to grow, and thrive in collaborative teams. Strong communicator and problem-solver with a passion for game development.
 
 ----
 
 # Skills
 
-- **Languages:** Ruby, JavaScript, Lua, GDScript, HTML5, CSS3
+- **Languages:** Ruby, JavaScript, Lua, GDScript, HTML5, CSS3, SQL
 
 - **Frameworks:** Ruby on Rails, Hotwire, Bootstrap, Tailwind
 
 - **Testing:** RSpec, Test-Driven Development (TDD)
 
-- **Deployment:** GitHub Actions, Heroku, DigitalOcean
+- **Deployment:** GitHub Actions, Heroku, Kamal, Dokku, DigitalOcean
 
-- **Tools:** Git, Neovim, Docker, Photoshop, DaVinci Resolve
+- **Tools:** Git, GitHub, Neovim, Docker, Kubernetes, Photoshop, DaVinci Resolve
 
 <br>
 
-**Technical Skills**:
+- **CRM and Automation:**
+Agent-CRM (customized for internal workflows, client communications, and automation)
+
+**Technical Support and Troubleshooting:**
+
+- CRM workflow optimization
+- Mobile device support (iPhone/Android)
+- Operational tool maintenance
+- Basic networking and router/modem activation
+
+**Client Engagement and Communication:**
+
+- Data-driven client assessments and outreach
+- Content and funnel management for lead generation
+- CRM integration for communication and task management
+
+**Technical Skills:**
 
 - SQL (PostgreSQL, SQLite)
 - RESTful APIs
-- Router and modem activation
-- Mobile device support (iPhone and Android)
 - Image editing and video production
-- Basic networking concepts
+- Microsoft OS and Linux troubleshooting
 - API integration and development
-- Microsoft OS troubleshooting
-- Linux development environment
 
-**Additional Skills**:
+**Additional Skills:**
 
-- Advanced Git usage (rebasing, cherry-picking, resolving merge conflicts)
-- Familiarity with GitHub workflows (issues, pull requests, code reviews)
-- Adaptability and willingness to learn new technologies
-- Problem-solving abilities
-- Communication and collaboration skills
+- Advanced Git (rebasing, cherry-picking, merge conflicts)
+- GitHub workflows (issues, pull requests, reviews)
+- Adaptability and quick learner
+- Strong problem-solving and collaboration skills
 - Time management and prioritization
-- Keeping up with industry trends and technologies
+- Industry trend awareness
 
 ----
 
@@ -111,45 +122,45 @@ Self-taught and determined, I'm a junior-level Full Stack developer seeking an o
 
 # Work Experience
 
-## CRM Automation Specialist, Columbia Basin Benefits
+## Administrative Assistant, Columbia Basin Benefits
 
 ### SEPTEMBER 2024 - Present
 
-- Utilized and customized a CRM software, enhancing agency workflows by 30% through automation and tailored integrations.
+- Created and managed automated workflows in Agent-CRM, streamlining internal processes and improving team efficiency by 20%.
 
-- Managed 15+ custom fields, enhancing data management capabilities.
+- Organized and scheduled client communications through email nurturing campaigns, ensuring timely follow-ups and enhanced client engagement.
 
-- Provided ongoing technical support, resolving 95% of platform-related issues within 24 hours, boosting system reliability.
+- Developed and maintained website funnels, supporting lead generation and improving the overall operational efficiency of the agency’s digital marketing efforts.
 
 ## Operations Team Lead, Bon Appétit Management Company
 
 ### SEPTEMBER 2023 - MAY 2024
 
-- Leveraged process optimization to increase workflow efficiency by 20%.
+- Led grill station operations, managing food prep, cooking, and plating to ensure timely service during high-volume hours, improving efficiency by 25%.
 
-- Streamlined inventory management, reducing prep time by 25% through systematized organization techniques.
+- Oversaw prep for global station, rotisserie, and salad bar, ensuring all ingredients were prepared and organized, streamlining service and reducing prep time.
 
-- Maintained high standards of quality, boosting customer satisfaction by 15% using data-driven feedback.
+- Trained and mentored kitchen staff, fostering teamwork and ensuring adherence to high food safety standards and quality control.
 
-## Data Management Coordinator, National Intercollegiate Rodeo Association
+## Data Entry Assistant, National Intercollegiate Rodeo Association
 
 ### JULY 2021 - SEPTEMBER 2021
 
-- Accurately maintained data for over 100 rodeo events using an internal database, ensuring 100% data integrity and accuracy.
+- Processed and entered over 100 membership applications per week, ensuring 100% accuracy in data entry and timely updates.
 
-- Optimized information processing workflows, contributing to a 25% increase in overall event management efficiency.
+- Organized and filed 500+ member documents, reducing document retrieval time by 30% with a streamlined filing system.
 
-- Improved the efficiency of filing applications for over 100 rodeo events by 30%, ensuring timely submissions and adherence to organizational requirements.
+- Managed and sent out 200+ pieces of membership-related mail monthly, ensuring 100% on-time delivery and improving communication efficiency.
 
-## Mortgage Product Specialist, Banner Bank
+## Loss Mitigation Specialist, Banner Bank
 
 ### JANUARY 2021 - MARCH 2021
 
-- Supported 150+ clients by guiding them through mortgage product options using data-driven insights.
+- Identified solutions to reduce foreclosure risk, helping clients keep their homes and strengthening borrower retention.
 
-- Monitored and optimized loan pipelines, ensuring timely updates for 95% of customers with proactive tracking systems.
+- Maintained 95% accuracy in client documentation and timely updates, ensuring regulatory compliance and transparency.
 
-- Increased client interaction efficiency by 25% by utilizing CRM tools to track customer inquiries and follow-ups, resulting in improved satisfaction ratings.
+- Guided over 150 clients with clear, personalized mortgage support, building trust and promoting independent online banking.
 
 ## Sales Operations Associate, (Spectrum, OSL Retail Services, and Walmart)
 
