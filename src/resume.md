@@ -27,8 +27,9 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 
 <br>
 
-- **CRM and Automation:**
-Agent-CRM (customized for internal workflows, client communications, and automation)
+**CRM and Automation:**
+
+- Agent-CRM (customized for internal workflows, client communications, and automation)
 
 **Technical Support and Troubleshooting:**
 
