@@ -24,17 +24,17 @@ chess: chess_cli.png
 
 ---
 
-# Ruby & Rails Expert • Washington, USA
+# • Developer • Ruby & Rails • WA, USA •
 
 ----
 
 # About Me
 
-I'm John-Alvin, a Full Stack Developer who specializes in Ruby on Rails. I am passionate and driven with a strong aptitude for learning. Always excited for the chance to deepen my knowledge of Ruby, embracing new challenges. I value great communication and seek opportunities to teach others.
+Hi, I’m John-Alvin, a Full Stack Developer specializing in Ruby on Rails. Coding truly fuels my soul, and the thrill of continuous learning is absolutely addictive! Driven and constantly seeking to deepen my knowledge, I thrive on embracing new challenges. My interest in cybersecurity, particularly penetration testing, informs my approach to building more robust and secure applications that solve real-world problems.
 
-You can view my recent contributions on my [GitHub](https://github.com/jambalong). As a hobby, I do game development which has expanded my knowledge across various subjects. Early in my coding journey, I discovered concepts that became the foundation of my self study. I shared my experiences in this [Medium publication](https://medium.com/launch-school/a-beginners-journey-to-mastery-3b54883610fa).
+I value clear communication and actively seek opportunities to share insights and connect with fellow developers. Explore my projects on [GitHub](https://github.com/jambalong) and follow my programming adventures and learning experiences on [my blog](/blog). Beyond professional development, my hobby in game development broadens my creative problem-solving skills.
 
-Outside of development, I enjoy reading books 📚 and cooking in the kitchen 🔪
+When not coding, you'll find me engrossed in a good book 📚 or exploring new recipes in the kitchen 🔪.
 
 ----
 
@@ -109,8 +109,6 @@ Outside of development, I enjoy reading books 📚 and cooking in the kitchen �
 
 <img src="/images/projects/{{ data.portfolio }}" class="project-screenshot">
 
-**Live:** [https://jambalong.com/](https://jambalong.com/)
-
 **[Repository](https://github.com/jambalong/portfolio)**
 
 - Developed a personal portfolio website using Bridgetown for modern static site generation.
@@ -146,8 +144,6 @@ Outside of development, I enjoy reading books 📚 and cooking in the kitchen �
 #### _Ruby, RSpec_
 
 <img src="/images/projects/{{ data.chess }}" class="project-screenshot">
-
-**Live:** [https://replit.com/@jambalong/chess](https://replit.com/@jambalong/chess)
 
 **[Repository](https://github.com/jambalong/chess)**
 
