@@ -3,63 +3,45 @@ layout: resume
 title: Resume
 ---
 
-[Download Resume](static/resume.pdf)
+<!-- [Download Resume](static/resume.pdf) -->
 
-- Email: <john@jambalong.com>
+- Email: <john-alvin@ambalong.dev>
 - Walla Walla, Washington, USA
-- [GitHub](https://github.com/jambalong) -- [LinkedIn](https://linkedin.com/in/jambalong) -- [YouTube](https://youtube.com/@SimplyJustDev)
+- [GitHub](https://github.com/jambalong) -- [LinkedIn](https://linkedin.com/in/jambalong)
 
-Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, JavaScript, and CRM automation. Passionate about streamlining workflows and enhancing client experiences. Self-taught, eager to grow, and thrive in collaborative teams. Strong communicator and problem-solver with a passion for game development.
+As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robust back-end solutions and leverage **Hotwire** and **React** to create engaging front-end experiences. My practical experience extends to optimizing workflows through CRM automation. I'm currently pursuing an **Associate of Applied Science (AAS) in Software Design**, where I'm expanding my expertise in programming (**Golang, C#**), front-end development (**React, HTML/CSS**), databases, and DevOps. My hands-on experience in IT support, coupled with my self-taught journey, has equipped me with strong problem-solving, communication, and collaboration skills. Eager to leverage my technical proficiency and commitment to learning in a dynamic tech team.
 
 ----
 
 # Skills
 
-- **Languages:** Ruby, JavaScript, Lua, GDScript, HTML5, CSS3, SQL
+### **Languages:**
 
-- **Frameworks:** Ruby on Rails, Hotwire, Bootstrap, Tailwind
+- Ruby, JavaScript, Lua, GDScript, HTML5, CSS3, SQL (PostgreSQL, SQLite, MySQL), C#, Golang
 
-- **Testing:** RSpec, Test-Driven Development (TDD)
+### **Frameworks:**
 
-- **Deployment:** GitHub Actions, Heroku, Kamal, Dokku, DigitalOcean
+- Ruby on Rails, Hotwire, React, ASP.NET, Tailwind
 
-- **Tools:** Git, GitHub, Neovim, Docker, Kubernetes, Photoshop, DaVinci Resolve
+### **Testing:**
 
-<br>
+- RSpec, Jest, Test-Driven Development (TDD)
 
-**CRM and Automation:**
+### **Deployment:**
 
-- Agent-CRM (customized for internal workflows, client communications, and automation)
+- GitHub Actions, Heroku, Kamal, Dokku, DigitalOcean, DevOps Concepts
 
-**Technical Support and Troubleshooting:**
+### **Tools:**
 
-- CRM workflow optimization
-- Mobile device support (iPhone/Android)
-- Operational tool maintenance
-- Basic networking and router/modem activation
+- Git, GitHub, Neovim, Docker, Kubernetes, Photoshop, DaVinci Resolve, Figma
 
-**Client Engagement and Communication:**
+### **IT Support:**
 
-- Data-driven client assessments and outreach
-- Content and funnel management for lead generation
-- CRM integration for communication and task management
+- Hardware Troubleshooting & Maintenance, Software Installation & Configuration, Operating System Administration (Windows, Linux), Network Fundamentals (connectivity, IP, DNS), A/V Setup, Secure Data Wiping
 
-**Technical Skills:**
+### **Concepts:**
 
-- SQL (PostgreSQL, SQLite)
-- RESTful APIs
-- Image editing and video production
-- Microsoft OS and Linux troubleshooting
-- API integration and development
-
-**Additional Skills:**
-
-- Advanced Git (rebasing, cherry-picking, merge conflicts)
-- GitHub workflows (issues, pull requests, reviews)
-- Adaptability and quick learner
-- Strong problem-solving and collaboration skills
-- Time management and prioritization
-- Industry trend awareness
+- RESTful APIs, Object-Oriented Programming (OOP), API Integration & Development, Advanced Git (rebasing, cherry-picking, merge conflicts), GitHub Workflows (issues, pull requests, reviews), CRM Workflow Optimization, User Interface (UI) Design, User Experience (UX) Principles
 
 ----
 
@@ -68,8 +50,6 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 ## Portfolio Website
 
 #### _Bridgetown, Ruby, HTML, CSS, JavaScript_
-
-**Live:** [https://jambalong.com/](https://jambalong.com/)
 
 **[Repository](https://github.com/jambalong/portfolio)**
 
@@ -103,8 +83,6 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 
 #### _Ruby, RSpec_
 
-**Live:** [https://replit.com/@jambalong/chess](https://replit.com/@jambalong/chess)
-
 **[Repository](https://github.com/jambalong/chess)**
 
 - Command-line chess game designed for one player against a computer.
@@ -123,9 +101,23 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 
 # Work Experience
 
-## Administrative Assistant, Columbia Basin Benefits
+## Information Technology Intern | Walla Walla Community College
 
-### SEPTEMBER 2024 - Present
+### JANUARY 2025 - Present
+
+- Performed hardware assembly, disassembly, imaging, and deployment for new computers and laptops, ensuring readiness for institutional use.
+
+- Diagnosed, troubleshot, and resolved technical issues related to audio/video consoles, including setup and maintenance for various campus events.
+
+- Executed secure data wiping protocols for Microsoft Surface devices and replaced projector bulbs, maintaining operational efficiency and data security.
+
+- Gained practical experience in hardware and software troubleshooting, including operating system installation (Windows, Linux) and basic network connectivity issues.
+
+<br/>
+
+## Administrative Assistant | Columbia Basin Benefits
+
+### SEPTEMBER 2024 - NOVEMBER 2024
 
 - Created and managed automated workflows in Agent-CRM, streamlining internal processes and improving team efficiency by 20%.
 
@@ -133,7 +125,9 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 
 - Developed and maintained website funnels, supporting lead generation and improving the overall operational efficiency of the agency’s digital marketing efforts.
 
-## Operations Team Lead, Bon Appétit Management Company
+<br/>
+
+## Operations Team Lead | Bon Appétit Management Company
 
 ### SEPTEMBER 2023 - MAY 2024
 
@@ -143,7 +137,9 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 
 - Trained and mentored kitchen staff, fostering teamwork and ensuring adherence to high food safety standards and quality control.
 
-## Data Entry Assistant, National Intercollegiate Rodeo Association
+<br/>
+
+## Data Entry Assistant | National Intercollegiate Rodeo Association
 
 ### JULY 2021 - SEPTEMBER 2021
 
@@ -153,7 +149,9 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 
 - Managed and sent out 200+ pieces of membership-related mail monthly, ensuring 100% on-time delivery and improving communication efficiency.
 
-## Loss Mitigation Specialist, Banner Bank
+<br/>
+
+## Loss Mitigation Specialist | Banner Bank
 
 ### JANUARY 2021 - MARCH 2021
 
@@ -163,7 +161,9 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 
 - Guided over 150 clients with clear, personalized mortgage support, building trust and promoting independent online banking.
 
-## Sales Operations Associate, (Spectrum, OSL Retail Services, and Walmart)
+<br/>
+
+## Sales Operations Associate | (Spectrum, OSL Retail Services, and Walmart)
 
 ### YEAR 2016 - YEAR 2020
 
@@ -187,6 +187,8 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 
 - Collaborated with staff and volunteers, improving operational communication and coordination.
 
+<br/>
+
 ## Animal Shelter Volunteer, Humane Society
 
 - Contributed to the well-being of 25+ animals through daily care routines and feeding schedules.
@@ -200,6 +202,14 @@ Motivated junior full-stack developer with experience in Ruby/Rails, Hotwire, Ja
 ----
 
 # Education History
+
+## Walla Walla Community College
+
+### Associates in Software Design, Jan 2025 - Present (Expected Dec 2026)
+
+- Currently pursuing Associates in Software Design.
+
+<br/>
 
 ## Washington State University
 
