@@ -1,0 +1,45 @@
+{% assign image_path = path | asset_path %}
+{% assign alt_text = alt | default: "Image" %}
+{% assign css_class = class %}
+{% assign max_height_style = max_height %}
+{% assign border_style = border %}
+{% assign padding_style = padding %}
+{% assign background_color_style = background_color %}
+{% assign box_shadow_style = box_shadow %}
+{% assign border_radius_style = border_radius | default: "12px" %}
+{% assign image_caption = caption %}
+
+
+<figure style="
+    display: block;
+    margin: 2rem auto; /* Adjust margin as needed */
+    padding: 10px 0px;
+    max-width: 75%; /* Ensure figure doesn't exceed parent width */
+    text-align: center; /* Center caption and image within figure */
+    {% if background_color_style %}background-color: {{ background_color_style }};{% endif %}
+  ">
+  <img
+    src="{{ image_path }}"
+    alt="{{ alt_text }}"
+    {% if css_class %}class="{{ css_class }}"{% endif %}
+    style="
+      max-width: 100%; /* Ensure images are responsive within their container */
+      height: auto; /* Maintain aspect ratio */
+      {% if max_height_style %}max-height: {{ max_height_style }};{% endif %}
+      {% if border_style %}border: {{ border_style }};{% endif %}
+      {% if padding_style %}padding: {{ padding_style }};{% endif %}
+      {% if box_shadow_style %}box-shadow: {{ box_shadow_style }};{% endif %}
+      {% if border_radius_style %}border-radius: {{ border_radius_style }};{% endif %}
+    "
+  >
+  {% if image_caption %}
+    <figcaption style="
+        font-style: italic;
+        font-size: 0.9em;
+        color: #a6adc8;
+        margin-top: 0.5rem;
+      ">
+      {{ image_caption }}
+    </figcaption>
+  {% endif %}
+</figure>

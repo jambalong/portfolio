@@ -1,5 +1,6 @@
 @import "../fonts/0xpropo.css";
 @import "resume.css";
+@import "post.css";
 
 :root {
   --body-background: #181825;

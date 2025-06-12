@@ -12,5 +12,6 @@ Whether you're a fellow developer, a tech enthusiast, or just curious about the 
     <li>
       <a href="{{ post.relative_url }}">{{ post.data.title }}</a>
     </li>
+    <br>
   {% endfor %}
 </ul>
