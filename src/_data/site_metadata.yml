@@ -5,7 +5,7 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: John Alvin
-tagline: Simply Just Dev
+tagline: Portfolio
 email: john-alvin@ambalong.dev
 description: >-
   Hi, I’m John Alvin, a self-taught developer with a passion for Ruby. I'm on a journey to build elegant applications that address real-world challenges.
