@@ -2,6 +2,7 @@
 layout: post
 title: "Diving into the World of UX"
 date: 2025-04-30
+thumbnail: /images/thumbnails/figma_button.jpg
 ---
 
 Alright, get ready, because I am officially neck-deep in the world of User Experience design, and let me tell you, it has been a ride! I am taking a UX course that has been a bit of a reading marathon, which if I'm being totally honest, is not my favorite pastime (when it is not a technology documentation). But the hands-on stuff? That is where the magic happens for me.

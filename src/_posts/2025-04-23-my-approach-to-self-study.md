@@ -2,6 +2,7 @@
 layout: post
 title: "My Approach to Self-Study"
 date: 2025-04-23
+thumbnail: /images/thumbnails/study_books.jpg
 ---
 
 ## Stay in Focus & Avoid Distractions

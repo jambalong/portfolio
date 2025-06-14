@@ -1,5 +1,6 @@
 @import "../fonts/0xpropo.css";
 @import "resume.css";
+@import "blog.css";
 @import "post.css";
 
 :root {
@@ -7,6 +8,7 @@
   --body-color: #cdd6f4;
   --heading-color: #b4befe;
   --action-color: #cba6f7;
+  font-size: 85%;
 }
 
 body {
@@ -187,7 +189,7 @@ hr {
 
   body > nav .nav-links a {
     text-align: center;
-    font-size: 28px;
+    font-size: 1.3rem;
     background-color: #1e1e2e;
     border: solid #11111b;
     border-radius: 3px;
