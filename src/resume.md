@@ -7,7 +7,7 @@ title: Resume
 
 - Email: <johnalvin@ambalong.dev>
 - Walla Walla, Washington, USA
-- [GitHub](https://github.com/jambalong) <!-- [LinkedIn](https://linkedin.com/in/jambalong) -->
+- [GitHub](https://github.com/jambalong) -- [LinkedIn](https://linkedin.com/in/jambalong)
 
 As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robust back-end solutions and leverage **Hotwire** and **React** to create engaging front-end experiences. I'm currently pursuing an **Associate of Applied Science (AAS) in Software Design**, where I'm expanding my expertise in programming (**JavaScript and Golang**), front-end development (**React, HTML/CSS**), databases, and DevOps. My hands-on experience in IT support, coupled with my self-taught journey, has equipped me with strong problem-solving, communication, and collaboration skills. Eager to leverage my technical proficiency and commitment to learning in a dynamic tech team.
 
