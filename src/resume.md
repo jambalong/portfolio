@@ -5,11 +5,11 @@ title: Resume
 
 <!-- [Download Resume](static/resume.pdf) -->
 
-- Email: <john-alvin@ambalong.dev>
+- Email: <johnalvin@ambalong.dev>
 - Walla Walla, Washington, USA
-- [GitHub](https://github.com/jambalong) -- [LinkedIn](https://linkedin.com/in/jambalong)
+- [GitHub](https://github.com/jambalong) <!-- [LinkedIn](https://linkedin.com/in/jambalong) -->
 
-As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robust back-end solutions and leverage **Hotwire** and **React** to create engaging front-end experiences. My practical experience extends to optimizing workflows through CRM automation. I'm currently pursuing an **Associate of Applied Science (AAS) in Software Design**, where I'm expanding my expertise in programming (**Golang, C#**), front-end development (**React, HTML/CSS**), databases, and DevOps. My hands-on experience in IT support, coupled with my self-taught journey, has equipped me with strong problem-solving, communication, and collaboration skills. Eager to leverage my technical proficiency and commitment to learning in a dynamic tech team.
+As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robust back-end solutions and leverage **Hotwire** and **React** to create engaging front-end experiences. I'm currently pursuing an **Associate of Applied Science (AAS) in Software Design**, where I'm expanding my expertise in programming (**JavaScript and Golang**), front-end development (**React, HTML/CSS**), databases, and DevOps. My hands-on experience in IT support, coupled with my self-taught journey, has equipped me with strong problem-solving, communication, and collaboration skills. Eager to leverage my technical proficiency and commitment to learning in a dynamic tech team.
 
 ----
 
@@ -17,11 +17,11 @@ As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robu
 
 ### **Languages:**
 
-- Ruby, JavaScript, Lua, GDScript, HTML5, CSS3, SQL (PostgreSQL, SQLite, MySQL), C#, Golang
+- Ruby, JavaScript, Lua, GDScript, HTML5, CSS3, SQL (PostgreSQL, SQLite, MySQL), Golang
 
 ### **Frameworks:**
 
-- Ruby on Rails, Hotwire, React, ASP.NET, Tailwind
+- Ruby on Rails, Hotwire, React
 
 ### **Testing:**
 
@@ -29,7 +29,7 @@ As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robu
 
 ### **Deployment:**
 
-- GitHub Actions, Heroku, Kamal, Dokku, DigitalOcean, DevOps Concepts
+- GitHub Actions, Heroku, Kamal, DigitalOcean, DevOps Concepts
 
 ### **Tools:**
 
@@ -47,27 +47,11 @@ As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robu
 
 # Projects
 
-## Portfolio Website
-
-#### _Bridgetown, Ruby, HTML, CSS, JavaScript_
-
-**[Repository](https://github.com/jambalong/portfolio)**
-
-- Developed a personal portfolio website using Bridgetown for modern static site generation.
-
-- Utilized Ruby and Markdown for content management and dynamic generation.
-
-- Implemented HTML and CSS for structured layout and styling, ensuring a responsive design.
-
-- Utilized JavaScript to implement a hamburger menu for improved navigation on mobile screens.
-
-- Managed version control with Git and hosted the site on DigitalOcean.
-
 ## Project Pounce
 
-#### _GDScript, Godot Engine_
+### **[GitHub Repository](https://github.com/jambalong/project_pounce)**
 
-**[Repository](https://github.com/jambalong/project_pounce)**
+#### _GDScript, Godot Engine_
 
 - In-development Celeste-like platformer built in Godot 4.2 using GDScript.
 
@@ -79,11 +63,13 @@ As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robu
 
 - Aims to create an enjoyable feline adventure with charming visuals and playful mechanics.
 
+<br/>
+
 ## Chess CLI
 
-#### _Ruby, RSpec_
+### **[GitHub Repository](https://github.com/jambalong/chess)**
 
-**[Repository](https://github.com/jambalong/chess)**
+#### _Ruby, RSpec_
 
 - Command-line chess game designed for one player against a computer.
 
@@ -96,6 +82,24 @@ As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robu
 - Utilizes object-oriented programming principles to enhance code maintainability.
 
 - Includes RSpec tests for critical components to facilitate debugging.
+
+<br/>
+
+## Portfolio Website
+
+### **[GitHub Repository](https://github.com/jambalong/portfolio)**
+
+#### _Bridgetown, Ruby, HTML, CSS, JavaScript_
+
+- Developed a personal portfolio website using Bridgetown for modern static site generation.
+
+- Utilized Ruby and Markdown for content management and dynamic generation.
+
+- Implemented HTML and CSS for structured layout and styling, ensuring a responsive design.
+
+- Utilized JavaScript to implement a hamburger menu for improved navigation on mobile screens.
+
+- Managed version control with Git and hosted the site on DigitalOcean.
 
 ----
 
