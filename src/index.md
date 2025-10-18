@@ -65,10 +65,12 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
     <img src="/images/logos/{{ data.css }}" alt="CSS" class="skill-icon">
     <span class="skill-name">CSS</span>
   </div>
+  <!--
   <div class="skill">
     <img src="/images/logos/{{ data.tailwind }}" alt="Tailwind" class="skill-icon">
     <span class="skill-name">Tailwind</span>
   </div>
+  -->
   <div class="skill">
     <img src="/images/logos/{{ data.godot_engine }}" alt="Godot Engine" class="skill-icon">
     <span class="skill-name">Godot Engine</span>
@@ -103,31 +105,13 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 # Projects
 
-## Portfolio Website
-
-#### _Bridgetown, Ruby, HTML, CSS, JavaScript_
-
-<img src="/images/projects/{{ data.portfolio }}" class="project-screenshot">
-
-**[Repository](https://github.com/jambalong/portfolio)**
-
-- Developed a personal portfolio website using Bridgetown for modern static site generation.
-
-- Utilized Ruby and Markdown for content management and dynamic generation.
-
-- Implemented HTML and CSS for structured layout and styling, ensuring a responsive design.
-
-- Utilized JavaScript to implement a hamburger menu for improved navigation on mobile screens.
-
-- Managed version control with Git and hosted the site on DigitalOcean.
-
 ## Project Pounce
+
+### **[GitHub Repository](https://github.com/jambalong/project_pounce)**
 
 #### _GDScript, Godot Engine_
 
 <img src="/images/projects/{{ data.pounce }}" class="project-screenshot">
-
-**[Repository](https://github.com/jambalong/project_pounce)**
 
 - In-development Celeste-like platformer built in Godot 4.2 using GDScript.
 
@@ -139,13 +123,15 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 - Aims to create an enjoyable feline adventure with charming visuals and playful mechanics.
 
+<br/>
+
 ## Chess CLI
+
+### **[GitHub Repository](https://github.com/jambalong/chess)**
 
 #### _Ruby, RSpec_
 
 <img src="/images/projects/{{ data.chess }}" class="project-screenshot">
-
-**[Repository](https://github.com/jambalong/chess)**
 
 - Command-line chess game designed for one player against a computer.
 
@@ -158,3 +144,23 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 - Utilizes object-oriented programming principles to enhance code maintainability.
 
 - Includes RSpec tests for critical components to facilitate debugging.
+
+<br/>
+
+## Portfolio Website
+
+### **[GitHub Repository](https://github.com/jambalong/portfolio)**
+
+#### _Bridgetown, Ruby, HTML, CSS, JavaScript_
+
+<img src="/images/projects/{{ data.portfolio }}" class="project-screenshot">
+
+- Developed a personal portfolio website using Bridgetown for modern static site generation.
+
+- Utilized Ruby and Markdown for content management and dynamic generation.
+
+- Implemented HTML and CSS for structured layout and styling, ensuring a responsive design.
+
+- Utilized JavaScript to implement a hamburger menu for improved navigation on mobile screens.
+
+- Managed version control with Git and hosted the site on DigitalOcean.
