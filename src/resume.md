@@ -49,6 +49,8 @@ As a **Junior Full-Stack Developer**, I specialize in **Ruby on Rails** for robu
 
 ## Project Pounce
 
+### **[YouTube Video](https://www.youtube.com/watch?v=RiQhABsLiw0)**
+
 ### **[GitHub Repository](https://github.com/jambalong/project_pounce)**
 
 #### _GDScript, Godot Engine_
