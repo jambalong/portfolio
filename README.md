@@ -26,7 +26,7 @@ Welcome to my personal portfolio website built with Bridgetown! This website sho
 
 ## Contact
 
-- Email: <john-alvin@ambalong.dev>
+- Email: <johnalvin@ambalong.dev>
 
 - GitHub: github.com/jambalong
 
