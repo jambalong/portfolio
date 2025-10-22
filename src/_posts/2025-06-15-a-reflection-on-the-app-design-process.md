@@ -8,7 +8,8 @@ thumbnail: /images/thumbnails/app_design.jpg
 As I finish my User Experience course, I learned a lesson that no book could have taught me. I wasn't just designing a time management app but also was living on both sides of the app design process simultaneously. In one group, I was the Designer, tasked with translating a user's vision and needs into a functional interface. In another, I was the Customer, giving feedback on a different peer's design. Juggling these two roles was challenging, but it was also the most profound learning experience I've had.
 
 You can see the final prototype for the app I designed here:<br>
-[Time Management App Prototype](https://www.figma.com/proto/tvCPQi5bbvZN80F5ayV4R8/Time-Management-App?node-id=1-2&p=f&t=GWdOlPyH4JeOgELj-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2) (**I also added new pages**)
+[Time Management App Prototype](https://www.figma.com/proto/tvCPQi5bbvZN80F5ayV4R8/Time-Management-App?node-id=1-2&p=f&t=GWdOlPyH4JeOgELj-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2)<br>
+(**I also added new pages**)
 
 {% render "post_image",
   path: "/images/posts/app_design.jpg",
