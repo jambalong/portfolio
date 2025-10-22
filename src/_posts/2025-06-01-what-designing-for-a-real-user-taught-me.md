@@ -18,8 +18,8 @@ The biggest shocking moment for me has been the huge power of direct customer fe
 
 _**Here is the new prototype for Landing Page:**_
 
-<div class="prototype-center">
-  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="350" height="500" src="https://embed.figma.com/proto/tvCPQi5bbvZN80F5ayV4R8/Time-Management-App?node-id=294-638&p=f&scaling=scale-down&content-scaling=fixed&page-id=294%3A428&embed-host=share" allowfullscreen></iframe>
+<div class="figma-embed">
+  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/proto/tvCPQi5bbvZN80F5ayV4R8/Time-Management-App?node-id=294-638&p=f&scaling=scale-down&content-scaling=fixed&page-id=294%3A428&embed-host=share" allowfullscreen></iframe>
 </div>
 
 This iterative process of design, feedback, redesign – is teaching me that true user-centered design isn't just a buzzword; it's a conversation. Each piece of feedback isn't a critique of your idea, but an invitation to collaborate and build something even better. It's moving the Time Management App from being just my design to being a tool genuinely tailored to help its user reduce stress and manage their time effectively.
