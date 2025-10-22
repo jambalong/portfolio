@@ -107,6 +107,8 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 ## Project Pounce
 
+### **[YouTube Video](https://www.youtube.com/watch?v=RiQhABsLiw0)**
+
 ### **[GitHub Repository](https://github.com/jambalong/project_pounce)**
 
 #### _GDScript, Godot Engine_
