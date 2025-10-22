@@ -113,7 +113,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 #### _GDScript, Godot Engine_
 
-<img src="/images/projects/{{ data.pounce }}" class="project-screenshot">
+<img src="/images/projects/{{ data.pounce }}" alt="Project Pounce thumbnail" class="project-screenshot">
 
 - In-development Celeste-like platformer built in Godot 4.2 using GDScript.
 
@@ -133,7 +133,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 #### _Ruby, RSpec_
 
-<img src="/images/projects/{{ data.chess }}" class="project-screenshot">
+<img src="/images/projects/{{ data.chess }}" alt="Chess CLI thumbnail" class="project-screenshot">
 
 - Command-line chess game designed for one player against a computer.
 
@@ -155,7 +155,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 #### _Bridgetown, Ruby, HTML, CSS, JavaScript_
 
-<img src="/images/projects/{{ data.portfolio }}" class="project-screenshot">
+<img src="/images/projects/{{ data.portfolio }}" alt="Portfolio Website thumbnail" class="project-screenshot">
 
 - Developed a personal portfolio website using Bridgetown for modern static site generation.
 
