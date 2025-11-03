@@ -96,7 +96,7 @@ body > nav .hamburger .bar {
 }
 
 main {
-  margin: 2rem auto 4rem;
+  margin: 0px auto 4rem;
   max-width: 65rem;
   min-height: calc(100vh - 200px);
   padding: 25px 25px 50px;
@@ -164,17 +164,19 @@ hr {
 @media (max-width: 768px) {
   body > nav {
     flex-wrap: wrap;
-    min-height: 6.5rem;
+    /* min-height: 6.5rem; */
     padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   body > nav .hamburger {
     display: flex;
     flex-wrap: wrap;
+    margin-left: auto;
   }
 
   body > nav .logo {
-    min-height: 80px;
+    display: none;
   }
 
   body > nav .nav-links {
@@ -189,7 +191,7 @@ hr {
 
   body > nav .nav-links a {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     background-color: #1e1e2e;
     border: solid #11111b;
     border-radius: 3px;
