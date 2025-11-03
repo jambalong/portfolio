@@ -50,12 +50,12 @@ body > nav {
 
 body > nav .logo h2 {
   margin: 0;
-  font-size: 2.25rem;
+  font-size: 1.65rem;
 }
 
 body > nav .logo h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 body > nav .nav-links {
@@ -65,7 +65,7 @@ body > nav .nav-links {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: bold;
   align-items: center;
 }
@@ -164,8 +164,8 @@ hr {
 @media (max-width: 768px) {
   body > nav {
     flex-wrap: wrap;
-    min-height: 10rem;
-    padding-top: 20px;
+    min-height: 6.5rem;
+    padding-top: 15px;
   }
 
   body > nav .hamburger {
