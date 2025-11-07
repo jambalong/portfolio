@@ -53,6 +53,21 @@
   height: 100%;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 @media (max-width: 768px) {
   .figma-embed {
     max-width: 350px; 
