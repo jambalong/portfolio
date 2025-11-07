@@ -20,6 +20,7 @@ docker: docker.svg
 kamal: kamal.png
 linux: linux.svg
 
+pebble_list: pebble_list.png
 portfolio: portfolio_page.png
 pounce: project_pounce.png
 chess: chess_cli.png
@@ -156,6 +157,30 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 - Includes RSpec tests for critical components to facilitate debugging.
 
 <br/>
+
+## Pebble List
+
+## **[Live Demo](https://jambalong.github.io/pebble-list/)**
+
+### **[GitHub Repository](https://github.com/jambalong/pebble-list)**
+
+#### _React, JavaScript, CSS_
+
+<img src="/images/projects/{{ data.pebble_list }}" alt="Pebble List thumbnail" class="project-screenshot">
+
+- Built a functional single-page **Task List application** using **React** and the `useState` hook for state management.
+
+- Implements core **CRUD (Create, Read, Update, Delete)** functionality for tasks.
+
+- **Creation:** New tasks are added via the `handleAddTask` function, prepending them to the list.
+
+- **Update/Toggle:** Tasks can be marked as complete/incomplete using `handleToggleComplete`, which maps over the array to update state immutably.
+
+- **Deletion:** The `handleDeleteTask` function filters the tasks array to remove a selected item.
+
+- The architecture demonstrates **component-based design**, utilizing `TaskInput`, `TaskList`, and more components to separate concerns.
+
+<br>
 
 ## Portfolio Website
 

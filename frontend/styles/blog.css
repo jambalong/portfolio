@@ -7,6 +7,7 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 0;
+  gap: 2.5rem;
   box-sizing: border-box;
 }
 
@@ -14,19 +15,18 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  padding-bottom: 16px;
-  max-height: 380px;
+  max-height: 325px;
 }
 
 .divider {
   border: 2px solid #11111b;
-  margin: 25px 0 50px;
   height: 0;
 }
 
 @media (max-width: 768px) {
   .post-item {
     flex-direction: column;
+    margin-top: 25px;
   }
 }
 
