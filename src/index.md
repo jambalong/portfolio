@@ -124,15 +124,13 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 <img src="/images/projects/{{ data.pounce }}" alt="Project Pounce thumbnail" class="project-screenshot">
 
-- In-development Celeste-like platformer built in Godot 4.2 using GDScript.
+- In-development **Celeste-like platformer** built in *Godot 4.2* using **GDScript**.
 
-- Players control a cat navigating through basic puzzle levels.
+- Features a **custom platformer physics system** to achieve smooth, responsive, and precise character movement.
 
-- Features a custom platformer physics system for smooth, responsive gameplay.
+- Includes a **level management system** for seamless and consistent transitions between puzzle stages.
 
-- Includes a level change system for seamless transitions.
-
-- Aims to create an enjoyable feline adventure with charming visuals and playful mechanics.
+- **Core Concept**: Players control a cat, navigating levels that emphasize core platformer skills, aiming for an enjoyable feline adventure with charming visuals and playful mechanics.
 
 <br/>
 
@@ -144,17 +142,15 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 <img src="/images/projects/{{ data.chess }}" alt="Chess CLI thumbnail" class="project-screenshot">
 
-- Command-line chess game designed for one player against a computer.
+- **Game Logic:** Built a functional command-line chess game designed for one player against a computer, implemented purely in **Ruby**.
 
-- Enforces proper constraints by preventing illegal moves.
+- Implements logic to **prevent illegal moves** based on piece movement rules, ensuring game integrity.
 
-- Correctly declares check and checkmate situations.
+- Correctly determines and declares **check and checkmate** scenarios during gameplay.
 
-- Emphasizes modular class design and single-responsibility methods.
+- Emphasized **modular class design** and **Single Responsibility Principle (SRP)** for high code maintainability across core game objects (Board, Pieces, Player).
 
-- Utilizes object-oriented programming principles to enhance code maintainability.
-
-- Includes RSpec tests for critical components to facilitate debugging.
+- **Testing:** Utilizes **RSpec** to test critical components and methods, ensuring reliability and facilitating efficient debugging.
 
 <br/>
 
@@ -190,12 +186,12 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 <img src="/images/projects/{{ data.portfolio }}" alt="Portfolio Website thumbnail" class="project-screenshot">
 
-- Developed a personal portfolio website using Bridgetown for modern static site generation.
+- **Architecture:** Developed this personal portfolio website using **Bridgetown** for modern **Static Site Generation (SSG)**, hosted on DigitalOcean.
 
-- Utilized Ruby and Markdown for content management and dynamic generation.
+- Utilized **Ruby** and **Markdown** for dynamic content injection, template rendering, and streamlined content management.
 
-- Implemented HTML and CSS for structured layout and styling, ensuring a responsive design.
+- Implemented **HTML** and **CSS** for structured layout and styling, ensuring the design is fully responsive across mobile and desktop breakpoints.
 
-- Utilized JavaScript to implement a hamburger menu for improved navigation on mobile screens.
+- **Navigation (Mobile):** Utilized **JavaScript** to implement a dynamic **hamburger menu** that toggles visibility, significantly improving navigation and user experience on mobile screens.
 
-- Managed version control with Git and hosted the site on DigitalOcean.
+- Managed codebase changes and history using **Git** for version control.
