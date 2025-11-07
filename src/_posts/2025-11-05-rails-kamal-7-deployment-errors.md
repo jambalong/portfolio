@@ -62,7 +62,7 @@ The only clean path was to perform a complete teardown of the persistent data:
 ```bash
 docker-compose down # Stop and remove the containers
 docker volume ls | grep wuwa # To find the right volume
-docker volume rm wuwa-planner_pg_data # <--- The critical step: delete the stale volume
+docker volume rm wuwa-planner_pg_data # <--- Dlete the stale volume
 docker-compose up # Rebuild and force Postgres to re-initialize
 ```
 
