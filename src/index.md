@@ -9,6 +9,7 @@ html: html5.svg
 css: css3.svg
 ruby_on_rails: ruby_on_rails.svg
 hotwire: hotwire.png
+react: react.svg
 tailwind: tailwind.svg
 godot_engine: godot_engine.svg
 rspec: rspec.svg
@@ -16,6 +17,7 @@ git: git.svg
 neovim: neovim.svg
 github_actions: github_actions.svg
 docker: docker.svg
+kamal: kamal.png
 linux: linux.svg
 
 portfolio: portfolio_website.png
@@ -24,13 +26,13 @@ chess: chess_cli.png
 
 ---
 
-# • Developer • Ruby & Rails • WA, USA •
+# Developer **|** Ruby & Rails **|** WA, USA
 
 ----
 
 # About Me
 
-Hi, I’m John-Alvin, a Full Stack Developer specializing in Ruby on Rails. Coding truly fuels my soul, and the thrill of continuous learning is absolutely addictive! Driven and constantly seeking to deepen my knowledge, I thrive on embracing new challenges. My interest in cybersecurity, particularly penetration testing, informs my approach to building more robust and secure applications that solve real-world problems.
+Hi, I’m **John-Alvin**, a Full Stack Developer specializing in Ruby on Rails. Coding truly fuels my soul, and the thrill of continuous learning is absolutely addictive! Driven and constantly seeking to deepen my knowledge, I thrive on embracing new challenges. My interest in cybersecurity, particularly devops, informs my approach to building more robust and secure applications that solve real-world problems.
 
 I value clear communication and actively seek opportunities to share insights and connect with fellow developers. Explore my projects on [GitHub](https://github.com/jambalong) and follow my programming adventures and learning experiences on [my blog](/blog). Beyond professional development, my hobby in game development broadens my creative problem-solving skills.
 
@@ -58,6 +60,10 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
     <span class="skill-name">JavaScript</span>
   </div>
   <div class="skill">
+    <img src="/images/logos/{{ data.react }}" alt="React" class="skill-icon">
+    <span class="skill-name">React</span>
+  </div>
+  <div class="skill">
     <img src="/images/logos/{{ data.html }}" alt="HTML" class="skill-icon">
     <span class="skill-name">HTML</span>
   </div>
@@ -65,12 +71,10 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
     <img src="/images/logos/{{ data.css }}" alt="CSS" class="skill-icon">
     <span class="skill-name">CSS</span>
   </div>
-  <!--
   <div class="skill">
     <img src="/images/logos/{{ data.tailwind }}" alt="Tailwind" class="skill-icon">
     <span class="skill-name">Tailwind</span>
   </div>
-  -->
   <div class="skill">
     <img src="/images/logos/{{ data.godot_engine }}" alt="Godot Engine" class="skill-icon">
     <span class="skill-name">Godot Engine</span>
@@ -83,10 +87,10 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
     <img src="/images/logos/{{ data.git }}" alt="Git" class="skill-icon">
     <span class="skill-name">Git</span>
   </div>
-  <div class="skill">
+  <!-- <div class="skill">
     <img src="/images/logos/{{ data.neovim }}" alt="Neovim" class="skill-icon">
     <span class="skill-name">Neovim</span>
-  </div>
+  </div> -->
   <div class="skill">
     <img src="/images/logos/{{ data.github_actions }}" alt="GitHub Actions" class="skill-icon">
     <span class="skill-name">GitHub Actions</span>
@@ -94,6 +98,10 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
   <div class="skill">
     <img src="/images/logos/{{ data.docker }}" alt="Docker" class="skill-icon">
     <span class="skill-name">Docker</span>
+  </div>
+  <div class="skill">
+    <img src="/images/logos/{{ data.kamal }}" alt="Kamal" class="skill-icon">
+    <span class="skill-name">Kamal</span>
   </div>
   <div class="skill">
     <img src="/images/logos/{{ data.linux }}" alt="Linux" class="skill-icon">
