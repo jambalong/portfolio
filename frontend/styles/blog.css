@@ -28,7 +28,8 @@
 
 
 .post-thumbnail {
-  width: 288px;
+  min-width: 288px;
+  max-width: 288px;
   height: 192px;
   border: 4px solid #cba6f7;
   box-shadow: 5px 5px 5px #11111b;
