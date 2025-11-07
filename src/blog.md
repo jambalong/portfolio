@@ -26,5 +26,6 @@ title: Blog
       </li>
       <br>
     </div>
+    <div class="divider"></div>
   {% endfor %}
 </ul>

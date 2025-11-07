@@ -5,7 +5,6 @@
 .posts-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -14,10 +13,15 @@
 .post-item {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 32px;
   padding-bottom: 16px;
-  border-bottom: solid #11111b;
-  max-height: 320px;
+  max-height: 380px;
+}
+
+.divider {
+  border: 2px solid #11111b;
+  margin: 25px 0 50px;
+  height: 0;
 }
 
 @media (max-width: 768px) {
