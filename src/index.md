@@ -133,6 +133,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 - **Core Concept**: Players control a cat, navigating levels that emphasize core platformer skills, aiming for an enjoyable feline adventure with charming visuals and playful mechanics.
 
 <br/>
+<div class="divider"></div>
 
 ## Chess CLI
 
@@ -153,10 +154,11 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 - **Testing:** Utilizes **RSpec** to test critical components and methods, ensuring reliability and facilitating efficient debugging.
 
 <br/>
+<div class="divider"></div>
 
 ## Pebble List
 
-## **[Live Demo](https://jambalong.github.io/pebble-list/)**
+### **[Live Demo](https://jambalong.github.io/pebble-list/)**
 
 ### **[GitHub Repository](https://github.com/jambalong/pebble-list)**
 
@@ -177,6 +179,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 - The architecture demonstrates **component-based design**, utilizing `TaskInput`, `TaskList`, and more components to separate concerns.
 
 <br>
+<div class="divider"></div>
 
 ## Portfolio Website
 
