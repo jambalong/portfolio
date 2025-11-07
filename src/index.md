@@ -20,7 +20,7 @@ docker: docker.svg
 kamal: kamal.png
 linux: linux.svg
 
-portfolio: portfolio_website.png
+portfolio: portfolio_page.png
 pounce: project_pounce.png
 chess: chess_cli.png
 
