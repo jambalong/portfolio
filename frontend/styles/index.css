@@ -35,7 +35,6 @@ h1 {
   margin: 1rem 0 3rem;
   text-align: center;
   font-weight: 900;
-  font-size: 2.25rem;
   color: var(--heading-color);
   line-height: 1.2;
 }
@@ -54,12 +53,10 @@ body > nav {
 
 body > nav .logo h2 {
   margin: 0;
-  font-size: 1.65rem;
 }
 
 body > nav .logo h3 {
   margin: 0;
-  font-size: 1.15rem;
 }
 
 body > nav .nav-links {
@@ -114,28 +111,27 @@ main {
 }
 
 main .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center; 
+  gap: 1rem;
 }
 
 main .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5px;
-  min-width: 120px;
-  gap: 6px;
+  margin: 2px;
+  min-width: 108px;
 }
 
 main .skill-icon {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
 }
 
 main .skill-name {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 main .project-screenshot {
