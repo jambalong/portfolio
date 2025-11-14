@@ -145,6 +145,7 @@ main .skill-name {
 }
 
 .project-description {
+  margin-top: 2rem;
   flex-basis: 60%;
 }
 
@@ -153,6 +154,7 @@ main .skill-name {
   max-width: 100%;
   height: auto;
   border: solid #cba6f7;
+  box-shadow: 5px 5px 5px #11111b;
 }
 
 @media (max-width: 768px) {
@@ -163,7 +165,15 @@ main .skill-name {
   .project-media,
   .project-description {
     flex-basis: auto;
-    width: 100%;
+    width: 90%;
+  }
+
+  .project-media {
+    order: 1;
+  }
+ 
+  .project-description {
+    order: 2;
   }
 }
 

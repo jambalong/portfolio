@@ -114,11 +114,10 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 # Projects
 
-## Whisker Dash
-
 <div class="project-layout">
   
   <div class="project-media">
+    <h2><strong>Whisker Dash</strong></h2>
     <h3><strong><a href="https://www.youtube.com/watch?v=RiQhABsLiw0">YouTube Video</a></strong></h3>
     <h3><strong><a href="https://github.com/jambalong/project_pounce">GitHub Repository</a></strong></h3>
     <h4><em>GDScript, Godot Engine</em></h4>
@@ -131,25 +130,21 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
       <br/>
       <li>Features a <strong>custom platformer physics system</strong> to achieve smooth, responsive, and precise character movement.</li>
       <br/>
-      <li>Includes a <strong>level management system</strong> for seamless and consistent transitions between puzzle stages.</li>
+      <li>Built a <strong>scene manager</strong> that listens for the signal, dynamically constructs the next level's file path, and then instantiates the new level</li>
       <br/>
-      <li><strong>Core Concept</strong>: Players control a cat, navigating levels that emphasize core platformer skills, aiming for an enjoyable feline adventure with charming visuals and playful mechanics.</li>
+      <li>Ensured transitions are robust by <strong>validating the 'player' group</strong> before firing the signal, preventing other physics bodies from triggering a level change.</li>
+      <br/>
+      <li><strong>Debugged runtime issues</strong> where new scene colliders failed to load, tracing the problem back to the <code>CollisionPolygonShape</code>, for compatibility with instantiation I refactored to use <code>RectangleShape</code> instead.</li>
     </ul>
   </div>
 
 </div>
+
 <br/>
 <div class="divider"></div>
-
-## Ruby Chess
+<br/>
 
 <div class="project-layout">
-  
-  <div class="project-media">
-    <h3><strong><a href="https://github.com/jambalong/chess">GitHub Repository</a></strong></h3>
-    <h4><em>Ruby, RSpec</em></h4>
-    <img src="/images/projects/{{ data.ruby_chess }}" alt="Ruby Chess thumbnail" class="project-screenshot">
-  </div>
 
   <div class="project-description">
     <ul>
@@ -164,16 +159,24 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
       <li><strong>Testing:</strong> Utilizes <strong>RSpec</strong> to test critical components and methods, ensuring reliability and facilitating efficient debugging.</li>
     </ul>
   </div>
+  
+  <div class="project-media">
+    <h2><strong>Ruby Chess</strong></h2>
+    <h3><strong><a href="https://github.com/jambalong/chess">GitHub Repository</a></strong></h3>
+    <h4><em>Ruby, RSpec</em></h4>
+    <img src="/images/projects/{{ data.ruby_chess }}" alt="Ruby Chess thumbnail" class="project-screenshot">
+  </div>
 
 </div>
+
 <br/>
 <div class="divider"></div>
-
-## Pebble List
+<br/>
 
 <div class="project-layout">
   
   <div class="project-media">
+    <h2><strong>Pebble List</strong></h2>
     <h3><strong><a href="https://jambalong.github.io/pebble-list/">Live Demo</a></strong></h3>
     <h3><strong><a href="https://github.com/jambalong/pebble-list">GitHub Repository</a></strong></h3>
     <h4><em>React, JavaScript, CSS</em></h4>
@@ -185,6 +188,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
       <li>Built a functional single-page <strong>Task List application</strong> using <strong>React</strong> and the <code>useState</code> hook for state management.</li>
       <br/>
       <li>Implements core <strong>CRUD (Create, Read, Update, Delete)</strong> functionality for tasks.</li>
+      <br/>
       <li><strong>Creation:</strong> New tasks are added via the <code>handleAddTask</code> function, prepending them to the list.</li>
       <br/>
       <li><strong>Update/Toggle:</strong> Tasks can be marked as complete/incomplete using <code>handleToggleComplete</code>, which maps over the array to update state immutably.</li>
@@ -196,18 +200,12 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
   </div>
 
 </div>
+
 <br/>
 <div class="divider"></div>
-
-## Portfolio Website
+<br/>
 
 <div class="project-layout">
-  
-  <div class="project-media">
-    <h3><strong><a href="https://github.com/jambalong/portfolio">GitHub Repository</a></strong></h3>
-    <h4><em>Bridgetown, Ruby, HTML, CSS, JavaScript</em></h4>
-    <img src="/images/projects/{{ data.portfolio_website }}" alt="Portfolio Website thumbnail" class="project-screenshot">
-  </div>
 
   <div class="project-description">
     <ul>
@@ -223,5 +221,13 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
     </ul>
   </div>
 
+  <div class="project-media">
+    <h2><strong>Portfolio Website</strong></h2>
+    <h3><strong><a href="https://github.com/jambalong/portfolio">GitHub Repository</a></strong></h3>
+    <h4><em>Bridgetown, Ruby, HTML, CSS, JavaScript</em></h4>
+    <img src="/images/projects/{{ data.portfolio_website }}" alt="Portfolio Website thumbnail" class="project-screenshot">
+  </div>
+
 </div>
+
 <br/>
