@@ -21,9 +21,9 @@ kamal: kamal.png
 linux: linux.svg
 
 pebble_list: pebble_list.png
-portfolio: portfolio_page.png
-pounce: project_pounce.png
-chess: chess_cli.png
+portfolio_website: portfolio_website.png
+whisker_dash: whisker_dash.png
+ruby_chess: ruby_chess.png
 
 ---
 
@@ -114,7 +114,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 
 # Projects
 
-## Project Pounce
+## Whisker Dash
 
 <div class="project-layout">
   
@@ -122,7 +122,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
     <h3><strong><a href="https://www.youtube.com/watch?v=RiQhABsLiw0">YouTube Video</a></strong></h3>
     <h3><strong><a href="https://github.com/jambalong/project_pounce">GitHub Repository</a></strong></h3>
     <h4><em>GDScript, Godot Engine</em></h4>
-    <img src="/images/projects/{{ data.pounce }}" alt="Project Pounce thumbnail" class="project-screenshot">
+    <img src="/images/projects/{{ data.whisker_dash }}" alt="Whisker Dash thumbnail" class="project-screenshot">
   </div>
 
   <div class="project-description">
@@ -141,14 +141,14 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
 <br/>
 <div class="divider"></div>
 
-## Chess CLI
+## Ruby Chess
 
 <div class="project-layout">
   
   <div class="project-media">
     <h3><strong><a href="https://github.com/jambalong/chess">GitHub Repository</a></strong></h3>
     <h4><em>Ruby, RSpec</em></h4>
-    <img src="/images/projects/{{ data.chess }}" alt="Chess CLI thumbnail" class="project-screenshot">
+    <img src="/images/projects/{{ data.ruby_chess }}" alt="Ruby Chess thumbnail" class="project-screenshot">
   </div>
 
   <div class="project-description">
@@ -159,7 +159,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
       <br/>
       <li>Correctly determines and declares <strong>check and checkmate</strong> scenarios during gameplay.</li>
       <br/>
-      <li>Emphasized <strong>modular class design</strong> and <strong>Single Responsibility Principle (SRP)</strong> for high code maintainability across core game objects (Board, Pieces, Player).</li>
+      <li>Emphasized <strong>modular class design</strong> and <strong>Single Responsibility Principle (SRP)</strong> for high code maintainability across core game objects (<code>Board</code>, <code>Pieces</code>, <code>Player</code>).</li>
       <br/>
       <li><strong>Testing:</strong> Utilizes <strong>RSpec</strong> to test critical components and methods, ensuring reliability and facilitating efficient debugging.</li>
     </ul>
@@ -206,7 +206,7 @@ When not coding, you'll find me engrossed in a good book 📚 or exploring new r
   <div class="project-media">
     <h3><strong><a href="https://github.com/jambalong/portfolio">GitHub Repository</a></strong></h3>
     <h4><em>Bridgetown, Ruby, HTML, CSS, JavaScript</em></h4>
-    <img src="/images/projects/{{ data.portfolio }}" alt="Portfolio Website thumbnail" class="project-screenshot">
+    <img src="/images/projects/{{ data.portfolio_website }}" alt="Portfolio Website thumbnail" class="project-screenshot">
   </div>
 
   <div class="project-description">
