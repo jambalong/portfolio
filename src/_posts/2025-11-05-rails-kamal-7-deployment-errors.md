@@ -7,11 +7,11 @@ thumbnail: /images/posts/rails_kamal_deployment.jpg
 
 ## Introduction: The Infrastructure Battles Start
 
-When I chose to front-load the deployment of my `Wuthering Waves Planner`, the goal is simple: **get it live, get it stable**. But between my local machine and the virtual private server, I hit a myriad of deployment errors that tested every single assumption I had with deploying an app.
+When I chose to front-load the deployment of my `Wuthering Waves Planner`, the goal was simple: **get it live, get it stable**. But between my local machine and the virtual private server, I hit a myriad of deployment errors that tested every single assumption I had with deploying an app.
 
-This blog post documents my challenges of deploying a **Rails 8** application powered by **Kamal** and **Postgres**. From the lurking **IPv6-vs-IPv4 conflict** to encountering my first tussle with **Solid Queue**, I encountered- and solved- the kind of issues that seemed unsurmountable at first.
+This blog post documents my challenges of deploying a **Rails 8** application powered by **Kamal** and **Postgres**. From the lurking **IPv6-vs-IPv4 conflict** to encountering my first tussle with **Solid Queue**, I encountered- and solved- the kind of issues that seemed insurmountable at first.
 
-My goal here is to give you a bit of guidance. If you're using Kamal, Rails 8, or wrestling with containerized Postgres database, this is a look at the hardest errors I've come across to date.
+My goal here is to give you a bit of guidance. If you're using Kamal, Rails 8, or wrestling with a containerized Postgres database, this is a look at the hardest errors I've come across to date.
 
 ---
 
@@ -88,7 +88,7 @@ The next phase introduced two classic production headaches: URL-safe passwords a
 
 The production password I generated using a strong password manager (Bitwarden) contained URL-reserved characters (@, #, &). These characters need to be URL-encoded, and failing to do so breaks the entire `DATABASE_URL`.
 
-I generated a new, alphanumeric-only password for the database and ensured the `DATABASE_URL` was built with the clean string. I encourage keeping secrets simple for URI use or ensure great URL encoding is applied.
+I generated a new, alphanumeric-only password for the database and ensured the `DATABASE_URL` was built with the clean string. I encourage keeping secrets simple for URI use, or ensuring great URL encoding is applied.
 
 ## Missing Variable Somewhere In My Configs?
 
@@ -96,9 +96,9 @@ I generated a new, alphanumeric-only password for the database and ensured the `
 
 `ActiveRecord::ConnectionNotEstablished: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed`
 
-This looked like a networking issue again, but the root cause was actually simpler and more critical: Empty DATABASE_URL. The variable which was defined in the secrets file, was not being injected into the running container.
+This looked like a networking issue again, but the root cause was actually simpler and more critical: Empty DATABASE_URL. The variable which was defined in the secrets file was not being injected into the running container.
 
-I therefore confirmed `DATABASE_URL` was explicitly listed under:
+I therefore confirmed that `DATABASE_URL` was explicitly listed under:
 
 ```yaml
 ## config/deploy.yml
@@ -108,7 +108,7 @@ env:
     - DATABASE_URL
 ```
 
-and correctly defined in my `.kamal/secrets file`. Deployment tools require explicit permission to inject secret; is what I learned.
+and correctly defined in my `.kamal/secrets file`. Deployment tools require explicit permission to inject a secret, which is what I learned.
 
 ---
 
@@ -118,7 +118,7 @@ The final hurdle was specific to the latest Rails 8 stack (with its addition of 
 
 ## Worker Crash Loop and Puma Premature Shutdown
 
-I finally ran `bin/kamal deploy` with no errors, which gave me great relief and it felt like I could start writing my first `Models`... However, when I visited the server's IP Address, it was not over.
+I finally ran `bin/kamal deploy` with no errors, which gave me great relief, and it felt like I could start writing my first `Models`... However, when I visited the server's IP Address, it was not over.
 
 ### Error
 
@@ -136,7 +136,7 @@ While the app was a bit more stable, the database was still throwing errors abou
 
 `PG::UndefinedTable: ERROR: relation "solid_queue_recurring_tasks" does not exist`
 
-I knew I had set up the database, however the error meant the tables Solid Queue was expecting simply didn't exist. I thought the `db:prepare` command alone would handle everything, but it seemed like it only set up the *connection*, and not the actual **structure** of the database on the production server. The database was connected, but it was simply empty!
+I knew I had set up the database; however, the error meant the tables Solid Queue were expecting simply didn't exist. I thought the `db:prepare` command alone would handle everything, but it seemed like it only set up the *connection*, and not the actual **structure** of the database on the production server. The database was connected, but it was simply empty!
 
 To fix this, I manually told the server to run the database migrations, which is what creates all the tables. Thus, the fix was running this specific command using Kamal to execute it remotely:
 
@@ -154,18 +154,18 @@ The server was up, the database was connected and properly migrated, but why cou
 
 `ActionController::RoutingError (No route matches [GET] "/")`
 
-Expected, kind of silly actually. The application just didn't have any root route defined yet. I was so focused on deployment I assumed the `Rails::WelcomeController#index` would work on production, the same it did on the development environment.
+Expected, kind of silly actually. The application just didn't have any root route defined yet. I was so focused on deployment, I assumed the `Rails::WelcomeController#index` would work on production, the same way it did on the development environment.
 
-I created the `Pages#home` controller and set the `root "pages#home"` route in `config/routes.rb`. Deployment finally complete!
+I created the `Pages#home` controller and set the `root "pages#home"` route in `config/routes.rb`. Deployment is finally complete!
 
 ---
 
 ## Conclusion: It's All About the Fundamentals
 
-What this whole experience taught me is that successful deployment isn't really about writing crazy, complicated code. It's more about **mastering the basic rules** of the infrastructure underneath. And the biggest help were the debugging errors Ruby on Rails outputted on the logs. I learned that you have to be precise with the basics: making sure the networking is exact, handling secrets carefully so they don't break the URL, ensuring that the correct environment variables actually get injected, and most importantly, understand how things like my web server (**Puma**) and my background processor (**Solid Queue**) actually work together. I wanted to avoid disabling my Solid gems just for a quick fix. Everything relies on those foundations being stable. I might even encounter new errors on my next deployment lol.
+What this whole experience taught me is that successful deployment isn't really about writing crazy, complicated code. It's more about **mastering the basic rules** of the infrastructure underneath. And the biggest help was the debugging errors Ruby on Rails outputted in the logs. I learned that you have to be precise with the basics: making sure the networking is exact, handling secrets carefully so they don't break the URL, ensuring that the correct environment variables actually get injected, and most importantly, understanding how things like my web server (**Puma**) and my background processor (**Solid Queue**) actually work together. I wanted to avoid disabling my Solid gems just for a quick fix. Everything relies on those foundations being stable. I might even encounter new errors on my next deployment lol.
 
-For now, the Wuthering Waves Planner (while still a blank slate) is now live, a testament to overcoming the challenges of local development and remote production.
+For now, the Wuthering Waves Planner (while still a blank slate) is live, a testament to overcoming the challenges of local development and remote production.
 
-This video provides a helpful guide for fellow developers planning to attempt their first [Rails 8 + Kamal deployment](https://www.youtube.com/watch?v=_lRlOGS8Bgo)
+This video provides a helpful guide for fellow developers planning to attempt their first [Rails 8 + Kamal deployment](https://www.youtube.com/watch?v=_lRlOGS8Bgo).
 
-While this article is what assisted me in setting up all three [Solid gems in Rails 8 to use a single database in production](https://briancasel.gitbook.io/cheatsheet/rails-1/setup-solid-queue-cable-cache-in-rails-8-to-share-a-single-database)
+While this article is what assisted me in setting up all three [Solid gems in Rails 8 to use a single database in production](https://briancasel.gitbook.io/cheatsheet/rails-1/setup-solid-queue-cable-cache-in-rails-8-to-share-a-single-database).
