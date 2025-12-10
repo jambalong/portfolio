@@ -5,17 +5,17 @@ date: 2025-10-26
 thumbnail: /images/thumbnails/wuwa_planner.jpg
 ---
 
-It's been **severals** weeks since Fall quarter started, and I've carved out some time to build a fun portfolio project. I had an itch to build something new, something that challenges me, and helps me learn **further**. The goal was clear: I wanted to create an app that was not just functional, but genuinely interesting to me, to ensure that I'd stick to it from start to finish. I wanted to gain a solid learning experience and a tangible demonstration of my abilities.
+It's been **several** weeks since the Fall quarter started, and I've carved out some time to build a fun portfolio project. I had an itch to build something new, something that challenges me, and helps me learn **further**. The goal was clear: I wanted to create an app that was not just functional, but genuinely interesting to me, to ensure that I'd stick to it from start to finish. I wanted to gain a solid learning experience and a tangible demonstration of my abilities.
 
 The process of figuring out that a `"Wuthering Waves Planner"` is what spoke to me wasn't instant. It involved a bit of brainstorming, a dash of self-assessment, and a healthy dose of what I was currently passionate about outside of coding.
 
 ## Brainstorming Phase: So What Do I Want to Build?
 
-I initially thought wide, so I considered a few different paths:
+I initially thought widely, so I considered a few different paths:
 
 - **A task manager**: I've been interested in having a tool fr time-blocking, since I wanted assistance in being a bit more productive. It so happened that I worked on a time management design throughout my UX Design course. But ultimately, I wanted something a bit more unique than another `to-do app`.
 
-- **An inventory system**: I was tasked to track some tech inventory during Summer, so I thought rather than a spreadsheet perhaps I could build an app with a `map overview` of the equipment's location. But it didn't spark that immediate _“I need to build this!”_ feeling.
+- **An inventory system**: I was tasked to track some tech inventory during the Summer, so I thought, rather than a spreadsheet, perhaps I could build an app with a `map overview` of the equipment's location. But it didn't spark that immediate _“I need to build this!”_ feeling.
 
 - **A personal finance tracker**: Could be complex, I've been enjoying using `YNAB` and thought of building a similar one. But I didn't have any pain points with the app, and I worried I'd just end up with a simple `CRUD` project.
 
@@ -30,15 +30,15 @@ This process helped me narrow it down to two very strong contenders, both of whi
 
 ## The Showdown: Calisthenics vs Gacha
 
-On one hand, I had the calisthenics workout app. As someone who's been training for 4-5 months, I have a real need for a personalized app to track `progressive overload` and progression. This is a great, practical idea that I was geniunely passionate about.
+On one hand, I had the calisthenics workout app. As someone who's been training for 4-5 months, I have a real need for a personalized app to track `progressive overload` and progression. This is a great, practical idea that I was genuinely passionate about.
 
-While on the other hand, I had the **Wuthering Waves Planner**. I've been playing the game recently, and I saw two clear challenges: the complex "shopping list" calculation for ascension materials and the puzzle of simulating the `gacha system`.
+On the other hand, I had the **Wuthering Waves Planner**. I've been playing the game recently, and I saw two clear challenges: the complex "shopping list" calculation for ascension materials and the puzzle of simulating the `gacha system`.
 
-## Why the Wuthering Waves Planner Won!
+## Why the Wuthering Waves Planner Won
 
 While the calisthenics app solved a personal problem, the Wuthering Waves planner gave me a more unique set of _technical challenges_.
 
-The calisthenics app would be focused on tracking user-inputted data over time and possible integration with an exercise API. The WuWa planner, however, would challenge me to learn complex backend queries on a static, pre-seeded database and build an interactive frontend component with probability logic (the simulator). After having gone through a `Statistics` course during summer and currently studying a `Database` course this fall, I thought it would be fun to reinforce the two subjects.
+The calisthenics app would be focused on tracking user-inputted data over time and possible integration with an exercise API. The WuWa planner, however, would challenge me to learn complex backend queries on a static, pre-seeded database and build an interactive frontend component with probability logic (the simulator). After having gone through a `Statistics` course during the summer and currently studying a `Database` course this fall, I thought it would be fun to reinforce the two subjects.
 
 ----
 
@@ -46,13 +46,13 @@ The calisthenics app would be focused on tracking user-inputted data over time a
 
 Just picking a project wouldn't be enough. To avoid the pitfall of getting overwhelmed and ensure that I actually finish it, I knew I needed a clear roadmap. I learned that for any portfolio project, I shouldn't try to build everything at once.
 
-So, I broke the "Wuthering Waves Planner" down into `four distinct phases`. Each phase has a clear goal, separates the different set of technical skills, and builds on top of the previous phase.
+So, I broke the "Wuthering Waves Planner" down into `four distinct phases`. Each phase has a clear goal, separates a different set of technical skills, and builds on the previous phase.
 
 _But first, what are my tools?_
 
 ## The Technology Stack
 
-Because I'm focused on mastering backend logic and just love to play with Ruby.. then **Ruby on Rails** was the clear choice.
+Because I'm focused on mastering backend logic and just love to play with Ruby, **Ruby on Rails** was the clear choice.
 
 - **Backend: `Ruby on Rails`** (This will be the core of the project).
 
@@ -60,13 +60,13 @@ Because I'm focused on mastering backend logic and just love to play with Ruby..
 
 - **Deployment: `Kamal`** (for container-based deployment) and a **`DigitalOcean Droplet (VPS)`**. Instead of an easier **Platform-as-a-Service (PaaS)** like _Render_ or _Fly.io_, I'm specifically choosing this route. I want to learn how to manage my own deployments from scratch on a server, and this is another key learning goal for the project.
 
-With the tools chosen, here's the gameplan:
+With the tools chosen, here's the game plan:
 
 ## Phase 0: The Infrastructure ("Hello, World!")
 
 **The Goal:** Get a **`"Hello, World!"` app** live and stable using the production deployment stack.
 
-**Why?** By setting up the deployment pipeline before I have any complex code, I'm front-loading one of the biggest technical challenges. I would love to learn how to get a working, `deployable app from Day 1`, rather saving all the infrastructure headaches in the end.
+**Why?** By setting up the deployment pipeline before I have any complex code, I'm front-loading one of the biggest technical challenges. I would love to learn how to get a working, `deployable app from Day 1`, rather than saving all the infrastructure headaches in the end.
 
 {% render "post_image",
   path: "/images/posts/ascension.jpg",
@@ -79,16 +79,17 @@ With the tools chosen, here's the gameplan:
 
 **The Goal:** Pure backend and database mastery 🔥🔥🔥
 
-This is the foundation that all future features will be built on. And it will be a single, public-facing tool which means anyone can use it outright without an account. The most important part of this phase is keeping it focused and working. By _intentionally not_ building user accounts or logins, I'm avoiding a huge source of complexity and making sure I finish this core feature. There are drawbacks, but I'd love to get it working first.
+This is the foundation that all future features will be built on. And it will be a single, public-facing tool, which means anyone can use it outright without an account. The most important part of this phase is keeping it focused and working. By _intentionally not_ building user accounts or logins, I'm avoiding a huge source of complexity and making sure I finish this core feature. There are drawbacks, but I'd love to get it working first.
 
 The core features will be:
 
-1. Static Data: I'll create a `seeds.rb` file and pre-populate the database with all the static game data (e.g. Characters, Materials, and their relationships).
+1. Static Data: I'll create a `seeds.rb` file and pre-populate the database with all the static game data (e.g., Characters, Materials, and their relationships).
 
 2. The Calculator: A simple form with three forms:
-  - Select `Character`
-  - Select `Current Level`
-  - Select `Goal Level`
+
+- Select `Character`
+- Select `Current Level`
+- Select `Goal Level`
 
 3. The "Shopping List": When the user submits the form, the page will reload and show the total summed quantity of every material needed.
 
@@ -125,13 +126,13 @@ The app will have to manage the user's `state` (their pity count and 50/50 statu
 
 These are the bells and whistles, for after the first two phases are rock-solid. And it would turn this tool into a true _application_:
 
-- **User Accounts:** Adding `Devise` gem to let users signup, login, and save their plans.
+- **User Accounts:** Adding `Devise` gem to let users sign up, log in, and save their plans.
 
 - **Inventory Tracking:** Allowing users to input current materials, and the Planner will subtract that from the `total amount needed` list.
 
 - **Expand Data:** These are new, separate planners or extensions:
-    - `Weapon Ascension`
-    - `Character Skills`
+  - `Weapon Ascension`
+  - `Character Skills`
 
 - **Connect the Features:** When a user "pulls" a new character using the simulator, the app would ask, "Add \[Character] to your planner?"
 
@@ -140,3 +141,4 @@ These are the bells and whistles, for after the first two phases are rock-solid.
 By breaking it down this way, the project feels ambitious but, most importantly, achievable. I'm starting with the infrastructure in `Phase 0` and will document my progress as I go.
 
 Time to get that server provisioned.
+
