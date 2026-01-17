@@ -58,13 +58,10 @@ const FeaturedProject = () => {
                 Built a reactive, SPA-like interface using Hotwire (Turbo/Stimulus) without 
                 client-side framework overhead. Features a recursive calculation engine that 
                 solves multi-level dependency trees and a custom guest-to-user sync system.
-
-                
               </p>
               <p className="text-foreground leading-relaxed mb-6">
-                I chose Rails for this project to leverage its speed-to-market, but I implemented Dockerto ensure the architecture is portable and language-independent.
+                I chose Rails for this project to leverage its speed-to-market, but I implemented Docker to ensure the architecture is portable and language-independent.
               </p>
-              
               
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-2 mb-8">

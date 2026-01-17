@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-20">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -24,7 +24,7 @@ const About = () => {
             <p className="text-text-secondary leading-relaxed mb-6">
               My journey started at Washington State University studying Computer Science and 
               Math, then I transitioned to the workforce to gain real-world experience. Now 
-              I'm back at Walla Walla Community College pursuing my degree while simultaneously:
+              I'm pursuing my degree at Walla Walla Community College while:
             </p>
             
             <ul className="space-y-3 mb-8">

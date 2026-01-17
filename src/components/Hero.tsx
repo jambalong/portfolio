@@ -18,7 +18,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 py-4 gradient-text"
           >
             John Alvin Ambalong
           </motion.h1>

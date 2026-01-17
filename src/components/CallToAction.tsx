@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CallToAction = () => {
   return (
-    <section id="contact" className="py-24 bg-linear-to-b from-background to-popover">
+    <section id="contact" className="py-20 bg-linear-to-b from-background to-popover">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
