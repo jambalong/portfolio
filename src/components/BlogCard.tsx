@@ -40,7 +40,7 @@ const BlogCard = ({ post, index }: Props) => {
         ) : (
           /* Placeholder for posts without images to keep layout consistent */
           <div className="w-full h-full flex items-center justify-center bg-muted/30">
-             <span className="text-text-muted/20 font-bold italic tracking-tighter text-2xl">Foundations</span>
+             <span className="text-text-muted/20 font-bold italic tracking-tighter text-2xl">No Available Image</span>
           </div>
         )}
         {/* Subtle overlay gradient to image */}

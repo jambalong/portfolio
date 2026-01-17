@@ -112,7 +112,7 @@ text: '#cdd6f4'      // Primary text
 
 Full color system and Tailwind configuration in `tailwind.config.mjs`.
 
-## ✍️ Adding Blog Posts
+## Adding Blog Posts
 
 Create a new Markdown file in `src/content/blog/`:
 ```markdown
@@ -120,6 +120,8 @@ Create a new Markdown file in `src/content/blog/`:
 title: "Your Post Title"
 description: "Brief description for SEO and preview cards"
 date: "2025-01-16"
+thumbnail: "/images/thumbnails/example.jpg"
+readTime: "5 min read"
 tags: ["Rails", "Hotwire", "Docker"]
 ---
 
@@ -130,9 +132,34 @@ Your content here using Markdown or MDX...
 - `title` (required): Post title
 - `description` (required): SEO description and card preview
 - `date` (required): Publication date
+- thumbnail (optional): Path to image in /public
+- readTime (required): Estimated reading duration
 - `tags` (required): Array of topic tags
 
 Posts automatically appear on `/blog` sorted by date.
+
+## Deployment
+
+### Netlify (Recommended)
+
+This site is configured for zero-config deployment on Netlify:
+
+1. **Connect your GitHub repository** to Netlify
+2. Netlify auto-detects Astro and uses:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+3. **Push to `main` branch** → automatic deployment
+
+**Custom Domain:**
+- Add `ambalong.dev` in Netlify domain settings
+- Update DNS records as instructed
+- Free SSL certificate provisioned automatically
+
+### Manual Build
+```bash
+npm run build
+# Deploy the dist/ folder to any static hosting service
+```
 
 ## Tech Details
 
