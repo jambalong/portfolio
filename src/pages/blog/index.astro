@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import BlogCard from '@/components/BlogCard.tsx';
+import { getCollection } from 'astro:content';
+import { motion } from 'framer-motion';
+
+const posts = await getCollection('blog');
+
+const sortedPosts = [...posts].sort((a, b) => {
+  const dateA = new Date(a.data.date).getTime();
+  const dateB = new Date(b.data.date).getTime();
+  return dateB - dateA;
+});
+---
+
+<Layout title="Technical Blog | Thoughts on Rails & Engineering">
+  <div class="min-h-screen bg-background">
+    <Navigation client:load />
+    
+    <main id="main-content">
+      <section class="pt-32 pb-16 px-6">
+        <div class="container mx-auto max-w-4xl text-center">
+          <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
+            Technical Blog
+          </h1>
+          <p class="text-lg text-text-secondary">
+            Thoughts on software development, design and problem-solving
+          </p>
+        </div>
+      </section>
+
+      <section class="pb-24 px-6">
+        <div class="container mx-auto max-w-5xl">
+          <div class="grid md:grid-cols-2 gap-6">
+            {sortedPosts.map((post, index) => (
+              <BlogCard 
+                client:visible 
+                post={post} 
+                index={index} 
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer />
+  </div>
+</Layout>
