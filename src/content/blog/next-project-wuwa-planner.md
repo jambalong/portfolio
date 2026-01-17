@@ -87,7 +87,6 @@ After the planner is deployed, I will add the Gacha Simulator. This is where I w
 ## Phase 3: The Polish
 
 **The Goal:** Showcase a mature, full-feature application.
-
 These are the features that turn a tool into a true application:
 
 * **User Accounts:** Using the Devise gem to let users save their plans.

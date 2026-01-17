@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Name */}
           <motion.h1

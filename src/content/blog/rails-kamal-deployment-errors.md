@@ -100,8 +100,6 @@ and correctly defined in my `.kamal/secrets file`. Deployment tools require expl
 
 ---
 
-# Solid Queue Stability Horror
-
 The final hurdle was specific to the latest Rails 8 stack (with its addition of the Solid gems) and its default configuration for background processing with Solid Queue.
 
 ## Worker Crash Loop and Puma Premature Shutdown
