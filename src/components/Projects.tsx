@@ -51,7 +51,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="card-lift bg-card rounded-xl overflow-hidden border border-border group"
+              className="card-lift bg-popover rounded-xl overflow-hidden border border-border group"
             >
               {/* Screenshot */}
               <div className="relative aspect-video bg-card overflow-hidden">
