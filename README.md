@@ -93,7 +93,6 @@ Visit `http://localhost:4321` to see your local site.
 │   │   └── blog/[...slug].astro  # Blog posts
 │   └── styles/                   # Global styles
 ├── astro.config.mjs              # Astro configuration
-├── tailwind.config.mjs           # Tailwind + Catppuccin colors
 ├── .node-version                 # Node version management
 └── package.json
 ```
