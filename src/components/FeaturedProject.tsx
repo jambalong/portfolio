@@ -46,7 +46,7 @@ const FeaturedProject = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="glass-elevated rounded-2xl p-8"
+              className="glass-lift rounded-2xl p-8"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 Pangu Terminal

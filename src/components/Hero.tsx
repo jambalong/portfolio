@@ -40,10 +40,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg text-foreground leading-relaxed max-w-2xl mx-auto mb-8"
           >
-            I'm a Software Engineer building production-ready web applications, with deep
-            experience in Ruby on Rails. Currently engineering Pangu Terminal, a resource
-            optimization platform serving the Wuthering Waves community, while working as
-            an IT intern and completing my CS degree.
+            Software Engineer and CS student specializing in Ruby on Rails. Currently developing
+            Pangu Terminal, a resource-optimization platform for the Wuthering Waves community,
+            while gaining hands-on infrastructure experience as an IT Intern.
           </motion.p>
           
           {/* Status line */}
