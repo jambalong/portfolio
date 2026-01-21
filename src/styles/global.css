@@ -262,7 +262,8 @@ body {
 
 /* Pull quote styling */
 .pull-quote {
-  @apply border-l-4 border-primary pl-6 py-2 my-6 italic text-text-secondary;
+  @apply border-l-4 border-primary pl-6 pr-2 py-2 my-6 italic text-text-secondary;
+  @apply bg-card/50;
 }
 
 /* Custom bullet points */

@@ -6,8 +6,8 @@ import pebbleScreenshot from '@/assets/pebble-list-screenshot.png';
 const projects = [
   {
     title: 'Ruby Chess Engine',
-    description: 'Terminal chess with move validation and checkmate detection',
-    details: 'Built in pure Ruby using OOP principles. Features directional move validation, collision detection, and comprehensive RSpec test coverage.',
+    description: 'CLI chess with move validation and checkmate logic',
+    details: 'Built with OOP principles and an extensive RSpec suite for test-driven development.',
     tech: ['Ruby', 'RSpec', 'OOP'],
     image: chessScreenshot,
     liveUrl: 'https://replit.com/@jambalong/chess',
@@ -15,8 +15,8 @@ const projects = [
   },
   {
     title: 'Pebble List',
-    description: 'Task management focused on predictable state and immutable patterns',
-    details: 'Built with React hooks implementing full CRUD functionality. Features modular component architecture and real-time state management.',
+    description: 'Task management app with immutable state patterns',
+    details: 'Built with React hooks for full CRUD functionality and component-based architecture.',
     tech: ['React', 'JavaScript', 'Vite'],
     image: pebbleScreenshot,
     liveUrl: 'https://jambalong.github.io/pebble-list/',

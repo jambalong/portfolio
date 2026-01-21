@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-2xl text-text-secondary font-medium mb-8"
           >
-            Software Engineer | Full Stack Developer
+            Software Engineer | Ruby on Rails & Full-Stack Development
           </motion.p>
           
           {/* Description */}
@@ -40,7 +40,10 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg text-foreground leading-relaxed max-w-2xl mx-auto mb-8"
           >
-            I’m a developer focused on building strong foundations. Whether I’m untangling complex logic or streamlining a deployment, I rely on persistent research and a deep respect for the fundamentals to find solutions that last.
+            I'm a Software Engineer building production-ready web applications, with deep
+            experience in Ruby on Rails. Currently engineering Pangu Terminal, a resource
+            optimization platform serving the Wuthering Waves community, while working as
+            an IT intern and completing my CS degree.
           </motion.p>
           
           {/* Status line */}

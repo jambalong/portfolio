@@ -52,16 +52,35 @@ const FeaturedProject = () => {
                 Pangu Terminal
               </h2>
               <p className="text-lg text-text-secondary mb-4">
-                Resource-optimization platform for Wuthering Waves built with Rails 8 + Hotwire
+                Resource-optimization platform for Wuthering Waves
               </p>
               <p className="text-foreground leading-relaxed mb-6">
-                Built a reactive, SPA-like interface using Hotwire (Turbo/Stimulus) without 
-                client-side framework overhead. Features a recursive calculation engine that 
-                solves multi-level dependency trees and a custom guest-to-user sync system.
+                Production-deployed Rails app for resource planning and inventory tracking:
               </p>
-              <p className="text-foreground leading-relaxed mb-6">
-                I chose Rails for this project to leverage its speed-to-market, but I implemented Docker to ensure the architecture is portable and language-independent.
-              </p>
+
+              {/* Feature List */}
+              <ul className="text-foreground leading-relaxed mb-6 space-y-2">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Recursive calculation engine for multi-level crafting dependencies</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Server-side search filtering for better performance</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Guest-to-user data migration for seamless account creation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Hotwire for SPA-like interactions without JavaScript frameworks</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Docker + Kamal deployment for portable architecture</span>
+                </li>
+              </ul>
               
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-2 mb-8">

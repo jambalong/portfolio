@@ -20,7 +20,7 @@ const skillCategories = [
   {
     title: 'Foundations',
     icon: Lightbulb,
-    skills: ['System Design', 'Database Design', 'API Design', 'Version Control'],
+    skills: ['OOP', 'Testing', 'Database Design', 'Version Control'],
   },
 ];
 
@@ -66,7 +66,7 @@ const Skills = () => {
                   <span key={skill} className="hover:text-primary transition-colors cursor-default">
                     {skill}
                     {skillIndex < category.skills.length - 1 && (
-                      <span className="text-primary mx-1">·</span>
+                      <span className="text-primary mx-1"> ·</span>
                     )}
                   </span>
                 ))}

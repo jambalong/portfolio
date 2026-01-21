@@ -16,9 +16,8 @@ const CallToAction = () => {
             Let's Work Together
           </h2>
           <p className="text-text-secondary text-lg leading-relaxed mb-10">
-            I'm actively seeking full-stack developer opportunities in Washington State 
-            or remote positions. Whether you're building with Rails, React, or exploring 
-            new technologies, I'd love to connect.
+            I'm actively seeking Software Engineer opportunities in Washington State or 
+            remote positions where I can contribute to building quality software.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
