@@ -40,12 +40,12 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg text-foreground leading-relaxed max-w-2xl mx-auto mb-8"
           >
-            Software Engineer and CS student specializing in Ruby on Rails. Currently developing
-            Pangu Terminal, a resource-optimization platform for the Wuthering Waves community,
-            while gaining hands-on infrastructure experience as an IT Intern.
+            Building full-stack web applications with Ruby on Rails. Currently developing 
+            Pangu Terminal, a resource optimization platform that calculates exact material 
+            requirements for Wuthering Waves players.
           </motion.p>
           
-          {/* Status line */}
+          {/* Status line
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const Hero = () => {
             <span className="text-tertiary">Engineering Pangu Terminal</span> | 
             <span className="text-tertiary"> IT Intern at WWCC</span> | 
             <span className="text-tertiary"> CS Student</span>
-          </motion.p>
+          </motion.p> */}
           
           {/* CTAs */}
           <motion.div
@@ -65,11 +65,11 @@ const Hero = () => {
             className="flex flex-wrap items-center justify-center gap-4"
           >
             <a href="#featured" className="btn-primary">
-              View My Work
+              View Projects
               <ArrowDown size={18} />
             </a>
             <a href="#contact" className="btn-secondary">
-              Contact Me
+              Contact
             </a>
             <div className="flex items-center gap-3 ml-2">
               <a 

@@ -13,42 +13,19 @@ const About = () => {
         >
           <div className="glass-elevated rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-              About Me
+              About
             </h2>
             
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              I’m a Software Engineer and Computer Science student focused on building 
-              reliable web applications. I began my studies 
-              at Washington State University, transitioned to the workforce to gain 
-              practical experience, and am now completing my degree at Walla Walla Community College.
+              Software Engineer building full-stack web applications with Ruby on Rails. Currently
+              developing Pangu Terminal, a resource optimization platform for Wuthering Waves that
+              handles complex material calculations and inventory reconciliation across 50+ game items.
             </p>
             
-            <p className="text-text-secondary leading-relaxed mb-6">
-              I balance my academic growth with hands-on technical work:
-            </p>
-            
-            <ul className="space-y-4 mb-8">
-              <li className="custom-bullet text-text-secondary">
-                <span className="text-tertiary font-medium">Full-Stack Engineering:</span> Developing <strong>Pangu Terminal</strong>, a Rails 8 + Hotwire platform for real-time game data optimization.
-              </li>
-              <li className="custom-bullet text-text-secondary">
-                <span className="text-tertiary font-medium">IT Operations:</span> Serving as an <strong>IT Intern</strong>, managing infrastructure, security protocols, and hardware systems.
-              </li>
-              <li className="custom-bullet text-text-secondary">
-                <span className="text-tertiary font-medium">Independent Research:</span> Building logic-heavy projects, like <strong>Ruby chess engines</strong> and <strong>React apps</strong>, to master clean architecture.
-              </li>
-            </ul>
-            
-            <blockquote className="pull-quote text-lg italic">
-              "I approach every challenge with a researcher’s mindset: if I don't 
-              know the answer, I lean on documentation and persistent testing 
-              until I find the solution that lasts."
-            </blockquote>
-            
-            <p className="text-text-secondary leading-relaxed mt-8">
-              When I’m not at my desk, I’m usually writing technical blogs, exploring 
-              new frameworks, or being reminded by my cats that every bug is just 
-              a puzzle waiting to be solved.
+            <p className="text-lg leading-relaxed">
+              Currently completing my AAS in Software Design at Walla Walla Community College 
+              (June 2026) while developing production applications and gaining hands-on 
+              technical experience.
             </p>
           </div>
         </motion.div>
