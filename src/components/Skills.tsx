@@ -3,9 +3,9 @@ import { Code2, Layout, Server, Lightbulb } from 'lucide-react';
 
 const skillCategories = [
   {
-    title: 'Core Stack',
+    title: 'Backend',
     icon: Code2,
-    skills: ['Ruby on Rails', 'Hotwire', 'PostgreSQL', 'Docker'],
+    skills: ['Ruby on Rails', 'Hotwire (Turbo/Stimulus)', 'PostgreSQL', 'Docker', 'SQL (PostgreSQL)'],
   },
   {
     title: 'Frontend',
@@ -13,14 +13,14 @@ const skillCategories = [
     skills: ['JavaScript (ES6+)', 'React', 'HTML5', 'CSS3'],
   },
   {
-    title: 'DevOps & Infrastructure',
+    title: 'DevOps',
     icon: Server,
-    skills: ['Linux', 'Git/GitHub', 'CI/CD', 'DigitalOcean', 'Kamal'],
+    skills: ['Docker', 'Linux', 'Git/GitHub', 'CI/CD', 'DigitalOcean', 'Kamal'],
   },
   {
-    title: 'Foundations',
+    title: 'Technologies',
     icon: Lightbulb,
-    skills: ['OOP', 'Testing', 'Database Design', 'Version Control'],
+    skills: ['RESTful APIs', 'OOP', 'Testing (Rspec)', 'Database Design', 'JSONB', 'Service Objects'],
   },
 ];
 

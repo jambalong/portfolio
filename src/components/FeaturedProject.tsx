@@ -55,30 +55,36 @@ const FeaturedProject = () => {
                 Resource-optimization platform for Wuthering Waves
               </p>
               <p className="text-foreground leading-relaxed mb-6">
-                Production-deployed Rails app for resource planning and inventory tracking:
+                Full-stack Rails application that reconciles game progression requirements 
+                against player inventory, calculating exact material deficits and detecting 
+                synthesis opportunities across 50+ items.
               </p>
 
               {/* Feature List */}
               <ul className="text-foreground leading-relaxed mb-6 space-y-2">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Recursive calculation engine for multi-level crafting dependencies</span>
+                  <span>Polymorphic data model with JSONB-cached aggregations avoiding recomputation on page loads</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Server-side search filtering for better performance</span>
+                  <span>Cost calculation engine aggregating requirements across 10+ static cost tables and dynamic mapping tables</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Guest-to-user data migration for seamless account creation</span>
+                  <span>Cross-tier equivalence logic: 10 Medium EXP potions (30k exp) satisfy 1 Premium potions (20k exp)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Hotwire for SPA-like interactions without JavaScript frameworks</span>
+                  <span>3-to-1 synthesis detection identifying conversion opportunities from surplus lower-tier materials</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Docker + Kamal deployment for portable architecture</span>
+                  <span>Real-time UI updates using Hotwire Turbo Streams without full-page reloads</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Cookie-based guest sessions with automatic plan migration on signup</span>
                 </li>
               </ul>
               
