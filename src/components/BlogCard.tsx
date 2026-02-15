@@ -9,7 +9,7 @@ interface Props {
 
 const BlogCard = ({ post, index }: Props) => {
   const { title, description, date, tags, thumbnail, readTime } = post.data;
-  const postUrl = `/blog/${post.id}`;
+  const postUrl = `/blog/${post.slug}/`;
   
   const formatDate = (dateValue: Date) => {
     const d = new Date(dateValue);

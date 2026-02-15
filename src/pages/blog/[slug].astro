@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
   return blogEntries.map(entry => ({
-    params: { slug: entry.id }, 
+    params: { slug: entry.slug },
     props: { entry },
   }));
 }
