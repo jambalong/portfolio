@@ -35,7 +35,7 @@ const sortedPosts = [...posts].sort((a, b) => {
         <div class="container mx-auto max-w-5xl">
           <div class="grid md:grid-cols-2 gap-6">
             {sortedPosts.map((post, index) => (
-              <BlogCard 
+              <BlogCard
                 client:visible 
                 post={post} 
                 index={index} 
