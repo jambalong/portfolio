@@ -68,9 +68,9 @@ const Hero = () => {
               View Projects
               <ArrowDown size={18} />
             </a>
-            <a href="#contact" className="btn-secondary">
+            {/* <a href="#contact" className="btn-secondary">
               Contact
-            </a>
+            </a> */}
             <div className="flex items-center gap-3 ml-2">
               <a 
                 href="https://github.com/jambalong" 
