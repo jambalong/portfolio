@@ -203,7 +203,7 @@ body {
 }
 
 .gradient-text-hover {
-  @apply bg-linear-to-r from-primary via-secondary to-primary bg-clip-text text-transparent transition-all duration-500;
+  @apply bg-linear-to-r from-primary via-secondary to-primary bg-clip-text text-transparent transition-colors duration-500;
   background-size: 200% auto;
 }
 
@@ -231,7 +231,8 @@ body {
 
 /* Card hover lift */
 .card-lift {
-  @apply transition-all duration-300 ease-out;
+  @apply transition-transform duration-300 ease-out;
+  will-change: transform, opacity;
 }
 
 .card-lift:hover {
@@ -257,7 +258,7 @@ body {
 
 /* Tech tag pill */
 .tech-tag {
-  @apply px-3 py-1 rounded-full text-sm font-medium bg-secondary/20 text-secondary transition-all duration-200;
+  @apply px-3 py-1 rounded-full text-sm font-medium bg-secondary/20 text-secondary transition-colors duration-200;
 }
 
 .tech-tag:hover {
@@ -282,7 +283,8 @@ body {
 
 /* Section fade in animation */
 .fade-in-section {
-  @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  @apply opacity-0 translate-y-8;
+  will-change: transform, opacity;
 }
 
 .fade-in-section.visible {
@@ -302,28 +304,28 @@ body {
 /* Button styles */
 .btn-primary {
   @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold 
-          bg-primary text-primary-foreground transition-all duration-200
+          bg-primary text-primary-foreground transition-transform duration-200
           hover:scale-105 hover:shadow-lg hover:shadow-primary/30
           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
 }
 
 .btn-secondary {
   @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold 
-          border-2 border-secondary text-secondary transition-all duration-200
+          border-2 border-secondary text-secondary transition-transform duration-200
           hover:bg-secondary/10 hover:scale-105
           focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-background;
 }
 
 .btn-outline {
   @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold 
-          border-2 border-primary text-primary transition-all duration-200
+          border-2 border-primary text-primary transition-transform duration-200
           hover:bg-primary hover:text-primary-foreground hover:scale-105
           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
 }
 
 .btn-ghost {
   @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium 
-          text-text-secondary transition-all duration-200
+          text-text-secondary transition-colors duration-200
           hover:text-primary hover:bg-primary/10
           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
 }
@@ -335,7 +337,7 @@ body {
 
 .nav-link::after {
   content: '';
-  @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300;
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-transform duration-300;
 }
 
 .nav-link:hover {
@@ -377,16 +379,15 @@ body {
   }
 }
 
+/* Blog article styling */
 .blog-article {
-  /* Base Setup */
   @apply prose prose-invert mx-auto max-w-2xl leading-relaxed tracking-normal;
 
-  /* Global Elements */
   & p { @apply indent-8 text-justify text-text-secondary mb-6; }
   
   & p {
-    @apply text-justify text-text-secondary; /* Increased margin-bottom for "air" */
-    text-indent: 0 !important; /* Force remove all indents */
+    @apply text-justify text-text-secondary;
+    text-indent: 0 !important;
   }
 
   & strong { @apply text-foreground font-semibold; }
@@ -396,7 +397,6 @@ body {
     &:hover { @apply border-secondary; }
   }
 
-  /* Header Styling */
   & header {
     @apply mb-12;
     
@@ -418,22 +418,16 @@ body {
   }
 
   & ul, & ol {
-    /* Ensures the list markers (dots/numbers) match your muted theme */
     @apply marker:text-text-muted;
 
     & li {
-      /* Forces the list text to match your paragraph color */
       @apply text-text-secondary leading-relaxed mb-4;
-      
-      /* Resets the indent so bullets align with the left margin */
       text-indent: 0 !important;
 
-      /* Highlighting the 'Title' of the list item if you use strong tags */
       & strong {
         @apply text-text-primary font-semibold;
       }
 
-      /* Ensures nested paragraphs in lists don't have the 8px indent */
       & p {
         text-indent: 0 !important;
         @apply mb-1 text-text-secondary;
@@ -441,7 +435,6 @@ body {
     }
   }
 
-  /* Content Typography */
   & :is(h2, h3) {
     @apply text-text-primary font-bold tracking-tight mt-16 mb-6;
     @apply bg-linear-to-r from-text-primary to-text-primary/60 bg-clip-text text-transparent;
@@ -463,12 +456,12 @@ body {
     }
   }
 
-  /* Media (Images) */
   & img {
     @apply my-12 rounded-xl mx-auto block w-auto max-w-full;
     @apply border border-border transition-transform duration-500 hover:scale-[1.01];
     max-height: 320px; 
     box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.5);
+    will-change: transform, opacity;
   }
 
   & :is(img + p > em, img + em) {
@@ -478,10 +471,8 @@ body {
     font-style: normal;
   }
 
-  /* Figma Embeds */
   & .figma-container {
-    @apply my-16 relative w-full overflow-hidden rounded-xl border-2 border-border;
-    @apply transition-all duration-500 ease-out aspect-video;
+    @apply my-16 relative w-full overflow-hidden rounded-xl border-2 border-border transition-transform duration-500 ease-out aspect-video;
     min-height: 600px;
     background: color-mix(in srgb, var(--color-border) 40%, transparent);
     box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.5);
@@ -491,7 +482,8 @@ body {
     }
 
     & iframe {
-      @apply absolute inset-0 w-full h-full border-0 grayscale-20 transition-all duration-700;
+      @apply absolute inset-0 w-full h-full border-0 grayscale-20;
+      will-change: transform, opacity;
       &:hover { @apply grayscale-0; }
     }
   }
@@ -510,4 +502,3 @@ body {
     content: "" !important;
   }
 }
-
