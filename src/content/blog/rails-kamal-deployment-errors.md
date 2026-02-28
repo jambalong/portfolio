@@ -146,4 +146,4 @@ For now, the Wuthering Waves Planner (while still a blank slate) is live, a test
 
 This video provides a helpful guide for fellow developers planning to attempt their first [Rails 8 + Kamal deployment](https://www.youtube.com/watch?v=_lRlOGS8Bgo).
 
-While this article is what assisted me in setting up all three [Solid gems in Rails 8 to use a single database in production](https://briancasel.gitbook.io/cheatsheet/rails-1/setup-solid-queue-cable-cache-in-rails-8-to-share-a-single-database).
+While this article is what assisted me in setting up all three ~~[Solid gems in Rails 8 to use a single database in production](https://briancasel.gitbook.io/cheatsheet/rails-1/setup-solid-queue-cable-cache-in-rails-8-to-share-a-single-database)~~. Alternative: [Setting Up Solid Cache on Heroku with a Single Database](https://dev.to/mrispoli24/setting-up-solid-cache-on-heroku-with-a-single-database-49c5)
