@@ -3,50 +3,57 @@ import { motion } from 'framer-motion';
 
 const CallToAction = () => {
   return (
-    <section id="contact" className="py-20 bg-linear-to-b from-background to-popover">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="dt-surface py-24">
+      <div className="w-full max-w-4xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-            Let's Work Together
+          {/* Eyebrow */}
+          <p className="dt-eyebrow mb-4">Contact</p>
+
+          {/* Heading */}
+          <h2 className="dt-display mb-6" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
+            Available for the <em>Right Opportunity</em>
           </h2>
-          <p className="text-text-secondary text-lg leading-relaxed mb-10">
-            I'm actively seeking Software Engineer opportunities in Washington State or 
-            remote positions where I can contribute to building quality software.
+
+          {/* Divider */}
+          <div className="dt-rule mb-8" />
+
+          {/* Body */}
+          <p className="dt-body mb-10" style={{ fontSize: '15px', maxWidth: '480px' }}>
+            I'm looking for my first engineering role, remote or Washington State.<br />
+            If you're building something interesting and value someone who builds and delivers, let's talk.
           </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a 
-              href="mailto:johnalvin@ambalong.dev" 
-              className="btn-primary w-full sm:w-auto"
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="mailto:johnalvin@ambalong.dev"
+              className="dt-btn-primary"
             >
-              <Mail size={20} />
-              Send Me an Email
+              <Mail size={14} /> Send an Email
             </a>
-            <a 
-              href="/resume.pdf" 
+            <a
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary w-full sm:w-auto"
+              className="dt-btn-ghost"
             >
-              <FileText size={20} />
-              Download Resume
+              <FileText size={14} /> Download Resume
             </a>
-            <a 
-              href="https://linkedin.com/jambalong" 
+            <a
+              href="https://www.linkedin.com/in/jambalong"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary w-full sm:w-auto"
+              className="dt-btn-ghost"
             >
-              <Linkedin size={20} />
-              View LinkedIn
+              <Linkedin size={14} /> LinkedIn
             </a>
           </div>
+
         </motion.div>
       </div>
     </section>

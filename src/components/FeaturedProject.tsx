@@ -1,118 +1,126 @@
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import panguScreenshot from '@/assets/pangu-terminal-screenshot.png';
 
+const techStack = ['Ruby on Rails 8', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2'];
+
+const features = [
+  'Polymorphic data model with JSONB-cached aggregations avoiding recomputation on page loads',
+  'Cost calculation engine aggregating requirements across 10+ static cost tables and dynamic mapping tables',
+  'Cross-tier equivalence logic: 10 Medium EXP potions (30k exp) satisfy 1 Premium potion (20k exp)',
+  '3-to-1 synthesis detection identifying conversion opportunities from surplus lower-tier materials',
+  'Real-time UI updates using Hotwire Turbo Streams without full-page reloads',
+  'Cookie-based guest sessions with automatic plan migration on signup',
+];
+
 const FeaturedProject = () => {
   return (
-    <section id="featured" className="py-20 bg-popover">
-      <div className="container mx-auto px-6">
+    <section id="featured" className="dt-surface py-24">
+      <div className="w-full max-w-6xl mx-auto px-6">
+
+        {/* Section eyebrow + rule */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          className="mb-12"
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative"
         >
-          {/* Badge */}
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-tertiary text-tertiary-foreground mb-8">
-            Currently Building
-          </span>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Screenshot */}
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="browser-mockup card-lift"
-            >
-              <div className="browser-mockup-bar">
-                <div className="browser-dot bg-destructive" />
-                <div className="browser-dot bg-warning" />
-                <div className="browser-dot bg-success" />
-                <span className="ml-4 text-sm text-text-muted">panguterminal.ambalong.dev</span>
-              </div>
-              <img 
-                src={typeof panguScreenshot === 'string' ? panguScreenshot : panguScreenshot.src} 
-                alt="Pangu Terminal dashboard showing resource optimization interface"
-                className="w-full h-auto"
-              />
-            </motion.div>
-            
-            {/* Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="glass-lift rounded-2xl p-8"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Pangu Terminal
-              </h2>
-              <p className="text-lg text-text-secondary mb-4">
-                Resource-optimization platform for Wuthering Waves
-              </p>
-              <p className="text-foreground leading-relaxed mb-6">
-                Full-stack Rails application that reconciles game progression requirements 
-                against player inventory, calculating exact material deficits and detecting 
-                synthesis opportunities across 50+ items.
-              </p>
-
-              {/* Feature List */}
-              <ul className="text-foreground leading-relaxed mb-6 space-y-2">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Polymorphic data model with JSONB-cached aggregations avoiding recomputation on page loads</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Cost calculation engine aggregating requirements across 10+ static cost tables and dynamic mapping tables</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Cross-tier equivalence logic: 10 Medium EXP potions (30k exp) satisfy 1 Premium potions (20k exp)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>3-to-1 synthesis detection identifying conversion opportunities from surplus lower-tier materials</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Real-time UI updates using Hotwire Turbo Streams without full-page reloads</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span>Cookie-based guest sessions with automatic plan migration on signup</span>
-                </li>
-              </ul>
-              
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-8">
-                {['Ruby on Rails 8', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2'].map((tech) => (
-                  <span key={tech} className="tech-tag">{tech}</span>
-                ))}
-              </div>
-              
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-4">
-                <a href="https://panguterminal.ambalong.dev" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  <ExternalLink size={18} />
-                  Live Demo
-                </a>
-                <a href="https://github.com/jambalong/pangu-terminal" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                  <Github size={18} />
-                  View Code
-                </a>
-                {/* <a href="#" className="btn-ghost text-secondary">
-                  Read Case Study
-                  <ArrowRight size={18} />
-                </a> */}
-              </div>
-            </motion.div>
-          </div>
+          <p className="dt-eyebrow mb-3">Currently Building</p>
+          <div className="dt-rule" />
         </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+          {/* Browser mockup */}
+          <motion.div
+            className="dt-browser"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <div className="dt-browser-bar">
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'var(--dt-red)' }} />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'var(--dt-orange)' }} />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'var(--dt-green)' }} />
+              <span className="dt-mono ml-3">panguterminal.ambalong.dev</span>
+            </div>
+            <img
+              src={typeof panguScreenshot === 'string' ? panguScreenshot : (panguScreenshot as any).src}
+              alt="Pangu Terminal dashboard showing resource optimization interface"
+              className="w-full h-auto block"
+            />
+          </motion.div>
+
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="dt-display mb-2" style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}>
+              Pangu <em>Terminal</em>
+            </h2>
+
+            <p className="dt-eyebrow-muted mb-6">
+              Resource-optimization platform for Wuthering Waves
+            </p>
+
+            <p className="dt-body mb-6" style={{ fontSize: '14px' }}>
+              Full-stack Rails application that reconciles game progression requirements
+              against player inventory, calculating exact material deficits and detecting
+              synthesis opportunities across 50+ items.
+            </p>
+
+            {/* Feature list */}
+            <ul className="mb-7 flex flex-col gap-2.5" style={{ listStyle: 'none', padding: 0 }}>
+              {features.map((f, i) => (
+                <motion.li
+                  key={i}
+                  className="dt-body relative pl-5"
+                  style={{ fontSize: '13px' }}
+                  initial={{ opacity: 0, x: -8 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 + i * 0.05 }}
+                  viewport={{ once: true }}
+                >
+                  <span className="absolute left-0" style={{ color: 'var(--dt-accent)', opacity: 0.6 }}>–</span>
+                  {f}
+                </motion.li>
+              ))}
+            </ul>
+
+            {/* Tech stack */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {techStack.map((tech) => (
+                <span key={tech} className="dt-tag">{tech}</span>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://panguterminal.ambalong.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="dt-btn-primary"
+              >
+                <ExternalLink size={14} /> Live Demo
+              </a>
+              <a
+                href="https://github.com/jambalong/pangu-terminal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="dt-btn-ghost"
+              >
+                <Github size={14} /> View Code
+              </a>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
