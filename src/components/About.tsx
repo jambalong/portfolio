@@ -47,8 +47,8 @@ const About = () => {
           >
             {[
               { label: 'Education', value: 'AAS Software Design, WWCC — June 2026' },
-              { label: 'Location',  value: 'Washington State' },
-              { label: 'Blog',      value: 'ambalong.dev/blog', href: 'https://ambalong.dev/blog' },
+              { label: 'Location', value: 'Washington State' },
+              { label: 'Blog', value: 'ambalong.dev/blog', href: 'https://ambalong.dev/blog' },
             ].map(({ label, value, href }) => (
               <div key={label} className="flex gap-6">
                 <span className="dt-eyebrow-muted" style={{ minWidth: '72px' }}>{label}</span>
