@@ -2,7 +2,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import panguScreenshot from '@/assets/pangu-terminal-screenshot.png';
 
-const techStack = ['Ruby on Rails 8.1', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2', 'Rack::Attack'];
+const techStack = ['Ruby on Rails 8.1', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2'];
 
 const features = [
   'Polymorphic associations with JSONB-cached plan output avoiding recomputation on every page load',
