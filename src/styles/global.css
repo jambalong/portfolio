@@ -23,11 +23,9 @@
   --font-body: 'Space Grotesk', sans-serif;
 
   /* Animations */
-  --animate-mesh-move: meshMove 20s ease-in-out infinite;
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
-  --animate-float: float 6s ease-in-out infinite;
 }
 
 :root {
@@ -64,37 +62,6 @@
 @keyframes fade-in-up {
   0%   { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fade-in {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes slide-in-right {
-  0%   { transform: translateX(100%); opacity: 0; }
-  100% { transform: translateX(0);    opacity: 1; }
-}
-
-@keyframes scale-in {
-  0%   { transform: scale(0.95); opacity: 0; }
-  100% { transform: scale(1);    opacity: 1; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(267 84% 81% / 0.3); }
-  50%       { box-shadow: 0 0 40px hsl(267 84% 81% / 0.5); }
-}
-
-@keyframes meshMove {
-  0%, 100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
-  33%       { background-position: 30% 20%, 70% 80%, 60% 40%; }
-  66%       { background-position: 20% 40%, 90% 60%, 40% 60%; }
 }
 
 @keyframes bounce {
@@ -191,15 +158,6 @@ body::after {
 .dt-card-red:hover    { border-color: var(--dt-red); }
 .dt-card-green:hover  { border-color: var(--dt-green); }
 .dt-card-orange:hover { border-color: var(--dt-orange); }
-
-/* Left accent stripe */
-.dt-stripe {
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--dt-accent), rgba(124,106,255,0.25));
-  transition: opacity 0.2s ease;
-}
 
 /* ─── Typography ─── */
 
@@ -376,6 +334,16 @@ body::after {
   padding: 10px 16px;
   border-bottom: 1px solid var(--dt-border);
   background: var(--dt-surface);
+}
+
+/* ─── Navigation responsive ─── */
+
+.nav-desktop { display: none; }
+.nav-mobile-btn { display: flex; }
+
+@media (min-width: 768px) {
+  .nav-desktop    { display: flex !important; }
+  .nav-mobile-btn { display: none !important; }
 }
 
 /* ─── Blog article styling ─── */
