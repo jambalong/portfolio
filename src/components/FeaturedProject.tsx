@@ -2,15 +2,16 @@ import { ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import panguScreenshot from '@/assets/pangu-terminal-screenshot.png';
 
-const techStack = ['Ruby on Rails 8', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2'];
+const techStack = ['Ruby on Rails 8.1', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2', 'Rack::Attack'];
 
 const features = [
-  'Polymorphic data model with JSONB-cached aggregations avoiding recomputation on page loads',
-  'Cost calculation engine aggregating requirements across 10+ static cost tables and dynamic mapping tables',
-  'Cross-tier equivalence logic: 10 Medium EXP potions (30k exp) satisfy 1 Premium potion (20k exp)',
+  'Polymorphic associations with JSONB-cached plan output avoiding recomputation on every page load',
+  'Service-based cost engine querying 10+ static cost tables across character and weapon upgrade paths',
   '3-to-1 synthesis detection identifying conversion opportunities from surplus lower-tier materials',
-  'Real-time UI updates using Hotwire Turbo Streams without full-page reloads',
-  'Cookie-based guest sessions with automatic plan migration on signup',
+  'EXP potion equivalence logic reconciling cross-tier satisfaction against plan requirements',
+  'Versioned REST API with hashed token authentication, rate limiting, and integration test coverage',
+  'Real-time inventory updates via Hotwire Turbo Streams, entire synthesis families re-render on edit',
+  'Cookie-based guest sessions with plan migration path on account signup',
 ];
 
 const FeaturedProject = () => {

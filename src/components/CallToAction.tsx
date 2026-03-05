@@ -23,7 +23,7 @@ const CallToAction = () => {
           <div className="dt-rule mb-8" />
 
           {/* Body */}
-          <p className="dt-body mb-10" style={{ fontSize: '15px', maxWidth: '480px' }}>
+          <p className="dt-body mb-10" style={{ fontSize: '15px', maxWidth: '512px' }}>
             I'm looking for my first engineering role, remote or Washington State.<br />
             If you're building something interesting and value someone who builds and delivers, let's talk.
           </p>
