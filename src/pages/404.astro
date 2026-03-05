@@ -1,39 +1,38 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const pathname = Astro.url.pathname;
 ---
 
-<Layout title="404: Page Not Found">
-  <div class="flex min-h-[80vh] flex-col items-center justify-center px-4 text-center">
-    <div class="space-y-6">
-      <h1 class="text-9xl font-extrabold tracking-widest text-primary/20 relative">
-        404
-        <span class="absolute inset-0 flex items-center justify-center text-4xl text-primary tracking-normal">
-          Oops!
-        </span>
-      </h1>
+<Layout title="404 | John Alvin Ambalong">
+  <div class="dt-bg min-h-screen flex flex-col">
+    <Navigation client:load />
 
-      <div class="space-y-2">
-        <h2 class="text-2xl font-semibold text-text">Page Not Found</h2>
-        <p class="text-text-muted max-w-md mx-auto">
-          The path <code class="bg-surface0 text-red px-1.5 py-0.5 rounded font-mono text-sm">{pathname}</code> 
-          could not be found or has been moved.
+    <main class="flex-1 flex items-center justify-center px-6">
+      <div class="w-full max-w-4xl mx-auto">
+
+        <p class="dt-eyebrow mb-4" style="color: var(--dt-red)">404</p>
+
+        <h1 class="dt-display mb-6" style="font-size: clamp(32px, 5vw, 56px)">
+          Page <em style="color: var(--dt-red)">not found</em>
+        </h1>
+
+        <div class="dt-rule mb-8" style="max-width: 320px; background: linear-gradient(90deg, var(--dt-border), rgba(255,106,106,0.35), var(--dt-border))" />
+
+        <p class="dt-body mb-3" style="font-size: 14px">
+          The path you're looking for doesn't exist or has been moved.
         </p>
-      </div>
+        <p class="dt-mono mb-10" style="color: var(--dt-red)">
+          {pathname}
+        </p>
 
-      <div class="pt-4">
-        <a 
-          href="/" 
-          class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-        >
-          Return Home
-        </a>
+        <a href="/" class="dt-btn-primary" style="border-color: var(--dt-green); color: var(--dt-green); background: rgba(106,255,176,0.1)">Return Home</a>
+
       </div>
-    </div>
+    </main>
+
+    <Footer />
   </div>
 </Layout>
-
-<script>
-  console.error("404 Error: User accessed:", window.location.pathname);
-</script>

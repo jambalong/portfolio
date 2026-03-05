@@ -1,46 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
-
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-
-  --color-tertiary: hsl(var(--tertiary));
-  --color-tertiary-foreground: hsl(var(--tertiary-foreground));
-
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
-
-  --color-success: hsl(var(--success));
-  --color-warning: hsl(var(--warning));
-
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-
-  --color-text-primary: hsl(var(--text-primary));
-  --color-text-secondary: hsl(var(--text-secondary));
-  --color-text-muted: hsl(var(--text-muted));
 
   /* Dark-technical surface tokens */
   --color-dt-bg: var(--dt-bg);
@@ -53,10 +16,6 @@
   --color-dt-red: var(--dt-red);
   --color-dt-green: var(--dt-green);
   --color-dt-orange: var(--dt-orange);
-
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
 
   /* Fonts */
   --font-display: 'Instrument Serif', serif;
@@ -72,50 +31,10 @@
 }
 
 :root {
-  /* ─── Catppuccin Mocha ─── */
-  --background: 240 21% 15%;
-  --foreground: 226 64% 88%;
-
-  --card: 240 23% 9%;
-  --card-foreground: 226 64% 88%;
-
-  --popover: 240 21% 12%;
-  --popover-foreground: 226 64% 88%;
-
   --primary: 267 84% 81%;
-  --primary-foreground: 240 21% 15%;
-
-  --secondary: 217 92% 76%;
-  --secondary-foreground: 240 21% 15%;
-
-  --tertiary: 23 92% 75%;
-  --tertiary-foreground: 240 21% 15%;
-
-  --muted: 240 21% 12%;
-  --muted-foreground: 228 24% 72%;
-
-  --accent: 217 92% 76%;
-  --accent-foreground: 240 21% 15%;
-
-  --destructive: 343 81% 75%;
-  --destructive-foreground: 240 21% 15%;
-
-  --success: 115 54% 76%;
-  --warning: 41 86% 83%;
-
-  --border: 240 17% 17%;
-  --input: 240 17% 17%;
-  --ring: 267 84% 81%;
-
-  --radius: 0.75rem;
 
   --text-primary: 226 64% 88%;
-  --text-secondary: 227 35% 80%;
   --text-muted: 228 24% 72%;
-
-  --glass-bg: 240 21% 15% / 0.8;
-  --glass-border: 240 17% 17% / 0.5;
-
 
   /* ─── Dark-technical palette ─── */
   --dt-bg:      #0a0a0f;
@@ -186,7 +105,7 @@
 /* ─── Base ─── */
 
 * {
-  @apply border-border;
+  @apply border-dt-border;
 }
 
 html {
@@ -195,8 +114,8 @@ html {
 }
 
 body {
-  @apply bg-background text-foreground font-sans antialiased;
-  font-family: 'Inter', system-ui, sans-serif;
+  @apply bg-dt-bg text-dt-text font-sans antialiased;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
 }
 
 body::after {
@@ -210,7 +129,7 @@ body::after {
 }
 
 ::selection {
-  @apply bg-primary/30 text-foreground;
+  @apply bg-dt-bg/30 text-dt-text;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -375,6 +294,27 @@ body::after {
   background: rgba(124,106,255,0.2);
 }
 
+.dt-btn-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: 1px solid var(--dt-green);
+  background: rgba(106,255,176,0.1);
+  color: var(--dt-green);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+.dt-btn-green:hover {
+  background: rgba(106,255,176,0.2);
+}
+
 .dt-btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -502,7 +442,7 @@ body::after {
   }
 
   & ul, & ol {
-    @apply marker:text-text-muted;
+    @apply marker:text-dt-muted;
 
     & li {
       font-family: 'Space Grotesk', sans-serif;

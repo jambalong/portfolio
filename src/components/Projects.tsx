@@ -45,9 +45,9 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="dt-eyebrow-green mb-3" style={{ opacity: 0.8 }}>Other Work</p>
-          <h2 className="dt-display mb-3" style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}>
-            Additional <em style={{ color: 'var(--dt-green)' }}>Projects</em>
+          <p className="dt-eyebrow mb-3" style={{ opacity: 0.8 }}>Other Work</p>
+          <h2 className="dt-display mb-3" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
+            Additional <em>Projects</em>
           </h2>
           <p className="dt-body max-w-md" style={{ fontSize: '14px' }}>
             A selection of personal projects showcasing different skills and technologies.

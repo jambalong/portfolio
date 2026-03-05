@@ -12,11 +12,11 @@ const CallToAction = () => {
           viewport={{ once: true }}
         >
           {/* Eyebrow */}
-          <p className="dt-eyebrow mb-4">Contact</p>
+          <p className="dt-eyebrow-green mb-4">Contact</p>
 
           {/* Heading */}
           <h2 className="dt-display mb-6" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
-            Available for the <em>Right Opportunity</em>
+            Available for the <em style={{ color: 'var(--dt-green)' }}>Right Opportunity</em>
           </h2>
 
           {/* Divider */}
@@ -32,7 +32,7 @@ const CallToAction = () => {
           <div className="flex flex-wrap gap-3">
             <a
               href="mailto:johnalvin@ambalong.dev"
-              className="dt-btn-primary"
+              className="dt-btn-green"
             >
               <Mail size={14} /> Send an Email
             </a>

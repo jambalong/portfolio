@@ -50,7 +50,7 @@ const Skills = () => {
           viewport={{ once: true }}
         >
           <p className="dt-eyebrow mb-3">Toolkit</p>
-          <h2 className="dt-display mb-3" style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}>
+          <h2 className="dt-display mb-3" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
             Technical <em>Skills</em>
           </h2>
           <p className="dt-body max-w-md" style={{ fontSize: '14px' }}>
