@@ -18,11 +18,13 @@ A modern, high-performance portfolio built with Astro, React, and Tailwind CSS. 
 ## Features
 
 ### **Project Showcase**
+
 - Featured project spotlight for Pangu Terminal (Rails 8 + Hotwire)
 - Additional projects: Ruby Chess Engine, Pebble List
 - Live demos and source code links
 
 ### **Technical Blog**
+
 - Type-safe blog powered by Astro Content Collections
 - Markdown/MDX support with frontmatter validation
 - Custom syntax highlighting with Vesper theme
@@ -30,24 +32,28 @@ A modern, high-performance portfolio built with Astro, React, and Tailwind CSS. 
 - Responsive grid layout with tags and reading time
 
 ### **Performance & Accessibility**
+
 - Static site generation for near-instant page loads
 - Partial hydration via Astro Islands keeps JavaScript minimal
 - Mobile-first responsive design
 - Semantic HTML
 
 ### **Developer Experience**
+
 - Type-safe content with Zod schemas
 - Hot module replacement in development
 - React components with Astro Islands architecture
-- Tailwind utility-first styling with `@layer components` for correct cascade
+- Tailwind utility-first styling
 
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 24+
 - npm
 
 ### Local Development
+
 ```bash
 # Clone the repository
 git clone https://github.com/jambalong/portfolio.git
@@ -72,6 +78,7 @@ Visit `http://localhost:4321` to see your local site.
 | `npm run astro` | Run Astro CLI commands |
 
 ## Project Structure
+
 ```
 /
 ├── public/                       # Static assets (images, fonts, resume)
@@ -138,6 +145,7 @@ The site uses a custom **dark-technical** palette built around near-black surfac
 ## Adding Blog Posts
 
 Create a new Markdown file in `src/content/blog/`:
+
 ```markdown
 ---
 title: "Your Post Title"
@@ -152,6 +160,7 @@ Your content here using Markdown or MDX...
 ```
 
 **Frontmatter fields:**
+
 - `title` (required): Post title
 - `description` (required): SEO description and card preview
 - `date` (required): Publication date
@@ -174,11 +183,13 @@ This site is configured for zero-config deployment on Netlify:
 3. **Push to `main` branch** → automatic deployment
 
 **Custom Domain:**
+
 - Add `ambalong.dev` in Netlify domain settings
 - Update DNS records as instructed
 - Free SSL certificate provisioned automatically
 
 ### Manual Build
+
 ```bash
 npm run build
 # Deploy the dist/ folder to any static hosting service
@@ -187,7 +198,9 @@ npm run build
 ## Tech Details
 
 ### Astro Islands Architecture
+
 React components use Astro's partial hydration:
+
 ```astro
 <Hero client:load />              <!-- Hydrate immediately -->
 <Projects client:visible />       <!-- Hydrate when visible -->
@@ -195,7 +208,9 @@ React components use Astro's partial hydration:
 ```
 
 ### Content Collections
+
 Type-safe blog posts with Zod validation:
+
 ```typescript
 // src/content/config.ts
 const blog = defineCollection({
@@ -211,9 +226,11 @@ const blog = defineCollection({
 ```
 
 ### Syntax Highlighting
+
 Shiki with the Vesper theme. The `pre` element background is overridden to `var(--dt-surface)` so code blocks integrate with the design system rather than using Vesper's default background. Copy buttons are injected client-side via a script in `[slug].astro`.
 
 ### Tailwind v4 + Custom Classes
+
 All custom `.dt-*` and `.blog-article` classes are wrapped in `@layer components` in `global.css`, ensuring Tailwind utility classes always win in the cascade (e.g. `md:hidden` correctly hides the mobile menu button on desktop).
 
 ## License
