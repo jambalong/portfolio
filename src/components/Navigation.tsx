@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { label: 'Projects', href: '/#featured' },
-  { label: 'Skills',   href: '/#skills' },
-  { label: 'About',    href: '/#about' },
-  { label: 'Blog',     href: '/blog' },
+  { label: 'Skills', href: '/#skills' },
+  { label: 'About', href: '/#about' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 const Navigation = () => {
@@ -49,7 +49,7 @@ const Navigation = () => {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="nav-desktop items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -83,7 +83,7 @@ const Navigation = () => {
         {/* Mobile menu button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden dt-icon-link"
+          className="nav-mobile-btn dt-icon-link"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
