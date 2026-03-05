@@ -5,68 +5,93 @@ const skillCategories = [
   {
     title: 'Backend',
     icon: Code2,
-    skills: ['Ruby on Rails', 'Hotwire (Turbo/Stimulus)', 'PostgreSQL', 'Docker', 'SQL (PostgreSQL)'],
+    skills: ['Ruby on Rails', 'Hotwire (Turbo / Stimulus)', 'PostgreSQL'],
+    accentCard: 'dt-card-accent',
+    accentEyebrow: 'dt-eyebrow',
+    accentColor: 'var(--dt-accent)',
   },
   {
     title: 'Frontend',
     icon: Layout,
-    skills: ['JavaScript (ES6+)', 'React', 'HTML5', 'CSS3'],
+    skills: ['JavaScript', 'Stimulus.js', 'HTML / CSS', 'Rails Views (ERB)'],
+    accentCard: 'dt-card-green',
+    accentEyebrow: 'dt-eyebrow-green',
+    accentColor: 'var(--dt-green)',
   },
   {
     title: 'DevOps',
     icon: Server,
-    skills: ['Docker', 'Linux', 'Git/GitHub', 'CI/CD', 'DigitalOcean', 'Kamal'],
+    skills: ['Docker', 'Linux', 'DigitalOcean', 'Kamal 2'],
+    accentCard: 'dt-card-orange',
+    accentEyebrow: 'dt-eyebrow-orange',
+    accentColor: 'var(--dt-orange)',
   },
   {
-    title: 'Technologies',
+    title: 'Practices',
     icon: Lightbulb,
-    skills: ['RESTful APIs', 'OOP', 'Testing (Rspec)', 'Database Design', 'JSONB', 'Service Objects'],
+    skills: ['RESTful APIs', 'OOP', 'Testing', 'JSONB', 'Service Objects'],
+    accentCard: 'dt-card-red',
+    accentEyebrow: 'dt-eyebrow-red',
+    accentColor: 'var(--dt-red)',
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-popover">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="dt-surface py-24">
+      <div className="w-full max-w-4xl mx-auto px-6">
+
+        {/* Section header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          className="mb-14"
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Technical Skills
+          <p className="dt-eyebrow mb-3">Toolkit</p>
+          <h2 className="dt-display mb-3" style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}>
+            Technical <em>Skills</em>
           </h2>
-          <p className="text-text-secondary max-w-2xl mx-auto">
-            Technologies and concepts I work with to build production-ready applications
+          <p className="dt-body max-w-md" style={{ fontSize: '14px' }}>
+            Technologies and concepts I work with to build production-ready applications.
           </p>
         </motion.div>
-        
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
+              className={`dt-card dt-card-on-surface ${category.accentCard} p-6`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="card-lift bg-card rounded-xl p-6 border border-border"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <category.icon className="w-5 h-5 text-primary" />
+              {/* Header */}
+              <div className="flex items-center gap-3 mb-5">
+                <div
+                  className="flex items-center justify-center w-8 h-8"
+                  style={{
+                    border: `1px solid ${category.accentColor}44`,
+                    background: `${category.accentColor}0d`,
+                  }}
+                >
+                  <category.icon size={16} style={{ color: category.accentColor }} />
                 </div>
-                <h3 className="text-xl font-semibold text-primary">
+                <h3 className={category.accentEyebrow} style={{ fontSize: '11px' }}>
                   {category.title}
                 </h3>
               </div>
-              <div className="flex flex-wrap gap-x-2 text-text-secondary">
+
+              {/* Skills */}
+              <div className="flex flex-wrap">
                 {category.skills.map((skill, skillIndex) => (
-                  <span key={skill} className="hover:text-primary transition-colors cursor-default">
+                  <span key={skill} className="dt-body" style={{ fontSize: '13px' }}>
                     {skill}
                     {skillIndex < category.skills.length - 1 && (
-                      <span className="text-primary mx-1"> ·</span>
+                      <span style={{ color: category.accentColor, opacity: 0.4, margin: '0 8px' }}>·</span>
                     )}
                   </span>
                 ))}
@@ -74,6 +99,7 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -7,94 +7,109 @@ interface Props {
   index: number;
 }
 
+const accentVars = [
+  { card: 'dt-card-accent', eyebrow: 'dt-eyebrow',        color: 'var(--dt-accent)' },
+  { card: 'dt-card-red',    eyebrow: 'dt-eyebrow-red',    color: 'var(--dt-red)'    },
+  { card: 'dt-card-green',  eyebrow: 'dt-eyebrow-green',  color: 'var(--dt-green)'  },
+  { card: 'dt-card-orange', eyebrow: 'dt-eyebrow-orange', color: 'var(--dt-orange)' },
+];
+
 const BlogCard = ({ post, index }: Props) => {
   const { title, description, date, tags, thumbnail, readTime } = post.data;
   const postUrl = `/blog/${post.slug}/`;
+  const accent = accentVars[index % accentVars.length];
 
   const formatDate = (dateValue: Date) => {
-    const d = new Date(dateValue);
-    return d.toLocaleDateString('en-US', {
+    return new Date(dateValue).toLocaleDateString('en-US', {
       year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      timeZone: 'UTC'
+      month: 'short',
+      day: '2-digit',
+      timeZone: 'UTC',
     });
   };
 
   return (
     <motion.article
+      className={`dt-card ${accent.card} flex flex-col h-full overflow-hidden`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
     >
-      {/* Thumbnail Container with reserved space */}
+      {/* Thumbnail */}
       <a
         href={postUrl}
-        className="relative aspect-video bg-card/80 overflow-hidden border-b border-border/50 block"
+        className="relative block overflow-hidden border-b"
+        style={{ aspectRatio: '16/9', borderColor: 'var(--dt-border)', background: 'var(--dt-bg)' }}
       >
         {thumbnail ? (
           <img
             src={thumbnail}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover block transition-transform duration-500 hover:scale-[1.03]"
+            style={{ filter: 'brightness(0.85)' }}
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-muted/30">
-            <span className="text-text-muted/20 font-bold italic tracking-tighter text-2xl">
-              No Available Image
-            </span>
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="dt-eyebrow-muted" style={{ opacity: 0.2 }}>No Image</span>
           </div>
         )}
-
-        {/* Subtle overlay gradient */}
-        <div className="absolute inset-0 bg-linear-to-t from-card/40 to-transparent pointer-events-none" />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'linear-gradient(to top, rgba(10,10,15,0.4), transparent)' }}
+        />
       </a>
 
-      {/* Card Content */}
+      {/* Content */}
       <div className="p-6 flex flex-col grow">
-        <time className="text-sm text-text-muted">
-          {formatDate(date)}
-        </time>
 
-        <h2 className="text-xl font-semibold text-primary mt-2 mb-3 group-hover:text-primary transition-colors">
-          <a href={postUrl}>{title}</a>
+        {/* Date */}
+        <time className="dt-mono mb-3 block">{formatDate(date)}</time>
+
+        {/* Title */}
+        <h2 className="dt-display mb-2" style={{ fontSize: '20px', lineHeight: 1.3 }}>
+          <a href={postUrl} style={{ textDecoration: 'none', color: 'inherit' }}>
+            {title}
+          </a>
         </h2>
 
-        <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-2">
+        {/* Description */}
+        <p className="dt-body mb-4" style={{ fontSize: '13px' }}>
           {description}
         </p>
 
         <div className="grow" />
 
-        <div className="flex flex-wrap gap-2 mb-6">
-          {tags.map((tag: string) => (
-            <span
-              key={tag}
-              className="text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        {/* Tags */}
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mb-5">
+            {tags.map((tag: string) => (
+              <span key={tag} className="dt-tag">{tag}</span>
+            ))}
+          </div>
+        )}
 
-        <div className="flex items-center justify-between pt-4 border-t border-border/50">
-          <span className="flex items-center gap-1.5 text-xs text-text-muted font-medium">
-            <Clock size={14} />
+        {/* Footer */}
+        <div
+          className="flex items-center justify-between pt-4"
+          style={{ borderTop: '1px solid var(--dt-border)' }}
+        >
+          <span className="dt-mono flex items-center gap-1.5">
+            <Clock size={12} />
             {readTime || '5 min read'}
           </span>
+
           <a
             href={postUrl}
-            className="flex items-center gap-1 text-sm font-medium text-secondary hover:text-secondary transition-colors group/link"
+            className="dt-read-more"
+            style={{ opacity: 0.8, color: accent.color }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1'; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.8'; }}
           >
-            Read More
-            <ArrowRight
-              size={14}
-              className="group-hover/link:translate-x-1 transition-transform"
-            />
+            Read post <ArrowRight size={12} />
           </a>
         </div>
+
       </div>
     </motion.article>
   );
