@@ -3,7 +3,7 @@ title: "Rails + Kamal: The Deployment Errors I Fought (And How I Won)"
 date: "2025-11-05"
 description: "A deep dive into the infrastructure hurdles of deploying Rails 8 with Kamal, from networking conflicts to Solid Queue stability."
 thumbnail: "/images/thumbnails/rails_kamal_deployment.jpg"
-readTime: "8 min read"
+readTime: "6 min read"
 tags: ["Ruby on Rails", "DevOps", "Kamal", "PostgreSQL"]
 ---
 

@@ -3,7 +3,7 @@ title: "A Reflection on the App Design Process"
 date: "2025-06-15"
 description: "What happens when you sit on both sides of the design table? A look at empathy, feedback, and the UX design process."
 thumbnail: "/images/thumbnails/app_design.jpg"
-readTime: "6 min read"
+readTime: "2 min read"
 tags: ["UX Design", "Product Discovery", "Reflection"]
 ---
 
