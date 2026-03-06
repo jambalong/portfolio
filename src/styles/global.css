@@ -547,6 +547,7 @@ body::after {
     font-family: 'DM Mono', monospace;
     letter-spacing: 0.04em;
     border: 1px solid var(--dt-border);
+    word-break: break-all;
   }
 
   :not(pre) > code::before,
