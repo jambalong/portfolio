@@ -3,7 +3,7 @@ title: "Next Project: WuWa Planner?!"
 date: "2025-10-26"
 description: "Choosing a portfolio project that balances personal passion with technical challenges in Ruby on Rails and probability logic."
 thumbnail: "/images/thumbnails/wuwa_planner.jpg"
-readTime: "7 min read"
+readTime: "5 min read"
 tags: ["Ruby on Rails", "Web Development", "Project Planning"]
 ---
 

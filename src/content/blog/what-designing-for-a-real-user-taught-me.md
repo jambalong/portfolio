@@ -3,7 +3,7 @@ title: "What Designing for a Real User Taught Me"
 date: "2025-06-01"
 description: "How direct feedback transformed a minimalist vision into a truly people-centered Time Management App."
 thumbnail: '/images/thumbnails/design_wireframe.jpg'
-readTime: "5 min read"
+readTime: "2 min read"
 tags: ["UX Design", "Product Discovery", "Figma"]
 ---
 
