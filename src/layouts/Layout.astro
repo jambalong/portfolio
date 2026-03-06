@@ -3,9 +3,35 @@ import '@/styles/global.css';
 
 interface Props {
   title?: string;
+  description?: string;
+  ogImage?: string;
+  canonicalURL?: string;
 }
 
-const { title = "Portfolio" } = Astro.props;
+const {
+  title = "John Alvin Ambalong | Software Engineer",
+  description = "Software engineer based in Washington State. Building production Rails applications with a focus on backend, DevOps, and security. Available for work.",
+  ogImage = "/og-image.png",
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).toString(),
+} = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "John Alvin Ambalong",
+  "url": "https://ambalong.dev",
+  "sameAs": [
+    "https://github.com/jambalong",
+    "https://www.linkedin.com/in/jambalong"
+  ],
+  "jobTitle": "Software Engineer",
+  "description": description,
+  "knowsAbout": ["Ruby on Rails", "PostgreSQL", "Hotwire", "Docker", "Kamal", "DevOps", "Web Security"],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Walla Walla Community College"
+  }
+};
 ---
 
 <!DOCTYPE html>
@@ -13,15 +39,46 @@ const { title = "Portfolio" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark">
-    <meta name="darkreader-lock">
+    <meta name="color-scheme" content="dark" />
+    <meta name="darkreader-lock" />
+
+    <!-- Primary SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="John Alvin Ambalong" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="ambalong.dev" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
   </head>
   <body>
     <slot />
