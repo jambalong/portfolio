@@ -10,19 +10,20 @@ import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 ---
 
-<Layout title="John Alvin Ambalong | Software Engineer">
+<Layout
+  title="John Alvin Ambalong | Software Engineer"
+  description="Software engineer based in Washington State. Building production Rails applications with a focus on backend, DevOps, and security. Available for work."
+>
   <Navigation client:load />
-  
+
   <main id="main-content">
     <Hero client:load />
-    
     <FeaturedProject client:load />
     <Projects client:visible />
     <Skills client:visible />
-    
     <About client:visible />
     <CallToAction client:visible />
   </main>
-  
+
   <Footer />
 </Layout>
