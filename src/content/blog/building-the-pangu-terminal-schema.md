@@ -1,9 +1,10 @@
 ---
 title: "Building the Pangu Terminal Schema"
+seoTitle: "Modeling Game Data in Rails: Cost Tables, JSONB, and Idempotent Seeds"
 date: "2025-12-08"
 description: "How I modeled a complex game dataset in PostgreSQL: cost tables, mapping tables, JSONB outputs, and the seeding patterns that kept it maintainable."
 thumbnail: "/images/thumbnails/pangu_schema.jpg"
-readTime: "6 min read"
+readTime: "5 min read"
 tags: ["Ruby on Rails", "PostgreSQL", "Database Design", "Project Planning"]
 ---
 
