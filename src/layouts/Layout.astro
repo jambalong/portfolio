@@ -6,6 +6,7 @@ interface Props {
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
+  ogType?: string;
 }
 
 const {
@@ -13,6 +14,7 @@ const {
   description = "Software engineer based in Washington State. Building production Rails applications with a focus on backend, DevOps, and security. Available for work.",
   ogImage = "/og-image.png",
   canonicalURL = new URL(Astro.url.pathname, Astro.site).toString(),
+  ogType = "website",
 } = Astro.props;
 
 const jsonLd = {
@@ -51,7 +53,7 @@ const jsonLd = {
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -85,6 +87,7 @@ const jsonLd = {
     <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <meta name="generator" content={Astro.generator} />
+    <slot name="head" />
   </head>
   <body>
     <slot />

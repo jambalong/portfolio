@@ -14,9 +14,41 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+const canonicalURL = new URL(`/blog/${entry.slug}/`, Astro.site).toString();
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": entry.data.title,
+  "description": entry.data.description,
+  "url": canonicalURL,
+  "datePublished": entry.data.date.toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": "John Alvin Ambalong",
+    "url": "https://ambalong.dev"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Alvin Ambalong",
+    "url": "https://ambalong.dev"
+  },
+  "image": entry.data.thumbnail
+    ? new URL(entry.data.thumbnail, Astro.site).toString()
+    : new URL('/og-image.png', Astro.site).toString(),
+};
 ---
 
-<Layout title={`${entry.data.title} | John Alvin Ambalong`}>
+<Layout
+  title={`${entry.data.title} | John Alvin Ambalong`}
+  description={entry.data.description}
+  ogImage={entry.data.thumbnail ?? '/og-image.png'}
+  canonicalURL={canonicalURL}
+  ogType="article"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} slot="head" />
+
   <Navigation client:load />
 
   <main class="dt-bg pt-32 pb-24 px-6">
