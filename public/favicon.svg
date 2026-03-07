@@ -1,26 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap');
-    </style>
-  </defs>
-
   <!-- Background -->
   <rect width="32" height="32" fill="#0a0a0f"/>
 
   <!-- Border -->
   <rect x="1" y="1" width="30" height="30" fill="none" stroke="#1e1e2e" stroke-width="1"/>
 
-  <!-- Italic A -->
+  <!-- Italic A — Georgia serif, no external dependency -->
   <text
     x="16"
     y="24"
-    font-family="'Instrument Serif', Georgia, serif"
+    font-family="Georgia, 'Times New Roman', serif"
     font-style="italic"
     font-size="22"
     font-weight="400"
     fill="#7c6aff"
     text-anchor="middle"
-    dominant-baseline="auto"
   >A</text>
 </svg>
