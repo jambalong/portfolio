@@ -1,24 +1,27 @@
-import { ExternalLink, Github } from 'lucide-react';
-import { motion } from 'framer-motion';
-import panguScreenshot from '@/assets/pangu-terminal-screenshot.png';
+import { ExternalLink, Github } from "lucide-react";
+import { motion } from "framer-motion";
+import panguScreenshot from "@/assets/pangu-terminal-screenshot.png";
 
-const techStack = ['Ruby on Rails 8.1', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2'];
+const techStack = [
+  "Ruby on Rails 8.1",
+  "Hotwire",
+  "PostgreSQL",
+  "Docker",
+  "Kamal 2",
+];
 
 const features = [
-  'Polymorphic associations with JSONB-cached plan output avoiding recomputation on every page load',
-  'Service-based cost engine querying 10+ static cost tables across character and weapon upgrade paths',
-  '3-to-1 synthesis detection identifying conversion opportunities from surplus lower-tier materials',
-  'EXP potion equivalence logic reconciling cross-tier satisfaction against plan requirements',
-  'Versioned REST API with hashed token authentication, rate limiting, and integration test coverage',
-  'Real-time inventory updates via Hotwire Turbo Streams, entire synthesis families re-render on edit',
-  'Cookie-based guest sessions with plan migration path on account signup',
+  "Game upgrade paths pull from 10+ overlapping cost tables with no single source of truth, so I built a service layer that queries each table in isolation and keeps the planning logic independently testable",
+  "The REST API returns a material deficit and its farming source from a single endpoint pair, so clients have everything needed to render a farming view without a second request",
+  "Inventory edits trigger real-time re-renders of entire synthesis families via Hotwire Turbo Streams; plan output is JSONB-cached so the page reads from cache rather than recomputing on load",
+  "96%+ service layer test coverage across three planning services — several cost calculation edge cases only turned up once formal tests replaced manual spot-checking",
+  "Surplus lower-tier materials can be synthesized 3-to-1 into higher tiers, but only if the math accounts for cross-rarity EXP equivalence — the planner reconciles both before marking a plan complete",
 ];
 
 const FeaturedProject = () => {
   return (
     <section id="featured" className="dt-surface py-24">
       <div className="w-full max-w-6xl mx-auto px-6">
-
         {/* Section eyebrow + rule */}
         <motion.div
           className="mb-12"
@@ -32,7 +35,6 @@ const FeaturedProject = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-
           {/* Browser mockup */}
           <motion.div
             className="dt-browser"
@@ -42,13 +44,26 @@ const FeaturedProject = () => {
             viewport={{ once: true }}
           >
             <div className="dt-browser-bar">
-              <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'var(--dt-red)' }} />
-              <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'var(--dt-orange)' }} />
-              <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'var(--dt-green)' }} />
+              <span
+                className="w-2.5 h-2.5 rounded-full"
+                style={{ background: "var(--dt-red)" }}
+              />
+              <span
+                className="w-2.5 h-2.5 rounded-full"
+                style={{ background: "var(--dt-orange)" }}
+              />
+              <span
+                className="w-2.5 h-2.5 rounded-full"
+                style={{ background: "var(--dt-green)" }}
+              />
               <span className="dt-mono ml-3">panguterminal.ambalong.dev</span>
             </div>
             <img
-              src={typeof panguScreenshot === 'string' ? panguScreenshot : (panguScreenshot as any).src}
+              src={
+                typeof panguScreenshot === "string"
+                  ? panguScreenshot
+                  : (panguScreenshot as any).src
+              }
               alt="Pangu Terminal dashboard showing resource optimization interface"
               className="w-full h-auto block"
             />
@@ -61,7 +76,10 @@ const FeaturedProject = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="dt-display mb-2" style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}>
+            <h2
+              className="dt-display mb-2"
+              style={{ fontSize: "clamp(28px, 4vw, 42px)" }}
+            >
               Pangu <em>Terminal</em>
             </h2>
 
@@ -69,25 +87,33 @@ const FeaturedProject = () => {
               Resource-optimization platform for Wuthering Waves
             </p>
 
-            <p className="dt-body mb-6" style={{ fontSize: '14px' }}>
-              Full-stack Rails application that reconciles game progression requirements
-              against player inventory, calculating exact material deficits and detecting
-              synthesis opportunities across 50+ items.
+            <p className="dt-body mb-6" style={{ fontSize: "14px" }}>
+              Full-stack Rails application that reconciles game progression
+              requirements against player inventory, calculating exact material
+              deficits and detecting synthesis opportunities across 50+ items.
             </p>
 
             {/* Feature list */}
-            <ul className="mb-7 flex flex-col gap-2.5" style={{ listStyle: 'none', padding: 0 }}>
+            <ul
+              className="mb-7 flex flex-col gap-2.5"
+              style={{ listStyle: "none", padding: 0 }}
+            >
               {features.map((f, i) => (
                 <motion.li
                   key={i}
                   className="dt-body relative pl-5"
-                  style={{ fontSize: '13px' }}
+                  style={{ fontSize: "13px" }}
                   initial={{ opacity: 0, x: -8 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 + i * 0.05 }}
                   viewport={{ once: true }}
                 >
-                  <span className="absolute left-0" style={{ color: 'var(--dt-accent)', opacity: 0.6 }}>–</span>
+                  <span
+                    className="absolute left-0"
+                    style={{ color: "var(--dt-accent)", opacity: 0.6 }}
+                  >
+                    –
+                  </span>
                   {f}
                 </motion.li>
               ))}
@@ -96,7 +122,9 @@ const FeaturedProject = () => {
             {/* Tech stack */}
             <div className="flex flex-wrap gap-2 mb-8">
               {techStack.map((tech) => (
-                <span key={tech} className="dt-tag">{tech}</span>
+                <span key={tech} className="dt-tag">
+                  {tech}
+                </span>
               ))}
             </div>
 
@@ -120,7 +148,6 @@ const FeaturedProject = () => {
               </a>
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
