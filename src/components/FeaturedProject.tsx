@@ -88,9 +88,9 @@ const FeaturedProject = () => {
             </p>
 
             <p className="dt-body mb-6" style={{ fontSize: "14px" }}>
-              Full-stack Rails application that reconciles game progression
+              Production Rails application that reconciles game progression
               requirements against player inventory, calculating exact material
-              deficits and detecting synthesis opportunities across 50+ items.
+              deficits and detecting synthesis opportunities.
             </p>
 
             {/* Feature list */}
