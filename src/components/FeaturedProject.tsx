@@ -14,8 +14,8 @@ const features = [
   "Game upgrade paths pull from 10+ overlapping cost tables with no single source of truth, so I built a service layer that queries each table in isolation and keeps the planning logic independently testable",
   "The REST API returns a material deficit and its farming source from a single endpoint pair, so clients have everything needed to render a farming view without a second request",
   "Inventory edits trigger real-time re-renders of entire synthesis families via Hotwire Turbo Streams; plan output is JSONB-cached so the page reads from cache rather than recomputing on load",
-  "96%+ service layer test coverage across three planning services — several cost calculation edge cases only turned up once formal tests replaced manual spot-checking",
-  "Surplus lower-tier materials can be synthesized 3-to-1 into higher tiers, but only if the math accounts for cross-rarity EXP equivalence — the planner reconciles both before marking a plan complete",
+  "Achieved 96%+ service layer test coverage across three planning services, surfacing cost calculation edge cases that weren't caught during manual testing",
+  "Surplus lower-tier materials can be synthesized 3-to-1 into higher tiers, and the planner reconciles cross-rarity EXP equivalence before marking a plan complete",
 ];
 
 const FeaturedProject = () => {
