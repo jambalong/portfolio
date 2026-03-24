@@ -1,34 +1,34 @@
-import { ExternalLink, Github } from 'lucide-react';
-import { motion } from 'framer-motion';
-import chessScreenshot from '@/assets/chess-engine-screenshot.png';
-import pebbleScreenshot from '@/assets/pebble-list-screenshot.png';
+import { ExternalLink, Github } from "lucide-react";
+import { motion } from "framer-motion";
+import chessScreenshot from "@/assets/chess-engine-screenshot.png";
+import pebbleScreenshot from "@/assets/pebble-list-screenshot.png";
 
 const projects = [
   {
-    title: 'Ruby Chess Engine',
-    category: 'CLI / Game Logic',
+    title: "Ruby CLI Chess",
+    category: "CLI / Game Logic",
     details:
-      'Terminal chess game demonstrating object-oriented design. Implements move validation, collision detection, and checkmate logic with modular class architecture.',
-    tech: ['Ruby', 'OOP'],
+      "Terminal chess engine in pure Ruby demonstrating object-oriented design. Implements legal move validation, collision detection, and checkmate detection via board-state simulation across modular Board, Piece, and Player classes.",
+    tech: ["Ruby", "OOP"],
     image: chessScreenshot,
-    liveUrl: 'https://replit.com/@jambalong/chess',
-    codeUrl: 'https://github.com/jambalong/chess',
-    accentClass: 'dt-card-red',
-    eyebrowClass: 'dt-eyebrow-red',
-    btnAccent: 'var(--dt-red)',
+    liveUrl: "https://replit.com/@jambalong/chess",
+    codeUrl: "https://github.com/jambalong/chess",
+    accentClass: "dt-card-red",
+    eyebrowClass: "dt-eyebrow-red",
+    btnAccent: "var(--dt-red)",
   },
   {
-    title: 'Pebble List',
-    category: 'Frontend / React',
+    title: "Pebble List",
+    category: "Frontend / React",
     details:
-      'Task management application built with React demonstrating component-based architecture and state management patterns.',
-    tech: ['React', 'JavaScript', 'Vite'],
+      "Task management application built with React demonstrating component-based architecture and state management patterns.",
+    tech: ["React", "JavaScript", "Vite"],
     image: pebbleScreenshot,
-    liveUrl: 'https://jambalong.github.io/pebble-list/',
-    codeUrl: 'https://github.com/jambalong/pebble-list',
-    accentClass: 'dt-card-green',
-    eyebrowClass: 'dt-eyebrow-green',
-    btnAccent: 'var(--dt-green)',
+    liveUrl: "https://jambalong.github.io/pebble-list/",
+    codeUrl: "https://github.com/jambalong/pebble-list",
+    accentClass: "dt-card-green",
+    eyebrowClass: "dt-eyebrow-green",
+    btnAccent: "var(--dt-green)",
   },
 ];
 
@@ -36,7 +36,6 @@ const Projects = () => {
   return (
     <section id="projects" className="dt-bg py-24">
       <div className="w-full max-w-4xl mx-auto px-6">
-
         {/* Section header */}
         <motion.div
           className="mb-14"
@@ -45,12 +44,18 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="dt-eyebrow mb-3" style={{ opacity: 0.8 }}>Other Work</p>
-          <h2 className="dt-display mb-3" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
+          <p className="dt-eyebrow mb-3" style={{ opacity: 0.8 }}>
+            Other Work
+          </p>
+          <h2
+            className="dt-display mb-3"
+            style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
+          >
             Additional <em>Projects</em>
           </h2>
-          <p className="dt-body max-w-md" style={{ fontSize: '14px' }}>
-            A selection of personal projects showcasing different skills and technologies.
+          <p className="dt-body max-w-md" style={{ fontSize: "14px" }}>
+            A selection of personal projects showcasing different skills and
+            technologies.
           </p>
         </motion.div>
 
@@ -66,33 +71,45 @@ const Projects = () => {
               viewport={{ once: true }}
             >
               {/* Screenshot */}
-              <div className="relative overflow-hidden" style={{ aspectRatio: '16/9', background: 'var(--dt-bg)' }}>
+              <div
+                className="relative overflow-hidden"
+                style={{ aspectRatio: "16/9", background: "var(--dt-bg)" }}
+              >
                 <img
-                  src={typeof project.image === 'string' ? project.image : (project.image as any).src}
+                  src={
+                    typeof project.image === "string"
+                      ? project.image
+                      : (project.image as any).src
+                  }
                   alt={`${project.title} screenshot`}
                   className="w-full h-full object-cover block transition-transform duration-500 hover:scale-[1.03]"
-                  style={{ filter: 'brightness(0.85)' }}
+                  style={{ filter: "brightness(0.85)" }}
                 />
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <p className={`${project.eyebrowClass} mb-2.5`} style={{ fontSize: '9px', opacity: 0.75 }}>
+                <p
+                  className={`${project.eyebrowClass} mb-2.5`}
+                  style={{ fontSize: "9px", opacity: 0.75 }}
+                >
                   {project.category}
                 </p>
 
-                <h3 className="dt-display mb-1.5" style={{ fontSize: '20px' }}>
+                <h3 className="dt-display mb-1.5" style={{ fontSize: "20px" }}>
                   {project.title}
                 </h3>
 
-                <p className="dt-body mb-4" style={{ fontSize: '13px' }}>
+                <p className="dt-body mb-4" style={{ fontSize: "13px" }}>
                   {project.details}
                 </p>
 
                 {/* Tech stack */}
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="dt-tag">{tech}</span>
+                    <span key={tech} className="dt-tag">
+                      {tech}
+                    </span>
                   ))}
                 </div>
 
@@ -105,8 +122,8 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="dt-btn-primary"
                       style={{
-                        padding: '7px 14px',
-                        fontSize: '10px',
+                        padding: "7px 14px",
+                        fontSize: "10px",
                         borderColor: project.btnAccent,
                         color: project.btnAccent,
                         background: `color-mix(in srgb, ${project.btnAccent} 10%, transparent)`,
@@ -120,7 +137,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="dt-btn-ghost"
-                    style={{ padding: '7px 14px', fontSize: '10px' }}
+                    style={{ padding: "7px 14px", fontSize: "10px" }}
                   >
                     <Github size={12} /> Code
                   </a>
@@ -129,7 +146,6 @@ const Projects = () => {
             </motion.article>
           ))}
         </div>
-
       </div>
     </section>
   );
