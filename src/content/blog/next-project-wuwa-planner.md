@@ -1,100 +1,35 @@
 ---
-title: "Next Project: WuWa Planner?!"
+title: "Next Project: WuWa Planner"
 date: "2025-10-26"
-description: "Choosing a portfolio project that balances personal passion with technical challenges in Ruby on Rails and probability logic."
+description: "Choosing a portfolio project with real technical problems: a Wuthering Waves ascension planner in Ruby on Rails."
 thumbnail: "/images/thumbnails/wuwa_planner.jpg"
 readTime: "5 min read"
 tags: ["Ruby on Rails", "Web Development", "Project Planning"]
 ---
 
-It has been several weeks since the Fall quarter started, and I have finally carved out time to build a new portfolio project. I had an itch to build something that challenges me and helps me learn further. 
+Fall quarter started a few weeks ago and I've been picking a portfolio project. I wanted something with actual technical problems to solve, not another CRUD app.
 
-The goal was clear: I wanted to create an app that was not just functional, but genuinely interesting to me. I wanted to ensure I would stick to it from start to finish while gaining a tangible demonstration of my abilities.
-
-The process of choosing a "Wuthering Waves Planner" was not instant. It involved brainstorming, self-assessment, and a healthy dose of what I am currently passionate about outside of coding.
-
-## Brainstorming Phase
-
-I initially thought widely and considered a few different paths:
-
-* **A task manager**: I have been interested in time-blocking tools since working on a design in my UX course. Ultimately, I wanted something more unique than another to-do app.
-* **An inventory system**: After tracking tech inventory over the summer, I considered building an app with a map overview of equipment locations. However, it didn't spark that immediate "I need to build this" feeling.
-* **A personal finance tracker**: I enjoy using YNAB and thought about building something similar. I worried, however, that I would just end up with a simple CRUD project without enough unique pain points to solve.
-
-This process helped me narrow it down to two strong contenders tied directly to my personal hobbies.
+The two options I took seriously were a calisthenics app to track progressive overload and a Wuthering Waves planner. The workout app solves a real problem I have, but the technical work is pretty shallow. The planner has two things I want to figure out: a materials calculator built on a nontrivial pre-seeded database, and a gacha simulator with real probability logic (soft pity, 50/50 guarantees). I finished a Statistics course this summer and I'm currently in Databases, so both of those line up well right now.
 
 ![Versus image: Calisthenics App vs. Wuthering Waves Planner.](/images/posts/versus.jpg)
-*The final showdown: A practical workout app versus a complex gacha planner.*
+*Calisthenics app on the left, Wuthering Waves planner on the right.*
 
-## The Showdown: Calisthenics vs Gacha
+Stack is Ruby on Rails with PostgreSQL. For deployment I'm using Kamal on a DigitalOcean droplet instead of something managed like Render. I want to know how to run my own deployments, so I'm doing that part first rather than leaving it for the end.
 
-On one hand, I had the calisthenics workout app. As someone who has been training for several months, I have a real need for a personalized app to track progressive overload. It was a practical, passion-driven idea.
+The plan breaks into four phases:
 
-On the other hand, I had the **Wuthering Waves Planner**. I have been playing the game recently and saw two clear technical challenges: the complex "shopping list" calculation for ascension materials and the puzzle of simulating the gacha probability system.
+**Phase 0** is getting a Hello World app live and stable on that stack. Infrastructure before anything else.
 
-## Why the Wuthering Waves Planner Won
-
-While the calisthenics app solved a personal problem, the Wuthering Waves planner offered a more unique set of technical challenges.
-
-The planner challenges me to learn complex backend queries on a pre-seeded database and build interactive frontend components with probability logic. After finishing a Statistics course this summer and currently studying Databases, I thought it would be fun to reinforce those two subjects.
-
----
-
-## Defining the Roadmap
-
-Just picking a project is not enough. To avoid getting overwhelmed, I knew I needed a clear roadmap. I learned that for any portfolio project, I should not try to build everything at once. 
-
-I broke the planner down into four distinct phases. Each phase has a clear goal and builds on the previous one.
-
-### The Technology Stack
-
-Because I am focused on mastering backend logic, **Ruby on Rails** was the clear choice.
-
-* **Backend:** Ruby on Rails (the core of the project).
-* **Database:** PostgreSQL (the production-level standard for Rails).
-* **Deployment:** Kamal for container-based deployment on a DigitalOcean Droplet. 
-
-Instead of an easier platform like Render, I am specifically choosing this route. I want to learn how to manage my own deployments from scratch on a VPS.
-
-## Phase 0: The Infrastructure
-
-**The Goal:** Get a "Hello, World!" app live and stable using the production deployment stack.
-
-By setting up the deployment pipeline before writing complex code, I am front-loading one of the biggest technical challenges. I would love to learn how to get a deployable app working from Day 1, rather than saving infrastructure headaches for the end.
+**Phase 1** is the ascension planner. A form to pick a character, current level, and target level, and a materials shopping list as output. No user accounts yet. I want the calculator working before adding auth.
 
 ![Wuthering Waves character ascension screen showing the list of required materials.](/images/posts/ascension.jpg)
-*The exact "shopping list" problem that Phase 1 (The Ascension Planner) is designed to solve.*
+*The shopping list problem Phase 1 is built around.*
 
-## Phase 1: The Ascension Planner
-
-**The Goal:** Pure backend and database mastery.
-
-This is the foundation for all future features. It will be a public-facing tool, meaning anyone can use it without an account. By intentionally not building user accounts yet, I am avoiding early complexity to ensure I finish the core feature.
-
-1.  **Static Data:** I will create a `seeds.rb` file to pre-populate the database with game data like characters and materials.
-2.  **The Calculator:** A simple form to select a character, current level, and goal level.
-3.  **The Shopping List:** When submitted, the page will show the total summed quantity of every material needed.
-
-## Phase 2: The Simulator
-
-**The Goal:** Frontend and algorithmic logic mastery.
-
-After the planner is deployed, I will add the Gacha Simulator. This is where I will dive into JavaScript using **StimulusJS**. The challenge here is writing the probability logic to accurately simulate the game's system, including soft pity (increasing chances after 65 pulls) and the "50/50" guarantee system.
+**Phase 2** is the gacha simulator. The probability logic for soft pity (rates increase after 65 pulls) and the 50/50 system is the part I'm least sure about. It lives mostly on the frontend with StimulusJS.
 
 ![Wuthering Waves 'Convene' gacha/pull screen with the buttons.](/images/posts/convene.jpg)
-*The challenge for Phase 2: accurately simulating the complex probability and pity systems behind these pull buttons.*
+*The pity and probability system behind these pull buttons is what Phase 2 is about.*
 
-## Phase 3: The Polish
+**Phase 3** is user accounts via Devise, inventory tracking so the planner subtracts what you already have, and expanding the calculator to cover weapons and skills.
 
-**The Goal:** Showcase a mature, full-feature application.
-These are the features that turn a tool into a true application:
-
-* **User Accounts:** Using the Devise gem to let users save their plans.
-* **Inventory Tracking:** Allowing users to input current materials so the planner can subtract them from the total needed.
-* **Expanded Data:** Adding weapons and character skills to the calculator.
-
----
-
-By breaking it down this way, the project feels ambitious but achievable. I am starting with the infrastructure in Phase 0 and will document my progress as I go. 
-
-Time to get that server provisioned.
+Starting with Phase 0. Writing as I go.
