@@ -1,176 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap");
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
 @theme {
+    /* Dark-technical surface tokens */
+    --color-dt-bg: var(--dt-bg);
+    --color-dt-surface: var(--dt-surface);
+    --color-dt-border: var(--dt-border);
+    --color-dt-text: var(--dt-text);
+    --color-dt-muted: var(--dt-muted);
+    --color-dt-mid: var(--dt-mid);
+    --color-dt-accent: var(--dt-accent);
+    --color-dt-red: var(--dt-red);
+    --color-dt-green: var(--dt-green);
+    --color-dt-orange: var(--dt-orange);
 
-  /* Dark-technical surface tokens */
-  --color-dt-bg: var(--dt-bg);
-  --color-dt-surface: var(--dt-surface);
-  --color-dt-border: var(--dt-border);
-  --color-dt-text: var(--dt-text);
-  --color-dt-muted: var(--dt-muted);
-  --color-dt-mid: var(--dt-mid);
-  --color-dt-accent: var(--dt-accent);
-  --color-dt-red: var(--dt-red);
-  --color-dt-green: var(--dt-green);
-  --color-dt-orange: var(--dt-orange);
+    /* Fonts */
+    --font-display: "Instrument Serif", serif;
+    --font-mono: "DM Mono", monospace;
+    --font-body: "Space Grotesk", sans-serif;
 
-  /* Fonts */
-  --font-display: 'Instrument Serif', serif;
-  --font-mono: 'DM Mono', monospace;
-  --font-body: 'Space Grotesk', sans-serif;
-
-  /* Animations */
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+    /* Animations */
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+    --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
 }
 
 :root {
-  --primary: 267 84% 81%;
+    --primary: 267 84% 81%;
 
-  --text-primary: 226 64% 88%;
-  --text-muted: 228 24% 72%;
+    --text-primary: 226 64% 88%;
+    --text-muted: 228 24% 72%;
 
-  /* ─── Dark-technical palette ─── */
-  --dt-bg:      #0a0a0f;
-  --dt-surface: #111118;
-  --dt-border:  #1e1e2e;
-  --dt-text:    #e8e8f0;
-  --dt-muted:   #5a5a72;
-  --dt-mid:     #8888a0;
-  --dt-accent:  #7c6aff;
-  --dt-red:     #ff6a6a;
-  --dt-green:   #6affb0;
-  --dt-orange:  #ff9f6a;
+    /* ─── Dark-technical palette ─── */
+    --dt-bg: #0a0a0f;
+    --dt-surface: #111118;
+    --dt-border: #1e1e2e;
+    --dt-text: #e8e8f0;
+    --dt-muted: #5a5a72;
+    --dt-mid: #8888a0;
+    --dt-accent: #7c6aff;
+    --dt-red: #ff6a6a;
+    --dt-green: #6affb0;
+    --dt-orange: #ff9f6a;
 }
 
 /* ─── Keyframes ─── */
 
 @keyframes accordion-down {
-  from { height: 0; }
-  to { height: var(--radix-accordion-content-height); }
+    from {
+        height: 0;
+    }
+    to {
+        height: var(--radix-accordion-content-height);
+    }
 }
 
 @keyframes accordion-up {
-  from { height: var(--radix-accordion-content-height); }
-  to { height: 0; }
+    from {
+        height: var(--radix-accordion-content-height);
+    }
+    to {
+        height: 0;
+    }
 }
 
 @keyframes fade-in-up {
-  0%   { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(10px); }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
 }
 
 /* ─── Base ─── */
 
 * {
-  @apply border-dt-border;
+    @apply border-dt-border;
 }
 
 html {
-  scroll-behavior: smooth;
-  background-color: var(--dt-bg);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.008'/%3E%3C/svg%3E");
+    scroll-behavior: smooth;
+    background-color: var(--dt-bg);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.008'/%3E%3C/svg%3E");
 }
 
 body {
-  @apply bg-dt-bg text-dt-text font-sans antialiased;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+    @apply bg-dt-bg text-dt-text font-sans antialiased;
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 40;
-  opacity: 0.2;
-}
+/* noise overlay handled on html element */
 
 ::selection {
-  @apply bg-dt-bg/30 text-dt-text;
+    @apply bg-dt-bg/30 text-dt-text;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  html { scroll-behavior: auto; }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 /* ─── Dark-technical utility classes ─── */
 
 /* Backgrounds */
-.dt-bg      { background-color: var(--dt-bg); }
-.dt-surface { background-color: var(--dt-surface); }
+.dt-bg {
+    background-color: var(--dt-bg);
+}
+.dt-surface {
+    background-color: var(--dt-surface);
+}
 
 /* Hero-only: subtle dot grid overlay */
 .dt-grid {
-  background-image:
-    linear-gradient(rgba(124,106,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,106,255,0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
-  pointer-events: none;
+    background-image:
+        linear-gradient(rgba(124, 106, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 106, 255, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
 }
 
 /* Hero-only: top accent glow */
 .dt-glow {
-  background: radial-gradient(ellipse at center, rgba(124,106,255,0.07) 0%, transparent 70%);
-  pointer-events: none;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(124, 106, 255, 0.07) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
 }
 
 /* Hairline divider */
 .dt-rule {
-  height: 1px;
-  background: linear-gradient(90deg, var(--dt-border), rgba(124,106,255,0.35), var(--dt-border));
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        var(--dt-border),
+        rgba(124, 106, 255, 0.35),
+        var(--dt-border)
+    );
 }
 
 /* Sharp card base */
 .dt-card {
-  border: 1px solid var(--dt-border);
-  background-color: var(--dt-surface);
-  border-radius: 0;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+    border: 1px solid var(--dt-border);
+    background-color: var(--dt-surface);
+    border-radius: 0;
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .dt-card:hover {
-  transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
 /* Used when card sits on a dt-surface section — darkens card bg for contrast */
 .dt-card-on-surface {
-  background-color: var(--dt-bg);
+    background-color: var(--dt-bg);
 }
 
 /* Accent hover variants */
-.dt-card-accent:hover { border-color: var(--dt-accent); }
-.dt-card-red:hover    { border-color: var(--dt-red); }
-.dt-card-green:hover  { border-color: var(--dt-green); }
-.dt-card-orange:hover { border-color: var(--dt-orange); }
+.dt-card-accent:hover {
+    border-color: var(--dt-accent);
+}
+.dt-card-red:hover {
+    border-color: var(--dt-red);
+}
+.dt-card-green:hover {
+    border-color: var(--dt-green);
+}
+.dt-card-orange:hover {
+    border-color: var(--dt-orange);
+}
 
 /* ─── Typography ─── */
 
 .dt-display {
-  font-family: 'Instrument Serif', serif;
-  font-weight: 400;
-  color: var(--dt-text);
-  line-height: 1.05;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    color: var(--dt-text);
+    line-height: 1.05;
 }
 
 .dt-display em {
-  font-style: italic;
-  color: var(--dt-accent);
+    font-style: italic;
+    color: var(--dt-accent);
 }
 
 /* Eyebrows — base styles shared by all variants */
@@ -179,471 +216,520 @@ body::after {
 .dt-eyebrow-red,
 .dt-eyebrow-green,
 .dt-eyebrow-orange {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  opacity: 0.85;
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.85;
 }
 
-.dt-eyebrow        { color: var(--dt-accent); }
-.dt-eyebrow-muted  { color: var(--dt-muted); }
-.dt-eyebrow-red    { color: var(--dt-red); }
-.dt-eyebrow-green  { color: var(--dt-green); }
-.dt-eyebrow-orange { color: var(--dt-orange); }
+.dt-eyebrow {
+    color: var(--dt-accent);
+}
+.dt-eyebrow-muted {
+    color: var(--dt-muted);
+}
+.dt-eyebrow-red {
+    color: var(--dt-red);
+}
+.dt-eyebrow-green {
+    color: var(--dt-green);
+}
+.dt-eyebrow-orange {
+    color: var(--dt-orange);
+}
 
 .dt-mono {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--dt-muted);
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--dt-muted);
 }
 
 .dt-body {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 300;
-  color: var(--dt-mid);
-  line-height: 1.75;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 300;
+    color: var(--dt-mid);
+    line-height: 1.75;
 }
 
 /* ─── Components ─── */
 
 .dt-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border: 1px solid var(--dt-border);
-  color: var(--dt-muted);
-  background: rgba(255,255,255,0.02);
-  border-radius: 0;
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--dt-border);
+    color: var(--dt-muted);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 0;
 }
 
 .dt-read-more {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: opacity 0.2s;
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s;
 }
 
 .dt-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  border: 1px solid var(--dt-accent);
-  background: rgba(124,106,255,0.1);
-  color: var(--dt-accent);
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0;
-  transition: background 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border: 1px solid var(--dt-accent);
+    background: rgba(124, 106, 255, 0.1);
+    color: var(--dt-accent);
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0;
+    transition: background 0.2s ease;
 }
 
 .dt-btn-primary:hover {
-  background: rgba(124,106,255,0.2);
+    background: rgba(124, 106, 255, 0.2);
 }
 
 .dt-btn-green {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  border: 1px solid var(--dt-green);
-  background: rgba(106,255,176,0.1);
-  color: var(--dt-green);
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0;
-  transition: background 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border: 1px solid var(--dt-green);
+    background: rgba(106, 255, 176, 0.1);
+    color: var(--dt-green);
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0;
+    transition: background 0.2s ease;
 }
 
 .dt-btn-green:hover {
-  background: rgba(106,255,176,0.2);
+    background: rgba(106, 255, 176, 0.2);
 }
 
 .dt-btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  border: 1px solid var(--dt-border);
-  background: transparent;
-  color: var(--dt-muted);
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0;
-  transition: color 0.2s ease, border-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border: 1px solid var(--dt-border);
+    background: transparent;
+    color: var(--dt-muted);
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .dt-btn-ghost:hover {
-  color: var(--dt-text);
-  border-color: var(--dt-muted);
+    color: var(--dt-text);
+    border-color: var(--dt-muted);
 }
 
 .dt-icon-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid var(--dt-border);
-  color: var(--dt-muted);
-  text-decoration: none;
-  border-radius: 0;
-  transition: color 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--dt-border);
+    color: var(--dt-muted);
+    text-decoration: none;
+    border-radius: 0;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .dt-icon-link:hover {
-  color: var(--dt-accent);
-  border-color: var(--dt-accent);
+    color: var(--dt-accent);
+    border-color: var(--dt-accent);
 }
 
 .dt-browser {
-  border: 1px solid var(--dt-border);
-  background: var(--dt-bg);
-  border-radius: 0;
-  overflow: hidden;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+    border: 1px solid var(--dt-border);
+    background: var(--dt-bg);
+    border-radius: 0;
+    overflow: hidden;
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .dt-browser:hover {
-  border-color: var(--dt-accent);
-  transform: translateY(-2px);
+    border-color: var(--dt-accent);
+    transform: translateY(-2px);
 }
 
 .dt-browser-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border-bottom: 1px solid var(--dt-border);
-  background: var(--dt-surface);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--dt-border);
+    background: var(--dt-surface);
 }
 
 /* ─── Navigation responsive ─── */
 
-.nav-desktop { display: none; }
-.nav-mobile-btn { display: flex; }
+.nav-desktop {
+    display: none;
+}
+.nav-mobile-btn {
+    display: flex;
+}
 
 @media (min-width: 768px) {
-  .nav-desktop    { display: flex !important; }
-  .nav-mobile-btn { display: none !important; }
+    .nav-desktop {
+        display: flex !important;
+    }
+    .nav-mobile-btn {
+        display: none !important;
+    }
 }
 
 /* ─── Blog article styling ─── */
 
 .blog-article {
-  @apply prose prose-invert mx-auto max-w-2xl leading-relaxed tracking-normal;
+    @apply prose prose-invert mx-auto max-w-4xl px-6 leading-relaxed tracking-normal;
 
-  /* Base body copy — Space Grotesk */
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 300;
-  color: var(--dt-mid);
-
-  & p {
-    font-family: 'Space Grotesk', sans-serif;
+    /* Base body copy — Space Grotesk */
+    font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
     color: var(--dt-mid);
-    line-height: 1.75;
-    @apply text-justify;
-    text-indent: 0 !important;
-  }
-
-  & strong {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
-    color: var(--dt-text);
-  }
-
-  & a {
-    font-family: 'Space Grotesk', sans-serif;
-    color: var(--dt-accent);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(124,106,255,0.2);
-    padding-bottom: 2px;
-    transition: border-color 0.2s ease;
-    &:hover { border-color: var(--dt-accent); }
-  }
-
-  & header {
-    @apply mb-12;
-
-    /* Title — Instrument Serif, matches dt-display */
-    & h1 {
-      font-family: 'Instrument Serif', serif;
-      font-weight: 400;
-      font-size: clamp(28px, 4vw, 42px);
-      line-height: 1.05;
-      color: var(--dt-text);
-      letter-spacing: 0;
-      @apply mb-4;
-    }
-
-    /* Metadata — DM Mono, matches dt-eyebrow */
-    & .metadata {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--dt-muted);
-      @apply flex items-center gap-4;
-      & time::after {
-        content: "•";
-        @apply ml-4 opacity-30;
-      }
-    }
-  }
-
-  & ul, & ol {
-    @apply marker:text-dt-muted;
-
-    & li {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 300;
-      color: var(--dt-mid);
-      line-height: 1.75;
-      @apply mb-4;
-      text-indent: 0 !important;
-
-      & strong {
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 500;
-        color: var(--dt-text);
-      }
-
-      & p {
-        text-indent: 0 !important;
-        font-family: 'Space Grotesk', sans-serif;
-        color: var(--dt-mid);
-        @apply mb-1;
-      }
-    }
-  }
-
-  /* Section headings — Instrument Serif italic accent, like dt-display em */
-  & h2 {
-    font-family: 'Instrument Serif', serif;
-    font-weight: 400;
-    font-size: clamp(20px, 2.5vw, 28px);
-    line-height: 1.15;
-    color: var(--dt-text);
-    letter-spacing: 0;
-    @apply mt-16 mb-6;
-  }
-
-  & h3 {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--dt-accent);
-    font-weight: 400;
-    @apply mt-12 mb-4;
-  }
-
-  & blockquote {
-    @apply my-14 pl-8 pr-4 py-4 relative border-none;
-    background: rgba(124,106,255,0.04);
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 2px;
-      background: linear-gradient(180deg, var(--dt-accent), rgba(124,106,255,0.25));
-    }
 
     & p {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(16px, 2vw, 20px);
-      line-height: 1.5;
-      color: var(--dt-text);
-      @apply m-0;
-      text-indent: 0 !important;
-      text-align: left;
-      &::before, &::after { content: none !important; }
-    }
-  }
-
-  & img {
-    display: block;
-    width: auto;
-    max-width: 100%;
-    max-height: 480px;
-    height: auto;
-    margin: 3rem auto;
-    border: 1px solid var(--dt-border);
-    border-radius: 0;
-    box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.6);
-    transition: border-color 0.2s ease;
-    will-change: transform, opacity;
-    &:hover { border-color: var(--dt-muted); }
-  }
-
-  & :is(img + p > em, img + em) {
-    display: block;
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--dt-mid);
-    font-style: normal;
-    text-align: center;
-    @apply -mt-6 mb-12;
-    text-indent: 0;
-  }
-
-  /* Inline emphasis — brighter than body copy */
-  & em {
-    font-style: italic;
-    color: var(--dt-text);
-    font-weight: 300;
-  }
-
-  & .figma-container {
-    @apply my-16 relative w-full overflow-hidden border-2 transition-transform duration-500 ease-out aspect-video;
-    border-color: var(--dt-border);
-    border-radius: 0;
-    min-height: 600px;
-    background: color-mix(in srgb, var(--color-border) 40%, transparent);
-    box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.5);
-
-    &:hover {
-      border-color: var(--dt-accent);
-      transform: scale(1.005);
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 300;
+        color: var(--dt-mid);
+        line-height: 1.75;
+        text-indent: 0 !important;
     }
 
-    & iframe {
-      @apply absolute inset-0 w-full h-full border-0 grayscale-20;
-      will-change: transform, opacity;
-      &:hover { @apply grayscale-0; }
-    }
-  }
-
-  :not(pre) > code {
-    background-color: #11111b;
-    color: var(--dt-accent);
-    padding: 0.2em 0.4em;
-    border-radius: 0;
-    font-size: 0.85em;
-    font-family: 'DM Mono', monospace;
-    letter-spacing: 0.04em;
-    border: 1px solid var(--dt-border);
-    word-break: break-all;
-  }
-
-  :not(pre) > code::before,
-  :not(pre) > code::after {
-    content: "" !important;
-  }
-
-  /* ── Fenced code block ── */
-  .code-block-wrapper {
-    position: relative;
-    margin: 2.5rem 0;
-
-    & .code-lang {
-      position: absolute;
-      top: -1px;
-      left: 0;
-      font-family: 'DM Mono', monospace;
-      font-size: 8.5px;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--dt-muted);
-      background: var(--dt-surface);
-      border: 1px solid var(--dt-border);
-      border-bottom: none;
-      padding: 4px 10px;
-      line-height: 1;
-      z-index: 2;
-    }
-
-    & .copy-btn {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      padding: 3px 9px;
-      font-family: 'DM Mono', monospace;
-      font-size: 8.5px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--dt-muted);
-      background: transparent;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
-      border-radius: 0;
-      opacity: 0;
-
-      &:hover {
+    & strong {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 500;
         color: var(--dt-text);
+    }
+
+    & a {
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--dt-accent);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(124, 106, 255, 0.2);
+        padding-bottom: 2px;
+        transition: border-color 0.2s ease;
+        &:hover {
+            border-color: var(--dt-accent);
+        }
+    }
+
+    & header {
+        @apply mb-12;
+
+        /* Title — Instrument Serif, matches dt-display */
+        & h1 {
+            font-family: "Instrument Serif", serif;
+            font-weight: 400;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.05;
+            color: var(--dt-text);
+            letter-spacing: 0;
+            @apply mb-4;
+        }
+
+        /* Metadata — DM Mono, matches dt-eyebrow */
+        & .metadata {
+            font-family: "DM Mono", monospace;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--dt-muted);
+            @apply flex items-center gap-4;
+            & time::after {
+                content: "•";
+                @apply ml-4 opacity-30;
+            }
+        }
+    }
+
+    & ul,
+    & ol {
+        @apply marker:text-dt-muted;
+
+        & li {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 300;
+            color: var(--dt-mid);
+            line-height: 1.75;
+            @apply mb-4;
+            text-indent: 0 !important;
+
+            & strong {
+                font-family: "Space Grotesk", sans-serif;
+                font-weight: 500;
+                color: var(--dt-text);
+            }
+
+            & p {
+                text-indent: 0 !important;
+                font-family: "Space Grotesk", sans-serif;
+                color: var(--dt-mid);
+                @apply mb-1;
+            }
+        }
+    }
+
+    /* Section headings — Instrument Serif italic accent, like dt-display em */
+    & h2 {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-size: clamp(20px, 2.5vw, 28px);
+        line-height: 1.15;
+        color: var(--dt-text);
+        letter-spacing: 0;
+        @apply mt-16 mb-6;
+    }
+
+    & h3 {
+        font-family: "DM Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--dt-accent);
+        font-weight: 400;
+        @apply mt-12 mb-4;
+    }
+
+    & blockquote {
+        @apply my-14 pl-8 pr-4 py-4 relative border-none;
+        background: rgba(124, 106, 255, 0.04);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(
+                180deg,
+                var(--dt-accent),
+                rgba(124, 106, 255, 0.25)
+            );
+        }
+
+        & p {
+            font-family: "Instrument Serif", serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.5;
+            color: var(--dt-text);
+            @apply m-0;
+            text-indent: 0 !important;
+            text-align: left;
+            &::before,
+            &::after {
+                content: none !important;
+            }
+        }
+    }
+
+    & img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: 3rem auto;
+        border: 1px solid var(--dt-border);
+        border-radius: 0;
+        box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.6);
+        transition: border-color 0.2s ease;
+        will-change: transform, opacity;
+        &:hover {
+            border-color: var(--dt-muted);
+        }
+    }
+
+    & :is(img + p > em, img + em) {
+        display: block;
+        font-family: "DM Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--dt-mid);
+        font-style: normal;
+        text-align: center;
+        @apply -mt-6 mb-12;
+        text-indent: 0;
+    }
+
+    /* Inline emphasis — brighter than body copy */
+    & em {
+        font-style: italic;
+        color: var(--dt-text);
+        font-weight: 300;
+    }
+
+    & .figma-container {
+        @apply my-16 relative w-full overflow-hidden border-2 transition-transform duration-500 ease-out aspect-video;
         border-color: var(--dt-border);
-      }
+        border-radius: 0;
+        min-height: 600px;
+        background: color-mix(in srgb, var(--color-border) 40%, transparent);
+        box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.5);
 
-      &.copied {
-        color: var(--dt-green);
-        border-color: rgba(106, 255, 176, 0.25);
-        opacity: 1;
-      }
+        &:hover {
+            border-color: var(--dt-accent);
+            transform: scale(1.005);
+        }
+
+        & iframe {
+            @apply absolute inset-0 w-full h-full border-0 grayscale-20;
+            will-change: transform, opacity;
+            &:hover {
+                @apply grayscale-0;
+            }
+        }
     }
 
-    &:hover .copy-btn {
-      opacity: 1;
+    :not(pre) > code {
+        background-color: #11111b;
+        color: var(--dt-accent);
+        padding: 0.2em 0.4em;
+        border-radius: 0;
+        font-size: 0.85em;
+        font-family: "DM Mono", monospace;
+        border: 1px solid var(--dt-border);
+        white-space: nowrap;
     }
-  }
 
-  pre {
-    margin: 0;
-    padding: 0;
-    background: var(--dt-surface) !important;
-    color: var(--dt-text) !important;
-    border: 1px solid var(--dt-border);
-    border-radius: 0;
-    overflow: hidden;
-
-    & code {
-      display: block;
-      font-family: 'DM Mono', monospace !important;
-      font-size: 12.5px !important;
-      font-weight: 400;
-      line-height: 1.85;
-      letter-spacing: 0.025em;
-      padding: 1.6rem 1.75rem;
-      overflow-x: auto;
-      background: transparent !important;
-      color: inherit !important;
-      border: none !important;
-      border-radius: 0 !important;
-
-      &::before, &::after { content: none !important; }
-
-      &::-webkit-scrollbar { height: 3px; }
-      &::-webkit-scrollbar-track { background: transparent; }
-      &::-webkit-scrollbar-thumb { background: var(--dt-border); }
+    :not(pre) > code::before,
+    :not(pre) > code::after {
+        content: "" !important;
     }
-  }
+
+    /* ── Fenced code block ── */
+    .code-block-wrapper {
+        position: relative;
+        margin: 2.5rem 0;
+
+        & .code-lang {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            font-family: "DM Mono", monospace;
+            font-size: 8.5px;
+            font-weight: 400;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--dt-muted);
+            background: var(--dt-surface);
+            border: 1px solid var(--dt-border);
+            border-bottom: none;
+            padding: 4px 10px;
+            line-height: 1;
+            z-index: 2;
+        }
+
+        & .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 9px;
+            font-family: "DM Mono", monospace;
+            font-size: 8.5px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--dt-muted);
+            background: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition:
+                color 0.2s ease,
+                border-color 0.2s ease,
+                opacity 0.2s ease;
+            border-radius: 0;
+            opacity: 0;
+
+            &:hover {
+                color: var(--dt-text);
+                border-color: var(--dt-border);
+            }
+
+            &.copied {
+                color: var(--dt-green);
+                border-color: rgba(106, 255, 176, 0.25);
+                opacity: 1;
+            }
+        }
+
+        &:hover .copy-btn {
+            opacity: 1;
+        }
+    }
+
+    pre {
+        margin: 0;
+        padding: 0;
+        background: var(--dt-surface) !important;
+        color: var(--dt-text) !important;
+        border: 1px solid var(--dt-border);
+        border-radius: 0;
+        overflow: hidden;
+
+        & code {
+            display: block;
+            font-family: "DM Mono", monospace !important;
+            font-size: 12.5px !important;
+            font-weight: 400;
+            line-height: 1.85;
+            letter-spacing: 0.025em;
+            padding: 1.6rem 1.75rem;
+            overflow-x: auto;
+            background: transparent !important;
+            color: inherit !important;
+            border: none !important;
+            border-radius: 0 !important;
+
+            &::before,
+            &::after {
+                content: none !important;
+            }
+
+            &::-webkit-scrollbar {
+                height: 3px;
+            }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: var(--dt-border);
+            }
+        }
+    }
 }
