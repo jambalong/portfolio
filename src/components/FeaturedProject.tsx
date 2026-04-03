@@ -34,6 +34,25 @@ const FeaturedProject = () => {
           <div className="dt-rule" />
         </motion.div>
 
+        {/* Title + subtitle above grid */}
+        <motion.div
+          className="mb-10"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          viewport={{ once: true }}
+        >
+          <h2
+            className="dt-display mb-2"
+            style={{ fontSize: "clamp(28px, 4vw, 42px)" }}
+          >
+            Pangu <em>Terminal</em>
+          </h2>
+          <p className="dt-eyebrow-muted">
+            Resource-optimization platform for Wuthering Waves
+          </p>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Browser mockup */}
           <motion.div
@@ -76,23 +95,6 @@ const FeaturedProject = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2
-              className="dt-display mb-2"
-              style={{ fontSize: "clamp(28px, 4vw, 42px)" }}
-            >
-              Pangu <em>Terminal</em>
-            </h2>
-
-            <p className="dt-eyebrow-muted mb-6">
-              Resource-optimization platform for Wuthering Waves
-            </p>
-
-            <p className="dt-body mb-6" style={{ fontSize: "14px" }}>
-              Production Rails application that reconciles game progression
-              requirements against player inventory, calculating exact material
-              deficits and detecting synthesis opportunities.
-            </p>
-
             {/* Feature list */}
             <ul
               className="mb-7 flex flex-col gap-2.5"
