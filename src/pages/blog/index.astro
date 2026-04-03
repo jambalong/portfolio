@@ -1,52 +1,58 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import BlogCard from '@/components/BlogCard.tsx';
-import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import BlogCard from "@/components/BlogCard.tsx";
+import { getCollection } from "astro:content";
 
-const posts = await getCollection('blog');
+const posts = await getCollection("blog");
 
 const sortedPosts = [...posts].sort((a, b) => {
-  const dateA = new Date(a.data.date).getTime();
-  const dateB = new Date(b.data.date).getTime();
-  return dateB - dateA;
+    const dateA = new Date(a.data.date).getTime();
+    const dateB = new Date(b.data.date).getTime();
+    return dateB - dateA;
 });
 ---
 
 <Layout title="Blog | John Alvin Ambalong">
-  <div class="dt-bg min-h-screen">
-    <Navigation client:load />
+    <div class="dt-bg min-h-screen">
+        <Navigation client:load />
 
-    <main id="main-content">
+        <main id="main-content">
+            <!-- Header -->
+            <section
+                class="dt-surface pt-32 pb-16 px-6"
+                style="border-bottom: 1px solid var(--dt-border)"
+            >
+                <div class="w-full max-w-4xl px-6 mx-auto">
+                    <p class="dt-eyebrow mb-3">Writing</p>
+                    <h1
+                        class="dt-display"
+                        style="font-size: clamp(32px, 5vw, 56px)"
+                    >
+                        Technical <em>Blog</em>
+                    </h1>
+                </div>
+            </section>
 
-      <!-- Header -->
-      <section class="dt-surface pt-32 pb-16 px-6" style="border-bottom: 1px solid var(--dt-border)">
-        <div class="w-full max-w-4xl mx-auto">
-          <p class="dt-eyebrow mb-3">Writing</p>
-          <h1 class="dt-display" style="font-size: clamp(32px, 5vw, 56px)">
-            Technical <em>Blog</em>
-          </h1>
-        </div>
-      </section>
+            <!-- Posts grid -->
+            <section class="dt-bg py-24 px-6">
+                <div class="w-full max-w-4xl px-6 mx-auto">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        {
+                            sortedPosts.map((post, index) => (
+                                <BlogCard
+                                    client:visible
+                                    post={post}
+                                    index={index}
+                                />
+                            ))
+                        }
+                    </div>
+                </div>
+            </section>
+        </main>
 
-      <!-- Posts grid -->
-      <section class="dt-bg py-24 px-6">
-        <div class="w-full max-w-4xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-6">
-            {sortedPosts.map((post, index) => (
-              <BlogCard
-                client:visible
-                post={post}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <Footer />
-  </div>
+        <Footer />
+    </div>
 </Layout>
