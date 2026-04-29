@@ -1,14 +1,26 @@
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import chessScreenshot from "@/assets/chess-engine-screenshot.png";
-import pebbleScreenshot from "@/assets/pebble-list-screenshot.png";
+import efiScriptScreenshot from "@/assets/efi-script-screenshot.png";
 
 const projects = [
+  {
+    title: "EFI BootMgr Cert Check",
+    category: "Security / PowerShell",
+    details:
+      "PowerShell audit script deployed via ManageEngine that mounts the EFI partition and validates the boot manager signing certificate against the Windows UEFI CA 2023 chain.",
+    tech: ["PowerShell", "UEFI", "Secure Boot"],
+    image: efiScriptScreenshot,
+    codeUrl: "https://github.com/jambalong/efi-bootmgr-cert-check",
+    accentClass: "dt-card-green",
+    eyebrowClass: "dt-eyebrow-green",
+    btnAccent: "var(--dt-green)",
+  },
   {
     title: "Ruby CLI Chess",
     category: "CLI / Game Logic",
     details:
-      "Terminal chess engine in pure Ruby demonstrating object-oriented design. Implements legal move validation, collision detection, and checkmate detection via board-state simulation across modular Board, Piece, and Player classes.",
+      "Terminal chess engine in pure Ruby. Implements legal move validation, collision detection, and checkmate detection via board-state simulation across modular Board, Piece, and Player classes.",
     tech: ["Ruby", "OOP"],
     image: chessScreenshot,
     liveUrl: "https://replit.com/@jambalong/chess",
@@ -16,19 +28,6 @@ const projects = [
     accentClass: "dt-card-red",
     eyebrowClass: "dt-eyebrow-red",
     btnAccent: "var(--dt-red)",
-  },
-  {
-    title: "Pebble List",
-    category: "Frontend / React",
-    details:
-      "Task management application built with React demonstrating component-based architecture and state management patterns.",
-    tech: ["React", "JavaScript", "Vite"],
-    image: pebbleScreenshot,
-    liveUrl: "https://jambalong.github.io/pebble-list/",
-    codeUrl: "https://github.com/jambalong/pebble-list",
-    accentClass: "dt-card-green",
-    eyebrowClass: "dt-eyebrow-green",
-    btnAccent: "var(--dt-green)",
   },
 ];
 
@@ -47,15 +46,11 @@ const Projects = () => {
           <p className="dt-eyebrow mb-3" style={{ opacity: 0.8 }}>
             Other Work
           </p>
-          <h2
-            className="dt-display mb-3"
-            style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
-          >
+          <h2 className="dt-display mb-3" style={{ fontSize: "clamp(28px, 4vw, 48px)" }}>
             Additional <em>Projects</em>
           </h2>
           <p className="dt-body max-w-md" style={{ fontSize: "14px" }}>
-            A selection of personal projects showcasing different skills and
-            technologies.
+            A selection of personal projects showcasing different skills and technologies.
           </p>
         </motion.div>
 
@@ -64,23 +59,16 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
-              className={`dt-card ${project.accentClass} overflow-hidden`}
+              className={`dt-card ${project.accentClass} overflow-hidden flex flex-col`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
               viewport={{ once: true }}
             >
               {/* Screenshot */}
-              <div
-                className="relative overflow-hidden"
-                style={{ aspectRatio: "16/9", background: "var(--dt-bg)" }}
-              >
+              <div className="relative overflow-hidden" style={{ aspectRatio: "4/3", background: "var(--dt-bg)" }}>
                 <img
-                  src={
-                    typeof project.image === "string"
-                      ? project.image
-                      : (project.image as any).src
-                  }
+                  src={typeof project.image === "string" ? project.image : (project.image as any).src}
                   alt={`${project.title} screenshot`}
                   className="w-full h-full object-cover block transition-transform duration-500 hover:scale-[1.03]"
                   style={{ filter: "brightness(0.85)" }}
@@ -88,11 +76,8 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <p
-                  className={`${project.eyebrowClass} mb-2.5`}
-                  style={{ fontSize: "9px", opacity: 0.75 }}
-                >
+              <div className="flex flex-col flex-1 p-6">
+                <p className={`${project.eyebrowClass} mb-2.5`} style={{ fontSize: "9px", opacity: 0.75 }}>
                   {project.category}
                 </p>
 
@@ -100,7 +85,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
 
-                <p className="dt-body mb-4" style={{ fontSize: "13px" }}>
+                <p className="dt-body mb-4 flex-1" style={{ fontSize: "13px" }}>
                   {project.details}
                 </p>
 
