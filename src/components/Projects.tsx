@@ -23,7 +23,7 @@ const projects = [
       "Terminal chess engine in pure Ruby. Implements legal move validation, collision detection, and checkmate detection via board-state simulation across modular Board, Piece, and Player classes.",
     tech: ["Ruby", "OOP"],
     image: chessScreenshot,
-    liveUrl: "https://replit.com/@jambalong/chess",
+    // liveUrl: "https://replit.com/@jambalong/chess",
     codeUrl: "https://github.com/jambalong/chess",
     accentClass: "dt-card-red",
     eyebrowClass: "dt-eyebrow-red",
