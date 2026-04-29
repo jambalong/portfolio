@@ -2,20 +2,13 @@ import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import panguScreenshot from "@/assets/pangu-terminal-screenshot.png";
 
-const techStack = [
-  "Ruby on Rails 8.1",
-  "Hotwire",
-  "PostgreSQL",
-  "Docker",
-  "Kamal 2",
-];
+const techStack = ["Ruby on Rails 8.1", "Hotwire", "PostgreSQL", "Docker", "Kamal 2"];
 
 const features = [
-  "Game upgrade paths pull from 10+ overlapping cost tables with no single source of truth, so I built a service layer that queries each table in isolation and keeps the planning logic independently testable",
-  "The REST API returns a material deficit and its farming source from a single endpoint pair, so clients have everything needed to render a farming view without a second request",
-  "Inventory edits trigger real-time re-renders of entire synthesis families via Hotwire Turbo Streams; plan output is JSONB-cached so the page reads from cache rather than recomputing on load",
-  "Achieved 96%+ service layer test coverage across three planning services, surfacing cost calculation edge cases that weren't caught during manual testing",
-  "Surplus lower-tier materials can be synthesized 3-to-1 into higher tiers, and the planner reconciles cross-rarity EXP equivalence before marking a plan complete",
+  "Built a service-based planner that queries 10+ static cost tables across character and weapon upgrade paths, keeping game rules and business logic independently testable",
+  "Detects 3-to-1 synthesis opportunities from surplus lower-tier materials and reconciles EXP potion equivalence across tiers to verify plan completeness",
+  "Inventory edits trigger Turbo Stream re-renders of the entire synthesis family, reflecting recalculated craftable counts without a page reload",
+  "Waveplate Optimizer estimates runs and Waveplate cost per deficit material by farming source, ranks source types by deficit coverage, and converts EXP potion deficits to higher-rarity drop equivalents via exp_value",
 ];
 
 const FeaturedProject = () => {
@@ -42,18 +35,13 @@ const FeaturedProject = () => {
           transition={{ duration: 0.6, delay: 0.05 }}
           viewport={{ once: true }}
         >
-          <h2
-            className="dt-display mb-2"
-            style={{ fontSize: "clamp(28px, 4vw, 42px)" }}
-          >
+          <h2 className="dt-display mb-2" style={{ fontSize: "clamp(28px, 4vw, 42px)" }}>
             Pangu <em>Terminal</em>
           </h2>
-          <p className="dt-eyebrow-muted">
-            Resource-optimization platform for Wuthering Waves
-          </p>
+          <p className="dt-eyebrow-muted">Resource-optimization platform for Wuthering Waves</p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Browser mockup */}
           <motion.div
             className="dt-browser"
@@ -63,26 +51,13 @@ const FeaturedProject = () => {
             viewport={{ once: true }}
           >
             <div className="dt-browser-bar">
-              <span
-                className="w-2.5 h-2.5 rounded-full"
-                style={{ background: "var(--dt-red)" }}
-              />
-              <span
-                className="w-2.5 h-2.5 rounded-full"
-                style={{ background: "var(--dt-orange)" }}
-              />
-              <span
-                className="w-2.5 h-2.5 rounded-full"
-                style={{ background: "var(--dt-green)" }}
-              />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-red)" }} />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-orange)" }} />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-green)" }} />
               <span className="dt-mono ml-3">panguterminal.ambalong.dev</span>
             </div>
             <img
-              src={
-                typeof panguScreenshot === "string"
-                  ? panguScreenshot
-                  : (panguScreenshot as any).src
-              }
+              src={typeof panguScreenshot === "string" ? panguScreenshot : (panguScreenshot as any).src}
               alt="Pangu Terminal dashboard showing resource optimization interface"
               className="w-full h-auto block"
             />
@@ -90,16 +65,14 @@ const FeaturedProject = () => {
 
           {/* Content */}
           <motion.div
+            className="flex flex-col"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
             {/* Feature list */}
-            <ul
-              className="mb-7 flex flex-col gap-2.5"
-              style={{ listStyle: "none", padding: 0 }}
-            >
+            <ul className="mb-7 flex flex-col flex-1 gap-2.5" style={{ listStyle: "none", padding: 0 }}>
               {features.map((f, i) => (
                 <motion.li
                   key={i}
@@ -110,10 +83,7 @@ const FeaturedProject = () => {
                   transition={{ duration: 0.4, delay: 0.3 + i * 0.05 }}
                   viewport={{ once: true }}
                 >
-                  <span
-                    className="absolute left-0"
-                    style={{ color: "var(--dt-accent)", opacity: 0.6 }}
-                  >
+                  <span className="absolute left-0" style={{ color: "var(--dt-accent)", opacity: 0.6 }}>
                     –
                   </span>
                   {f}
