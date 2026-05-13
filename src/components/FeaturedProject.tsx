@@ -2,13 +2,15 @@ import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import panguScreenshot from "@/assets/pangu-terminal-screenshot.png";
 
-const techStack = ["Ruby on Rails 8.1", "Hotwire", "PostgreSQL", "Docker", "Kamal 2"];
+const techStack = ["Ruby on Rails 8.1", "Hotwire", "PostgreSQL", "Docker", "Kamal 2", "RubyLLM", "GitHub Actions"];
 
 const features = [
-  "Built a service-based planner that queries 10+ static cost tables across character and weapon upgrade paths, keeping game rules and business logic independently testable",
-  "Detects 3-to-1 synthesis opportunities from surplus lower-tier materials and reconciles EXP potion equivalence across tiers to verify plan completeness",
-  "Inventory edits trigger Turbo Stream re-renders of the entire synthesis family, reflecting recalculated craftable counts without a page reload",
-  "Waveplate Optimizer estimates runs and Waveplate cost per deficit material by farming source, ranks source types by deficit coverage, and converts EXP potion deficits to higher-rarity drop equivalents via exp_value",
+  "Service layer queries 10+ static cost tables across Resonator and Weapon upgrade paths, keeping game rules independently testable without touching the database or web stack",
+  "Reconciliation engine detects 3-to-1 synthesis opportunities from surplus lower-tier materials and applies EXP potion cross-rarity equivalence to verify plan completeness",
+  "Inventory edits trigger Turbo Stream re-renders of the full synthesis family, reflecting recalculated craftable counts without a page reload or separate API call",
+  "Waveplate Optimizer ranks farming sources by deficit coverage and estimates runs and Waveplate cost per material, converting EXP deficits to higher-rarity drop equivalents",
+  "Farming Advisor integrates RubyLLM to pipe live reconciliation and optimizer data to an AI model, returning a prioritized plain-language farming recommendation per plan",
+  "Versioned REST API across seven endpoints with SHA-256 bearer token authentication and per-key rate limiting at 60 requests per minute",
 ];
 
 const FeaturedProject = () => {
@@ -41,7 +43,7 @@ const FeaturedProject = () => {
           <p className="dt-eyebrow-muted">Resource-optimization platform for Wuthering Waves</p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Browser mockup */}
           <motion.div
             className="dt-browser"
