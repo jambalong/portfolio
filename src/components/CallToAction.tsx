@@ -1,5 +1,5 @@
-import { Mail, FileText, Linkedin } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Mail, FileText, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const CallToAction = () => {
   return (
@@ -15,33 +15,26 @@ const CallToAction = () => {
           <p className="dt-eyebrow-green mb-4">Contact</p>
 
           {/* Heading */}
-          <h2 className="dt-display mb-6" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
-            Available for the <em style={{ color: 'var(--dt-green)' }}>Right Opportunity</em>
+          <h2 className="dt-display mb-6" style={{ fontSize: "clamp(28px, 4vw, 48px)" }}>
+            Looking for the <em style={{ color: "var(--dt-green)" }}>Right Team</em>
           </h2>
 
           {/* Divider */}
           <div className="dt-rule mb-8" />
 
           {/* Body */}
-          <p className="dt-body mb-10" style={{ fontSize: '15px', maxWidth: '512px' }}>
-            I'm looking for an engineering role, remote or Washington State.<br />
-            If you're building something interesting and value someone who builds and delivers, let's talk.
+          <p className="dt-body mb-10" style={{ fontSize: "15px", maxWidth: "512px" }}>
+            I'm looking for an engineering role, remote or Washington State.
+            <br />
+            If you're building something real and want someone who ships and takes ownership, let's talk.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-3">
-            <a
-              href="mailto:johnalvin@ambalong.dev"
-              className="dt-btn-green"
-            >
+            <a href="mailto:johnalvin@ambalong.dev" className="dt-btn-green">
               <Mail size={14} /> Send an Email
             </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="dt-btn-ghost"
-            >
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="dt-btn-ghost">
               <FileText size={14} /> Download Resume
             </a>
             <a
@@ -53,7 +46,6 @@ const CallToAction = () => {
               <Linkedin size={14} /> LinkedIn
             </a>
           </div>
-
         </motion.div>
       </div>
     </section>
