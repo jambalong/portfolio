@@ -8,26 +8,21 @@ const projects = [
     title: "EFI BootMgr Cert Check",
     category: "Security / PowerShell",
     details:
-      "PowerShell audit script deployed via ManageEngine that mounts the EFI partition and validates the boot manager signing certificate against the Windows UEFI CA 2023 chain.",
+      "PowerShell audit script deployed via ManageEngine across several departments to validate boot manager binaries against the Windows UEFI CA 2023 chain. Identified that Get-AuthenticodeSignature returns incorrect issuer data for EFI binaries and switched to X509Certificate.CreateFromSignedFile as the correct extraction path.",
     tech: ["PowerShell", "UEFI", "Secure Boot"],
     image: efiScriptScreenshot,
     codeUrl: "https://github.com/jambalong/efi-bootmgr-cert-check",
-    accentClass: "dt-card-green",
-    eyebrowClass: "dt-eyebrow-green",
-    btnAccent: "var(--dt-green)",
+    accent: "green",
   },
   {
     title: "Ruby CLI Chess",
     category: "CLI / Game Logic",
     details:
-      "Terminal chess engine in pure Ruby. Implements legal move validation, collision detection, and checkmate detection via board-state simulation across modular Board, Piece, and Player classes.",
+      "Terminal chess engine in pure Ruby with no framework. Models Board, Piece, and Player as distinct domain objects with clean separation of responsibilities. Validates legal moves for all pieces via directional constraints and collision detection, then confirms check and checkmate by deep-cloning board state to simulate each candidate move before committing.",
     tech: ["Ruby", "OOP"],
     image: chessScreenshot,
-    // liveUrl: "https://replit.com/@jambalong/chess",
     codeUrl: "https://github.com/jambalong/chess",
-    accentClass: "dt-card-red",
-    eyebrowClass: "dt-eyebrow-red",
-    btnAccent: "var(--dt-red)",
+    accent: "red",
   },
 ];
 
@@ -49,87 +44,90 @@ const Projects = () => {
           <h2 className="dt-display mb-3" style={{ fontSize: "clamp(28px, 4vw, 48px)" }}>
             Additional <em>Projects</em>
           </h2>
-          <p className="dt-body max-w-md" style={{ fontSize: "14px" }}>
-            A selection of personal projects showcasing different skills and technologies.
-          </p>
         </motion.div>
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
-            <motion.article
-              key={project.title}
-              className={`dt-card ${project.accentClass} overflow-hidden flex flex-col`}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.12 }}
-              viewport={{ once: true }}
-            >
-              {/* Screenshot */}
-              <div className="relative overflow-hidden" style={{ aspectRatio: "4/3", background: "var(--dt-bg)" }}>
-                <img
-                  src={typeof project.image === "string" ? project.image : (project.image as any).src}
-                  alt={`${project.title} screenshot`}
-                  className="w-full h-full object-cover block transition-transform duration-500 hover:scale-[1.03]"
-                  style={{ filter: "brightness(0.85)" }}
-                />
-              </div>
+          {projects.map(({ title, category, details, tech, image, codeUrl, liveUrl, accent }, index) => {
+            const accentCard = `dt-card-${accent}`;
+            const accentEyebrow = `dt-eyebrow-${accent}`;
+            const accentColor = `var(--dt-${accent})`;
 
-              {/* Content */}
-              <div className="flex flex-col flex-1 p-6">
-                <p className={`${project.eyebrowClass} mb-2.5`} style={{ fontSize: "9px", opacity: 0.75 }}>
-                  {project.category}
-                </p>
-
-                <h3 className="dt-display mb-1.5" style={{ fontSize: "20px" }}>
-                  {project.title}
-                </h3>
-
-                <p className="dt-body mb-4 flex-1" style={{ fontSize: "13px" }}>
-                  {project.details}
-                </p>
-
-                {/* Tech stack */}
-                <div className="flex flex-wrap gap-1.5 mb-5">
-                  {project.tech.map((tech) => (
-                    <span key={tech} className="dt-tag">
-                      {tech}
-                    </span>
-                  ))}
+            return (
+              <motion.article
+                key={title}
+                className={`dt-card ${accentCard} overflow-hidden flex flex-col`}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.12 }}
+                viewport={{ once: true }}
+              >
+                {/* Screenshot */}
+                <div className="relative overflow-hidden" style={{ aspectRatio: "4/3", background: "var(--dt-bg)" }}>
+                  <img
+                    src={typeof image === "string" ? image : (image as any).src}
+                    alt={`${title} screenshot`}
+                    className="w-full h-full object-cover block transition-transform duration-500 hover:scale-[1.03]"
+                    style={{ filter: "brightness(0.85)" }}
+                  />
                 </div>
 
-                {/* CTAs */}
-                <div className="flex gap-2.5">
-                  {project.liveUrl && (
+                {/* Content */}
+                <div className="flex flex-col flex-1 p-6">
+                  <p className={`${accentEyebrow} mb-2.5`} style={{ fontSize: "9px", opacity: 0.75 }}>
+                    {category}
+                  </p>
+
+                  <h3 className="dt-display mb-1.5" style={{ fontSize: "20px" }}>
+                    {title}
+                  </h3>
+
+                  <p className="dt-body mb-4 flex-1" style={{ fontSize: "13px" }}>
+                    {details}
+                  </p>
+
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {tech.map((t) => (
+                      <span key={t} className="dt-tag">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* CTAs */}
+                  <div className="flex gap-2.5">
+                    {liveUrl && (
+                      <a
+                        href={liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="dt-btn-primary"
+                        style={{
+                          padding: "7px 14px",
+                          fontSize: "10px",
+                          borderColor: accentColor,
+                          color: accentColor,
+                          background: `color-mix(in srgb, ${accentColor} 10%, transparent)`,
+                        }}
+                      >
+                        <ExternalLink size={12} /> Demo
+                      </a>
+                    )}
                     <a
-                      href={project.liveUrl}
+                      href={codeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="dt-btn-primary"
-                      style={{
-                        padding: "7px 14px",
-                        fontSize: "10px",
-                        borderColor: project.btnAccent,
-                        color: project.btnAccent,
-                        background: `color-mix(in srgb, ${project.btnAccent} 10%, transparent)`,
-                      }}
+                      className="dt-btn-ghost"
+                      style={{ padding: "7px 14px", fontSize: "10px" }}
                     >
-                      <ExternalLink size={12} /> Demo
+                      <Github size={12} /> Code
                     </a>
-                  )}
-                  <a
-                    href={project.codeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="dt-btn-ghost"
-                    style={{ padding: "7px 14px", fontSize: "10px" }}
-                  >
-                    <Github size={12} /> Code
-                  </a>
+                  </div>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
