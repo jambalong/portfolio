@@ -18,7 +18,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Software Engineer - AMBALONG.DEV
+          Software Engineer · AMBALONG.DEV
         </motion.p>
 
         {/* Name */}
@@ -44,7 +44,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Ruby on Rails : Full-Stack Development
+          Backend Development / DevOps
         </motion.p>
 
         {/* Divider */}
@@ -65,8 +65,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           Curious by nature, stubborn by habit.
-          <br />I build real things, ship them, and show up every day to get
-          better.
+          <br />I build real things, ship them, and show up every day to get better.
         </motion.p>
 
         {/* Status metadata */}
@@ -79,11 +78,11 @@ const Hero = () => {
           {[
             { label: "Status", value: "Open to work" },
             { label: "Location", value: "Walla Walla, WA" },
-            { label: "Focus", value: "Rails / Backend / DevOps" },
+            { label: "Focus", value: "Backend / DevOps" },
           ].map(({ label, value }) => (
             <span key={label} className="dt-mono">
               <span className="uppercase tracking-widest">{label} </span>
-              <span style={{ color: "var(--dt-accent)" }}>/ </span>
+              <span style={{ color: "var(--dt-accent)" }}>: </span>
               <span style={{ color: "var(--dt-text)" }}>{value}</span>
             </span>
           ))}
@@ -122,9 +121,7 @@ const Hero = () => {
                 key={label}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  href.startsWith("http") ? "noopener noreferrer" : undefined
-                }
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={label}
                 className="dt-icon-link"
               >
@@ -142,12 +139,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.2 }}
       >
-        <a
-          href="#featured"
-          aria-label="Scroll down"
-          className="dt-icon-link"
-          style={{ border: "none" }}
-        >
+        <a href="#featured" aria-label="Scroll down" className="dt-icon-link" style={{ border: "none" }}>
           <ArrowDown size={20} />
         </a>
       </motion.div>
