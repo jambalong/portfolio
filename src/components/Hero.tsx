@@ -18,7 +18,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Software Engineer · AMBALONG.DEV
+          AMBALONG.DEV
         </motion.p>
 
         {/* Name */}
@@ -44,7 +44,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Backend Development / DevOps
+          Software Engineer
         </motion.p>
 
         {/* Divider */}
