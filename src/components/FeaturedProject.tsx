@@ -5,12 +5,12 @@ import panguScreenshot from "@/assets/pangu-terminal-screenshot.png";
 const techStack = ["Ruby on Rails 8.1", "Hotwire", "PostgreSQL", "Docker", "Kamal 2", "RubyLLM", "GitHub Actions"];
 
 const features = [
-  "Service layer queries 10+ static cost tables across Resonator and Weapon upgrade paths, keeping game rules independently testable without touching the database or web stack",
-  "Reconciliation engine detects 3-to-1 synthesis opportunities from surplus lower-tier materials and applies EXP potion cross-rarity equivalence to verify plan completeness",
-  "Inventory edits trigger Turbo Stream re-renders of the full synthesis family, reflecting recalculated craftable counts without a page reload or separate API call",
-  "Waveplate Optimizer ranks farming sources by deficit coverage and estimates runs and Waveplate cost per material, converting EXP deficits to higher-rarity drop equivalents",
-  "Farming Advisor integrates RubyLLM to pipe live reconciliation and optimizer data to an AI model, returning a prioritized plain-language farming recommendation per plan",
-  "Versioned REST API across seven endpoints with SHA-256 bearer token authentication and per-key rate limiting at 60 requests per minute",
+  "Service layer encapsulates game rules across sourced drop rate tables, decoupling business logic from controllers and keeping each feature independently testable.",
+  "Versioned REST API across seven endpoints with SHA-256 bearer token authentication and per-key rate limiting at 60 requests per minute.",
+  "Reconciliation engine detects 3-to-1 synthesis opportunities from surplus lower-tier materials and applies EXP potion cross-rarity equivalence to verify plan completeness.",
+  "Waveplate Optimizer estimates farming runs per material deficit, converts higher-rarity EXP drops to rarity-2 equivalents for run estimation, and falls back to the nearest available SOL3 phase when drop rate data is missing.",
+  "Inventory edits trigger scoped Turbo Stream re-renders across the entire synthesis item group, automatically reflecting recalculated craftable counts without a page reload or client-side framework.",
+  "Farming Advisor integrates RubyLLM to pipe live reconciliation and optimizer data to an AI model, returning a prioritized plain-language farming recommendation per plan.",
 ];
 
 const FeaturedProject = () => {
@@ -25,7 +25,7 @@ const FeaturedProject = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="dt-eyebrow mb-3">Currently Building</p>
+          <p className="dt-eyebrow mb-3">Production</p>
           <div className="dt-rule" />
         </motion.div>
 
@@ -40,7 +40,7 @@ const FeaturedProject = () => {
           <h2 className="dt-display mb-2" style={{ fontSize: "clamp(28px, 4vw, 42px)" }}>
             Pangu <em>Terminal</em>
           </h2>
-          <p className="dt-eyebrow-muted">Resource-optimization platform for Wuthering Waves</p>
+          <p className="dt-eyebrow-muted">Progression planner and farming optimizer for Wuthering Waves</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
