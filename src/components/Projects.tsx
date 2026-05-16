@@ -5,10 +5,10 @@ import efiScriptScreenshot from "@/assets/efi-script-screenshot.png";
 
 const projects = [
   {
-    title: "EFI BootMgr Cert Check",
+    title: "EFI Boot Manager Cert Check",
     category: "Security / PowerShell",
     details:
-      "PowerShell audit script deployed via ManageEngine across several departments to validate boot manager binaries for Windows UEFI CA 2023 signing compliance. Identified that Get-AuthenticodeSignature and Get-PfxCertificate both return incorrect issuer data for EFI binaries and resolved it by switching to X509Certificate.CreateFromSignedFile.",
+      "PowerShell compliance script deployed via ManageEngine Endpoint Central across multiple departments to validate boot manager binaries for Windows UEFI CA 2023 signing compliance. Identified that Get-AuthenticodeSignature and Get-PfxCertificate return incorrect issuer data for EFI binaries and resolved it by switching to X509Certificate.CreateFromSignedFile after tracing it to a known PowerShell bug.",
     tech: ["PowerShell", "UEFI", "Secure Boot"],
     image: efiScriptScreenshot,
     codeUrl: "https://github.com/jambalong/efi-bootmgr-cert-check",
