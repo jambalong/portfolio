@@ -16,7 +16,7 @@ const Hero = () => {
           className="dt-eyebrow mb-5"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.2, delay: 0.1 }}
         >
           AMBALONG.DEV
         </motion.p>
@@ -27,7 +27,7 @@ const Hero = () => {
           style={{ fontSize: "clamp(40px, 7vw, 72px)" }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
         >
           John Alvin <em>Ambalong</em>
         </motion.h1>
@@ -42,7 +42,7 @@ const Hero = () => {
           }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.2, delay: 0.3 }}
         >
           Software Engineer
         </motion.p>
@@ -53,7 +53,7 @@ const Hero = () => {
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           style={{ transformOrigin: "left" }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.2, delay: 0.4 }}
         />
 
         {/* Description */}
@@ -62,7 +62,7 @@ const Hero = () => {
           style={{ fontSize: "14px" }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.2, delay: 0.5 }}
         >
           Curious by nature, stubborn by habit.
           <br />I build real things, ship them, and show up every day to get better.
@@ -73,7 +73,7 @@ const Hero = () => {
           className="flex flex-wrap gap-6 mb-10"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.2, delay: 0.6 }}
         >
           {[
             { label: "Status", value: "Open to work" },
@@ -93,7 +93,7 @@ const Hero = () => {
           className="flex flex-wrap items-center gap-4"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          transition={{ duration: 0.2, delay: 0.7 }}
         >
           <a href="#featured" className="dt-btn-primary">
             View Projects <ArrowDown size={14} />
@@ -137,7 +137,7 @@ const Hero = () => {
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1.2 }}
+        transition={{ duration: 0.2, delay: 1.2 }}
       >
         <a href="#featured" aria-label="Scroll down" className="dt-icon-link" style={{ border: "none" }}>
           <ArrowDown size={20} />

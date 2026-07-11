@@ -22,7 +22,7 @@ const FeaturedProject = () => {
           className="mb-12"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
         >
           <p className="dt-eyebrow mb-3">Production</p>
@@ -34,7 +34,7 @@ const FeaturedProject = () => {
           className="mb-10"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.05 }}
+          transition={{ duration: 0.2, delay: 0.05 }}
           viewport={{ once: true }}
         >
           <h2 className="dt-display mb-2" style={{ fontSize: "clamp(28px, 4vw, 42px)" }}>
@@ -49,14 +49,14 @@ const FeaturedProject = () => {
             className="dt-browser"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
             viewport={{ once: true }}
           >
             <div className="dt-browser-bar">
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-red)" }} />
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-orange)" }} />
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-green)" }} />
-              <span className="dt-mono ml-3">panguterminal.ambalong.dev</span>
+              {/*<span className="dt-mono ml-3">panguterminal.ambalong.dev</span>*/}
             </div>
             <img
               src={typeof panguScreenshot === "string" ? panguScreenshot : (panguScreenshot as any).src}
@@ -70,7 +70,7 @@ const FeaturedProject = () => {
             className="flex flex-col"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.2 }}
             viewport={{ once: true }}
           >
             {/* Feature list */}
@@ -82,7 +82,7 @@ const FeaturedProject = () => {
                   style={{ fontSize: "13px" }}
                   initial={{ opacity: 0, x: -8 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + i * 0.05 }}
+                  transition={{ duration: 0.2, delay: 0.3 + i * 0.05 }}
                   viewport={{ once: true }}
                 >
                   <span className="absolute left-0" style={{ color: "var(--dt-accent)", opacity: 0.6 }}>
@@ -104,14 +104,14 @@ const FeaturedProject = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
-              <a
+              {/*<a
                 href="https://panguterminal.ambalong.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="dt-btn-primary"
               >
                 <ExternalLink size={14} /> Live Demo
-              </a>
+              </a>*/}
               <a
                 href="https://github.com/jambalong/pangu-terminal"
                 target="_blank"

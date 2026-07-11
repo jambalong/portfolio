@@ -35,7 +35,7 @@ const Projects = () => {
           className="mb-14"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
         >
           <p className="dt-eyebrow mb-3" style={{ opacity: 0.8 }}>
@@ -59,7 +59,7 @@ const Projects = () => {
                 className={`dt-card ${accentCard} overflow-hidden flex flex-col`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.12 }}
+                transition={{ duration: 0.2, delay: index * 0.12 }}
                 viewport={{ once: true }}
               >
                 {/* Screenshot */}
