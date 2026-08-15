@@ -56,7 +56,7 @@ const FeaturedProject = () => {
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-red)" }} />
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-orange)" }} />
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--dt-green)" }} />
-              {/*<span className="dt-mono ml-3">panguterminal.ambalong.dev</span>*/}
+              <span className="dt-mono ml-3">panguterminal.ambalong.dev</span>
             </div>
             <img
               src={typeof panguScreenshot === "string" ? panguScreenshot : (panguScreenshot as any).src}
@@ -104,14 +104,14 @@ const FeaturedProject = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3">
-              {/*<a
+              <a
                 href="https://panguterminal.ambalong.dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="dt-btn-primary"
               >
                 <ExternalLink size={14} /> Live Demo
-              </a>*/}
+              </a>
               <a
                 href="https://github.com/jambalong/pangu-terminal"
                 target="_blank"
