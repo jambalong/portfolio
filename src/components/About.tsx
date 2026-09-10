@@ -24,17 +24,17 @@ const About = () => {
           {/* Copy */}
           <div className="flex flex-col gap-5 mb-10">
             <p className="dt-body" style={{ fontSize: "14px" }}>
-              Software engineer, early career, graduating June 2026 with an AAS in Software Design from Walla Walla
-              Community College. Currently working in Tech Services at Walla Walla Community College, and shipping
-              production software on the side.
+              Software Support Engineer at Ingeniux, AAS in Software Design from WWCC. Most of what I know came
+              from building things on my own outside of class, Ruby and C#.
             </p>
 
             <p className="dt-body" style={{ fontSize: "14px" }}>
-              I build on the side with the same discipline I bring to work. Pangu Terminal is live in production.
+              Pangu Terminal is the biggest of those, a portfolio project I still maintain, and I contribute to an
+              open-source project.
             </p>
 
             <p className="dt-body" style={{ fontSize: "14px" }}>
-              I read, I go to the gym, I show up consistently.
+              Outside of that, I enjoy cooking.
             </p>
           </div>
 

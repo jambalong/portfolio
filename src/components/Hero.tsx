@@ -44,7 +44,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.3 }}
         >
-          Software Engineer
+          Software Support Engineer
         </motion.p>
 
         {/* Divider */}
@@ -57,16 +57,15 @@ const Hero = () => {
         />
 
         {/* Description */}
-        <motion.p
+        {/* <motion.p
           className="dt-body mb-10 max-w-lg"
           style={{ fontSize: "14px" }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.5 }}
         >
-          Curious by nature, stubborn by habit.
-          <br />I build real things, ship them, and show up every day to get better.
-        </motion.p>
+          I build in Ruby and C#, and I'm studying for Security+
+        </motion.p> */}
 
         {/* Status metadata */}
         <motion.div

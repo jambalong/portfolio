@@ -8,7 +8,7 @@ const projects = [
     title: "EFI Boot Manager Cert Check",
     category: "Security / PowerShell",
     details:
-      "PowerShell compliance script deployed via ManageEngine Endpoint Central across multiple departments to validate boot manager binaries for Windows UEFI CA 2023 signing compliance. Identified that Get-AuthenticodeSignature and Get-PfxCertificate return incorrect issuer data for EFI binaries and resolved it by switching to X509Certificate.CreateFromSignedFile after tracing it to a known PowerShell bug.",
+      "PowerShell compliance script that validates boot manager binaries against the Windows UEFI CA 2023 signing standard. Traced Get-AuthenticodeSignature and Get-PfxCertificate returning incorrect issuer data for EFI binaries to a known PowerShell bug, and resolved it using X509Certificate.CreateFromSignedFile instead.",
     tech: ["PowerShell", "UEFI", "Secure Boot"],
     image: efiScriptScreenshot,
     codeUrl: "https://github.com/jambalong/efi-bootmgr-cert-check",
@@ -18,7 +18,7 @@ const projects = [
     title: "Ruby CLI Chess",
     category: "CLI / Game Logic",
     details:
-      "Terminal chess engine in pure Ruby with no framework. Validates legal moves for all pieces via directional constraints and collision detection, and confirms check and checkmate by deep-cloning board state to simulate each candidate move.",
+      "Terminal chess for two players, in pure Ruby with no framework. Validates legal moves for all pieces via directional constraints and collision detection, and confirms check and checkmate by deep-cloning board state to simulate each candidate move.",
     tech: ["Ruby", "OOP"],
     image: chessScreenshot,
     codeUrl: "https://github.com/jambalong/chess",
