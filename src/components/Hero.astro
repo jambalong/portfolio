@@ -1,0 +1,53 @@
+---
+import Icon from './Icon.astro';
+import { SITE } from '../config/site';
+
+const links = [
+  { href: SITE.github, label: 'GitHub', icon: 'github', external: true },
+  { href: '/rss.xml', label: 'RSS', icon: 'rss', external: false },
+  { href: `mailto:${SITE.email}`, label: 'Email', icon: 'mail', external: false },
+] as const;
+---
+
+<section class="dt-bg dt-hero relative overflow-hidden">
+  <div class="dt-grid absolute inset-0 z-0"></div>
+  <div
+    class="dt-glow absolute z-0 w-[600px] h-[300px] top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2"
+  >
+  </div>
+
+  <div class="w-full max-w-4xl mx-auto px-6 relative z-10 hero-fade">
+    <p class="dt-eyebrow mb-5">ambalong.dev</p>
+
+    <h1 class="dt-display hero-h1 mb-3">John Alvin <em>Ambalong</em></h1>
+
+    <p class="dt-display hero-tagline mb-6">I build software and write about it.</p>
+
+    <div class="dt-rule mb-6"></div>
+
+    <p class="dt-body mb-10 max-w-xl">
+      Most of it is Rails and Postgres. The posts are about how I built things and the errors I hit.
+    </p>
+
+    <div class="flex flex-wrap items-center gap-4">
+      <a href="/blog/" class="dt-btn-primary">Read the posts</a>
+      <a href="#subscribe" class="dt-btn-ghost">Get posts by email</a>
+
+      <div class="flex items-center gap-1">
+        {
+          links.map((l) => (
+            <a
+              href={l.href}
+              target={l.external ? '_blank' : undefined}
+              rel={l.external ? 'noopener noreferrer' : undefined}
+              aria-label={l.label}
+              class="dt-icon-link"
+            >
+              <Icon name={l.icon} />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

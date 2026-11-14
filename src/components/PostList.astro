@@ -1,0 +1,35 @@
+---
+import { formatDate, readTime, type Post } from '../lib/posts';
+
+interface Props {
+  posts: Post[];
+  compact?: boolean;
+}
+const { posts, compact = false } = Astro.props;
+---
+
+<ul class="post-list">
+  {
+    posts.map((post) => (
+      <li class="post-row">
+        <time class="dt-mono post-date" datetime={post.data.date.toISOString()}>
+          {formatDate(post.data.date)}
+        </time>
+        <div>
+          <h3 class="post-title">
+            <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+          </h3>
+          {!compact && (
+            <>
+              <p class="dt-body mt-2">{post.data.description}</p>
+              <p class="dt-mono mt-3">
+                {readTime(post)}
+                {post.data.tags.length > 0 && <> · {post.data.tags.join(' · ')}</>}
+              </p>
+            </>
+          )}
+        </div>
+      </li>
+    ))
+  }
+</ul>

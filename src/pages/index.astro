@@ -1,20 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
+import Hero from '@/components/Hero.astro';
+import PostList from '@/components/PostList.astro';
 import FeaturedProject from '@/components/FeaturedProject';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import About from '@/components/About';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
+import { getPosts } from '@/lib/posts';
+
+const latest = (await getPosts()).slice(0, 3);
 ---
 
 <Layout>
   <Navigation client:load />
 
   <main id="main-content">
-    <Hero client:load />
+    <Hero />
+
+    <section id="writing" class="dt-surface dt-section">
+      <div class="w-full max-w-4xl mx-auto px-6">
+        <p class="dt-eyebrow mb-3">Writing</p>
+        <h2 class="dt-display dt-h2 mb-8">Latest <em>posts</em></h2>
+        <PostList posts={latest} />
+        <p class="mt-8"><a href="/blog/" class="dt-btn-ghost">All posts</a></p>
+      </div>
+    </section>
+
     <FeaturedProject client:load />
     <Projects client:visible />
     <Skills client:visible />
