@@ -1,14 +1,14 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer.astro';
 
 const pathname = Astro.url.pathname;
 ---
 
 <Layout title="404 | John Alvin Ambalong">
   <div class="dt-bg min-h-screen flex flex-col">
-    <Navigation client:load />
+    <Navigation client:load pathname={pathname} />
 
     <main id="main-content" class="flex-1 flex items-center justify-center px-6">
       <div class="w-full max-w-4xl mx-auto">

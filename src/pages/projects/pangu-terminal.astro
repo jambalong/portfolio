@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer.astro';
 import panguDialog from '../../assets/pangu-plan-dialog.png';
 
 const tags = ['Ruby on Rails 8.1', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2', 'RubyLLM', 'GitHub Actions'];
@@ -12,7 +12,7 @@ const tags = ['Ruby on Rails 8.1', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2',
   title="Pangu Terminal | John Alvin Ambalong"
   description="A progression planner for the game Wuthering Waves, built with Rails 8. What it does and how it is built."
 >
-  <Navigation client:load />
+  <Navigation client:load pathname={Astro.url.pathname} />
 
   <main id="main-content" class="dt-bg page-main">
     <article class="page-column">

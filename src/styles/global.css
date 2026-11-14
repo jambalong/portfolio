@@ -561,6 +561,46 @@ body {
   margin-bottom: 1.25rem;
 }
 
+/* ─── Navigation ─── */
+
+.nav-logo {
+  color: var(--dt-text);
+  transition: color 0.2s ease;
+}
+.nav-logo:hover {
+  color: var(--dt-accent-text);
+}
+.nav-link {
+  padding: 6px 14px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--dt-text);
+}
+.nav-link-mobile {
+  padding: 12px 0;
+  min-height: 44px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid var(--dt-border);
+  transition: color 0.2s ease;
+}
+.nav-link-mobile:hover,
+.nav-link-mobile[aria-current="page"] {
+  color: var(--dt-text);
+}
+.nav-mobile-panel {
+  animation: fade-in-up 0.2s ease-out both;
+}
+
 /* ─── Navigation responsive ─── */
 
 .nav-desktop {

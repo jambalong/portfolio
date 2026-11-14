@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer.astro';
 import Subscribe from '@/components/Subscribe.astro';
 import { getPosts, readTime } from '@/lib/posts';
 
@@ -51,7 +51,7 @@ const articleJsonLd = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} slot="head" />
 
-  <Navigation client:load />
+  <Navigation client:load pathname={Astro.url.pathname} />
 
   <main id="main-content" class="dt-bg pt-32 pb-24 px-6">
     <article class="blog-article">

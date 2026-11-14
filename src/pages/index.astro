@@ -5,17 +5,14 @@ import Hero from '@/components/Hero.astro';
 import PostList from '@/components/PostList.astro';
 import Subscribe from '@/components/Subscribe.astro';
 import ProjectsSection from '@/components/ProjectsSection.astro';
-import Skills from '@/components/Skills';
-import About from '@/components/About';
-import CallToAction from '@/components/CallToAction';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer.astro';
 import { getPosts } from '@/lib/posts';
 
 const latest = (await getPosts()).slice(0, 3);
 ---
 
 <Layout>
-  <Navigation client:load />
+  <Navigation client:load pathname={Astro.url.pathname} />
 
   <main id="main-content">
     <Hero />
@@ -32,9 +29,6 @@ const latest = (await getPosts()).slice(0, 3);
     <Subscribe variant="section" />
 
     <ProjectsSection />
-    <Skills client:visible />
-    <About client:visible />
-    <CallToAction client:visible />
   </main>
 
   <Footer />

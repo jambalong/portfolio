@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer.astro";
 import BlogCard from "@/components/BlogCard.tsx";
 import { getPosts, readTime } from "@/lib/posts";
 
@@ -10,7 +10,7 @@ const sortedPosts = await getPosts();
 
 <Layout title="Blog | John Alvin Ambalong">
     <div class="dt-bg min-h-screen">
-        <Navigation client:load />
+        <Navigation client:load pathname={Astro.url.pathname} />
 
         <main id="main-content">
             <!-- Header -->
