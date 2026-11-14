@@ -43,7 +43,7 @@ const sortedPosts = [...posts].sort((a, b) => {
                             sortedPosts.map((post, index) => (
                                 <BlogCard
                                     client:visible
-                                    post={post}
+                                    post={{ ...post, body: "", rendered: undefined } as typeof post}
                                     index={index}
                                 />
                             ))

@@ -44,7 +44,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.3 }}
         >
-          Software Support Engineer
+          I build software and write about it.
         </motion.p>
 
         {/* Divider */}
@@ -66,26 +66,6 @@ const Hero = () => {
         >
           I build in Ruby and C#, and I'm studying for Security+
         </motion.p> */}
-
-        {/* Status metadata */}
-        <motion.div
-          className="flex flex-wrap gap-6 mb-10"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2, delay: 0.6 }}
-        >
-          {[
-            { label: "Status", value: "Open to work" },
-            { label: "Location", value: "Walla Walla, WA" },
-            { label: "Focus", value: "Backend / DevOps" },
-          ].map(({ label, value }) => (
-            <span key={label} className="dt-mono">
-              <span className="uppercase tracking-widest">{label} </span>
-              <span style={{ color: "var(--dt-accent)" }}>: </span>
-              <span style={{ color: "var(--dt-text)" }}>{value}</span>
-            </span>
-          ))}
-        </motion.div>
 
         {/* CTAs */}
         <motion.div

@@ -24,24 +24,18 @@ const About = () => {
           {/* Copy */}
           <div className="flex flex-col gap-5 mb-10">
             <p className="dt-body" style={{ fontSize: "14px" }}>
-              Software Support Engineer at Ingeniux, AAS in Software Design from WWCC. Most of what I know came
-              from building things on my own outside of class, Ruby and C#.
+              I studied software design at community college and finished in 2026. Most of what I know came from
+              building things on my own, outside of class.
             </p>
 
             <p className="dt-body" style={{ fontSize: "14px" }}>
-              Pangu Terminal is the biggest of those, a portfolio project I still maintain, and I contribute to an
-              open-source project.
-            </p>
-
-            <p className="dt-body" style={{ fontSize: "14px" }}>
-              Outside of that, I enjoy cooking.
+              Pangu Terminal is the biggest of those. It was my capstone project.
             </p>
           </div>
 
           {/* Metadata */}
           <div className="flex flex-col gap-3 pt-6" style={{ borderTop: "1px solid var(--dt-border)" }}>
             {[
-              { label: "Education", value: "AAS Software Design, WWCC — June 2026" },
               { label: "Location", value: "Washington State" },
               { label: "Blog", value: "ambalong.dev/blog", href: "https://ambalong.dev/blog" },
             ].map(({ label, value, href }) => (

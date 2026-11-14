@@ -16,7 +16,7 @@ const CallToAction = () => {
 
           {/* Heading */}
           <h2 className="dt-display mb-6" style={{ fontSize: "clamp(28px, 4vw, 48px)" }}>
-            Looking for the <em style={{ color: "var(--dt-green)" }}>Right Team</em>
+            Get in <em style={{ color: "var(--dt-green)" }}>touch</em>
           </h2>
 
           {/* Divider */}
@@ -24,9 +24,7 @@ const CallToAction = () => {
 
           {/* Body */}
           <p className="dt-body mb-10" style={{ fontSize: "15px", maxWidth: "512px" }}>
-            I'm looking for an engineering role, remote or Washington State.
-            <br />
-            If you're building something real and want someone who ships and takes ownership, let's talk.
+            Email is the best way to reach me.
           </p>
 
           {/* CTAs */}

@@ -4,6 +4,7 @@ const blog = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
+    seoTitle: z.string().optional(),
     description: z.string(),
     date: z.coerce.date(),
     thumbnail: z.string().optional(),
