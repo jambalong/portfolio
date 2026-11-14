@@ -1,11 +1,12 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { getPosts, readTime } from '@/lib/posts';
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
+  const blogEntries = await getPosts();
   return blogEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -51,7 +52,7 @@ const articleJsonLd = {
 
   <Navigation client:load />
 
-  <main class="dt-bg pt-32 pb-24 px-6">
+  <main id="main-content" class="dt-bg pt-32 pb-24 px-6">
     <article class="blog-article">
       <header>
         <h1>{entry.data.title}</h1>
@@ -64,7 +65,7 @@ const articleJsonLd = {
               timeZone: 'UTC'
             })}
           </time>
-          <span>{entry.data.readTime}</span>
+          <span>{readTime(entry)}</span>
         </div>
       </header>
 

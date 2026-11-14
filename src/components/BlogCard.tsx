@@ -5,6 +5,7 @@ import type { CollectionEntry } from 'astro:content';
 interface Props {
   post: CollectionEntry<'blog'>;
   index: number;
+  readTime: string;
 }
 
 const accentVars = [
@@ -14,8 +15,8 @@ const accentVars = [
   { card: 'dt-card-orange', eyebrow: 'dt-eyebrow-orange', color: 'var(--dt-orange)' },
 ];
 
-const BlogCard = ({ post, index }: Props) => {
-  const { title, description, date, tags, thumbnail, readTime } = post.data;
+const BlogCard = ({ post, index, readTime }: Props) => {
+  const { title, description, date, tags, thumbnail } = post.data;
   const postUrl = `/blog/${post.slug}/`;
   const accent = accentVars[index % accentVars.length];
 
@@ -96,7 +97,7 @@ const BlogCard = ({ post, index }: Props) => {
         >
           <span className="dt-mono flex items-center gap-1.5">
             <Clock size={12} />
-            {readTime || '5 min read'}
+            {readTime}
           </span>
 
           <a
