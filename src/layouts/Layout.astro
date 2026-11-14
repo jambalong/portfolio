@@ -86,5 +86,14 @@ const jsonLd = {
   <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <slot />
+    {
+      import.meta.env.PROD && SITE.goatcounterCode !== '' && (
+        <script
+          data-goatcounter={`https://${SITE.goatcounterCode}.goatcounter.com/count`}
+          async
+          src="//gc.zgo.at/count.js"
+        />
+      )
+    }
   </body>
 </html>
