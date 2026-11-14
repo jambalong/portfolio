@@ -10,44 +10,61 @@ const links = [
 ---
 
 <section class="dt-bg dt-hero relative overflow-hidden">
-  <div class="dt-grid absolute inset-0 z-0"></div>
   <div
-    class="dt-glow absolute z-0 w-[600px] h-[300px] top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    class="hero-glow-xl absolute z-0 w-[900px] h-[520px] top-1/3 right-0 translate-x-1/4 -translate-y-1/2"
   >
   </div>
 
-  <div class="w-full max-w-4xl mx-auto px-6 relative z-10 hero-fade">
-    <p class="dt-eyebrow mb-5">ambalong.dev</p>
+  <div class="w-full max-w-4xl mx-auto px-6 relative z-10 stagger">
+    <p class="dt-eyebrow mb-5" style="--i: 0">ambalong.dev</p>
 
-    <h1 class="dt-display hero-h1 mb-3">John Alvin <em>Ambalong</em></h1>
+    <h1 class="dt-display hero-h1-xl mb-10" style="--i: 1">John Alvin <em>Ambalong</em></h1>
 
-    <p class="dt-display hero-tagline mb-6">I build software and write about it.</p>
+    <div class="hero-grid" style="--i: 2">
+      <div>
+        <p class="dt-display hero-tagline mb-5">I build software and write about it.</p>
+        <p class="dt-body mb-10 max-w-md">
+          Most of it is Rails. The posts are about how I built things and the errors I hit.
+        </p>
 
-    <div class="dt-rule mb-6"></div>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="/blog/" class="dt-btn-primary">Read the posts</a>
+          <a href="#subscribe" class="dt-btn-ghost">Get posts by email</a>
 
-    <p class="dt-body mb-10 max-w-xl">
-      Most of it is Rails. The posts are about how I built things and the errors I hit.
-    </p>
-
-    <div class="flex flex-wrap items-center gap-4">
-      <a href="/blog/" class="dt-btn-primary">Read the posts</a>
-      <a href="#subscribe" class="dt-btn-ghost">Get posts by email</a>
-
-      <div class="flex items-center gap-1">
-        {
-          links.map((l) => (
-            <a
-              href={l.href}
-              target={l.external ? '_blank' : undefined}
-              rel={l.external ? 'noopener noreferrer' : undefined}
-              aria-label={l.label}
-              class="dt-icon-link"
-            >
-              <Icon name={l.icon} />
-            </a>
-          ))
-        }
+          <div class="flex items-center gap-1">
+            {
+              links.map((l) => (
+                <a
+                  href={l.href}
+                  target={l.external ? '_blank' : undefined}
+                  rel={l.external ? 'noopener noreferrer' : undefined}
+                  aria-label={l.label}
+                  class="dt-icon-link"
+                >
+                  <Icon name={l.icon} />
+                </a>
+              ))
+            }
+          </div>
+        </div>
       </div>
+
+      <figure class="m-0">
+        <div class="code-card">
+          <div class="code-card-bar">
+            <span class="code-card-dot" style="background: var(--dt-red)"></span>
+            <span class="code-card-dot" style="background: var(--dt-orange)"></span>
+            <span class="code-card-dot" style="background: var(--dt-green)"></span>
+            <span class="dt-mono ml-2">config/deploy.yml</span>
+          </div>
+<pre><code><span class="code-k">env</span>:
+  <span class="code-k">secret</span>:
+    - <span class="code-v">DATABASE_URL</span></code></pre>
+        </div>
+        <figcaption class="dt-mono mt-3">
+          From <a href="/blog/rails-kamal-deployment-errors/" class="subscribe-link">my post on Kamal deployment errors</a>.
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>

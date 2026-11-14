@@ -24,7 +24,7 @@ const { posts, compact = false } = Astro.props;
               <p class="dt-body mt-2">{post.data.description}</p>
               <p class="dt-mono mt-3">
                 {readTime(post)}
-                {post.data.tags.length > 0 && <> · {post.data.tags.join(' · ')}</>}
+                {post.data.tags.length > 0 && <> · <span class="post-tags">{post.data.tags.join(' · ')}</span></>}
               </p>
             </>
           )}

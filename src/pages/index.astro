@@ -6,9 +6,10 @@ import PostList from '@/components/PostList.astro';
 import Subscribe from '@/components/Subscribe.astro';
 import ProjectsSection from '@/components/ProjectsSection.astro';
 import Footer from '@/components/Footer.astro';
-import { getPosts } from '@/lib/posts';
+import { getPosts, formatDate, readTime } from '@/lib/posts';
 
 const latest = (await getPosts()).slice(0, 3);
+const [newest, ...rest] = latest;
 ---
 
 <Layout>
@@ -19,9 +20,26 @@ const latest = (await getPosts()).slice(0, 3);
 
     <section id="writing" class="dt-surface dt-section">
       <div class="w-full max-w-4xl mx-auto px-6">
-        <p class="dt-eyebrow mb-3">Writing</p>
-        <h2 class="dt-display dt-h2 mb-8">Latest <em>posts</em></h2>
-        <PostList posts={latest} />
+        <div class="section-head">
+          <div>
+            <p class="dt-eyebrow mb-3">Writing</p>
+            <h2 class="dt-display dt-h2">Latest <em>posts</em></h2>
+          </div>
+          <span class="section-num" aria-hidden="true">01</span>
+        </div>
+
+        <article class="featured-post">
+          <p class="dt-mono">
+            <time datetime={newest.data.date.toISOString()}>{formatDate(newest.data.date)}</time>
+            · {readTime(newest)}
+          </p>
+          <h3 class="featured-post-title"><a href={`/blog/${newest.slug}/`}>{newest.data.title}</a></h3>
+          <p class="dt-body mb-4 max-w-2xl">{newest.data.description}</p>
+          <p class="dt-mono mb-6"><span class="post-tags">{newest.data.tags.join(' · ')}</span></p>
+          <a href={`/blog/${newest.slug}/`} class="dt-btn-primary">Read the post</a>
+        </article>
+
+        <PostList posts={rest} />
         <p class="mt-8"><a href="/blog/" class="dt-btn-ghost">All posts</a></p>
       </div>
     </section>

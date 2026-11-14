@@ -58,7 +58,7 @@ const Navigation = ({ pathname = '' }: Props) => {
               {link.label}
             </a>
           ))}
-          <a href="/#subscribe" className="dt-btn-ghost ml-3" style={{ padding: '6px 14px', minHeight: '40px' }}>
+          <a href="/#subscribe" className="dt-btn-green ml-3" style={{ padding: '6px 14px', minHeight: '40px' }}>
             Subscribe
           </a>
         </div>
@@ -100,7 +100,7 @@ const Navigation = ({ pathname = '' }: Props) => {
             ))}
             <a
               href="/#subscribe"
-              className="dt-btn-ghost mt-4"
+              className="dt-btn-green mt-4"
               style={{ textAlign: 'center', justifyContent: 'center' }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
