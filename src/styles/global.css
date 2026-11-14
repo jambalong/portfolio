@@ -622,7 +622,8 @@ body {
 /* ─── Blog article styling ─── */
 
 .blog-article {
-  @apply prose prose-invert mx-auto max-w-4xl px-6 leading-relaxed tracking-normal;
+  @apply prose prose-invert mx-auto px-6 leading-relaxed tracking-normal;
+  max-width: 720px;
 
   /* Base body copy — Space Grotesk */
   font-family: "Space Grotesk", sans-serif;

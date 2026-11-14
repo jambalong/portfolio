@@ -2,6 +2,7 @@
 title: "Diving into the World of UX"
 description: "My journey into Figma prototypes and how it changed my mental model of CSS animations."
 date: "2025-04-30"
+archived: true
 thumbnail: '/images/thumbnails/figma_button.jpg'
 tags: ["UX Design", "Figma", "Learning"]
 ---
