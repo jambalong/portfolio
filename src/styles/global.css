@@ -462,6 +462,49 @@ body {
   color: var(--dt-accent-text);
 }
 
+/* ─── Subscribe ─── */
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 520px;
+}
+@media (min-width: 480px) {
+  .subscribe-form {
+    flex-direction: row;
+  }
+}
+.subscribe-input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  color: var(--dt-text);
+  background: var(--dt-surface);
+  border: 1px solid var(--dt-border-strong);
+  border-radius: 0;
+}
+.subscribe-input::placeholder {
+  color: var(--dt-muted);
+}
+.subscribe-link {
+  color: var(--dt-accent-text);
+  text-decoration: underline;
+}
+.subscribe-inline {
+  margin: 4rem auto 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--dt-border);
+  max-width: 720px;
+}
+.subscribe-inline-h2 {
+  font-size: 28px;
+  margin-bottom: 1.25rem;
+}
+
 /* ─── Navigation responsive ─── */
 
 .nav-desktop {

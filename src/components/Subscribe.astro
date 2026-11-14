@@ -1,0 +1,63 @@
+---
+import { SITE } from '../config/site';
+
+interface Props {
+  variant: 'section' | 'inline';
+}
+const { variant } = Astro.props;
+const hasForm = SITE.kitFormId !== '';
+const action = `https://app.kit.com/forms/${SITE.kitFormId}/subscriptions`;
+const inputId = `email-${variant}`;
+---
+
+{
+  variant === 'section' ? (
+    <section id="subscribe" class="dt-bg dt-section">
+      <div class="w-full max-w-4xl mx-auto px-6">
+        <p class="dt-eyebrow mb-3">Email</p>
+        <h2 class="dt-display dt-h2 mb-5">
+          New posts by <em>email</em>
+        </h2>
+        <p class="dt-body mb-8 max-w-xl">
+          I send an email when I publish a new post. If I release something I've built, I'll mention it there too.
+        </p>
+        {hasForm ? (
+          <>
+            <form method="post" action={action} class="subscribe-form">
+              <label for={inputId} class="sr-only">Email address</label>
+              <input id={inputId} type="email" name="email_address" required autocomplete="email" placeholder="you@example.com" class="subscribe-input" />
+              <button type="submit" class="dt-btn-primary">Subscribe</button>
+            </form>
+            <p class="dt-mono mt-4 max-w-xl">
+              Your address goes to Kit, the service that sends the emails. You can unsubscribe from any email. There is also an <a href="/rss.xml" class="subscribe-link">RSS feed</a>.
+            </p>
+          </>
+        ) : (
+          <p class="dt-body">
+            You can follow new posts with the <a href="/rss.xml" class="subscribe-link">RSS feed</a>.
+          </p>
+        )}
+      </div>
+    </section>
+  ) : (
+    <aside class="subscribe-inline">
+      <h2 class="dt-display subscribe-inline-h2">Get the next post by email</h2>
+      {hasForm ? (
+        <>
+          <form method="post" action={action} class="subscribe-form">
+            <label for={inputId} class="sr-only">Email address</label>
+            <input id={inputId} type="email" name="email_address" required autocomplete="email" placeholder="you@example.com" class="subscribe-input" />
+            <button type="submit" class="dt-btn-primary">Subscribe</button>
+          </form>
+          <p class="dt-mono mt-4">
+            Your address goes to Kit, the service that sends the emails. You can unsubscribe from any email. There is also an <a href="/rss.xml" class="subscribe-link">RSS feed</a>.
+          </p>
+        </>
+      ) : (
+        <p class="dt-body">
+          You can follow new posts with the <a href="/rss.xml" class="subscribe-link">RSS feed</a>.
+        </p>
+      )}
+    </aside>
+  )
+}

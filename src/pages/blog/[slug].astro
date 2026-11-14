@@ -3,6 +3,7 @@ import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Subscribe from '@/components/Subscribe.astro';
 import { getPosts, readTime } from '@/lib/posts';
 
 export async function getStaticPaths() {
@@ -71,6 +72,7 @@ const articleJsonLd = {
 
       <Content />
     </article>
+    <Subscribe variant="inline" />
   </main>
 
   <Footer />
