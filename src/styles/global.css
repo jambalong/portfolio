@@ -983,11 +983,20 @@ body {
     font-family: "DM Mono", monospace;
     border: 1px solid var(--dt-border);
     white-space: nowrap;
+
+    /* Long paths overflow a phone screen, so let them wrap there.
+       clone keeps the border and padding whole on each line. */
+    @media (max-width: 640px) {
+      white-space: normal;
+      overflow-wrap: anywhere;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
   }
 
   :not(pre) > code::before,
   :not(pre) > code::after {
-    content: "" !important;
+    content: none !important;
   }
 
   /* ── Fenced code block ── */
