@@ -132,7 +132,6 @@ title: "Your Post Title"
 seoTitle: "Optional longer title for search results"
 description: "Short description for search results and the post list"
 date: "2025-01-16"
-thumbnail: "/images/thumbnails/example.jpg"
 tags: ["Rails", "Hotwire", "Docker"]
 ---
 
@@ -145,7 +144,7 @@ Your content here.
 - `seoTitle` (optional): Used in the page `<title>` in place of `title`
 - `description` (required): Meta description and the text shown in the post list
 - `date` (required): Publication date
-- `thumbnail` (optional): Path to an image in `/public`, used as the social card for the post
+- `thumbnail` (optional): Path to an image in `/public`, used as the social card for the post. No current post sets one, so they all use `/og-image.png`
 - `tags` (required): Array of topic tags
 - `archived` (optional, default `false`): Moves the post under "Older posts" on `/blog/`
 

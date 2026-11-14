@@ -2,7 +2,6 @@
 title: "Wuthering Waves Planner: Rails + PostgreSQL"
 date: "2025-10-26"
 description: "A portfolio project combining a materials calculator, database design, and Kamal deployment. Here's my planning and tech choices."
-thumbnail: "/images/thumbnails/wuwa_planner.jpg"
 tags: ["Ruby on Rails", "Web Development", "Project Planning"]
 ---
 
