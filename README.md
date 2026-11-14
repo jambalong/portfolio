@@ -1,49 +1,29 @@
-# Portfolio Website
+# ambalong.dev
 
-A modern, high-performance portfolio built with Astro, React, and Tailwind CSS. Features my software engineering projects, technical writing, and professional experience. Designed with a custom dark-technical design system built on a near-black palette with purple accents.
+My personal site: a blog, a few projects, and an email signup. Built with Astro, React and Tailwind CSS. It uses a custom dark theme with a near-black palette and purple accents.
 
 **Live Site:** [ambalong.dev](https://ambalong.dev)
 
 ## Tech Stack
 
-- **Framework:** [Astro](https://astro.build) - Static site generation for speed and SEO
-- **UI Components:** React 18 with TypeScript
-- **Icons:** Lucide React
-- **Styling:** Tailwind CSS v4 with a custom dark-technical design system
-- **Animations:** Framer Motion for smooth interactions
-- **Syntax Highlighting:** Shiki with Vesper theme
-- **Content:** Markdown/MDX via Astro Content Collections
-- **Deployment:** Netlify with continuous deployment
+- **Framework:** [Astro](https://astro.build) for static site generation
+- **UI Components:** Astro components, plus one React island (the navigation) with TypeScript
+- **Icons:** Lucide React in the navigation, inline SVG elsewhere
+- **Styling:** Tailwind CSS v4 with a custom dark theme
+- **Syntax Highlighting:** Shiki with the Vesper theme
+- **Content:** Markdown via Astro Content Collections
+- **Email signup:** a plain HTML form that posts to Kit
+- **Analytics:** GoatCounter, production builds only
+- **Deployment:** Netlify
 
-## Features
+## Pages
 
-### **Project Showcase**
-
-- Featured project spotlight for Pangu Terminal (Rails 8 + Hotwire)
-- Additional projects: Ruby Chess Engine, Pebble List
-- Live demos and source code links
-
-### **Technical Blog**
-
-- Type-safe blog powered by Astro Content Collections
-- Markdown/MDX support with frontmatter validation
-- Custom syntax highlighting with Vesper theme
-- Fenced code blocks with language labels and copy button
-- Responsive grid layout with tags and reading time
-
-### **Performance & Accessibility**
-
-- Static site generation for near-instant page loads
-- Partial hydration via Astro Islands keeps JavaScript minimal
-- Mobile-first responsive design
-- Semantic HTML
-
-### **Developer Experience**
-
-- Type-safe content with Zod schemas
-- Hot module replacement in development
-- React components with Astro Islands architecture
-- Tailwind utility-first styling
+- `/` home: hero, latest three posts, email signup, projects
+- `/blog/` every post, newest first, with older posts grouped at the bottom
+- `/blog/<slug>/` one post, with a signup block at the end
+- `/about/` a short introduction and contact links
+- `/projects/pangu-terminal/` what the project does and how it is built
+- `/rss.xml` feed of all posts
 
 ## Getting Started
 
@@ -55,72 +35,73 @@ A modern, high-performance portfolio built with Astro, React, and Tailwind CSS. 
 ### Local Development
 
 ```bash
-# Clone the repository
 git clone https://github.com/jambalong/portfolio.git
 cd portfolio
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
 Visit `http://localhost:4321` to see your local site.
 
-### Build Commands
+### Commands
 
 | Command | Action |
 |---------|--------|
 | `npm run dev` | Start dev server at `localhost:4321` |
 | `npm run build` | Build production site to `./dist/` |
 | `npm run preview` | Preview production build locally |
+| `npm run check` | Build, then scan `dist/` for forbidden strings and em dashes |
 | `npm run astro` | Run Astro CLI commands |
 
 ## Project Structure
 
 ```
 /
-├── public/                       # Static assets (images, fonts, resume)
+├── public/                       # Static assets (images, resume, social card)
+├── scripts/
+│   ├── check-dist.mjs            # Forbidden-string check run by npm run check
+│   └── og-card.html              # Source for public/og-image.png
 ├── src/
-│   ├── assets/                   # Project screenshots and images
-│   ├── components/               # React/Astro components
-│   │   ├── Hero.tsx
-│   │   ├── FeaturedProject.tsx
-│   │   ├── Projects.tsx
-│   │   ├── BlogCard.tsx
-│   │   └── ...
+│   ├── assets/                   # Images processed by Astro
+│   ├── components/
+│   │   ├── Hero.astro
+│   │   ├── PostList.astro
+│   │   ├── Subscribe.astro
+│   │   ├── ProjectsSection.astro
+│   │   ├── Footer.astro
+│   │   ├── Icon.astro
+│   │   └── Navigation.tsx        # The only React island
+│   ├── config/site.ts            # Name, links, Kit form ID, GoatCounter code
 │   ├── content/
-│   │   ├── blog/                 # Blog posts (Markdown/MDX)
-│   │   └── config.ts             # Content collection schemas
-│   ├── layouts/                  # Page layouts
-│   │   └── Layout.astro
-│   ├── pages/                    # File-based routing
-│   │   ├── index.astro           # Homepage
-│   │   ├── blog/index.astro      # Blog index
-│   │   └── blog/[slug].astro     # Blog posts
-│   └── styles/                   # Global styles
-│       └── global.css
-├── astro.config.mjs              # Astro configuration
-├── .node-version                 # Node version management
+│   │   ├── blog/                 # Blog posts (Markdown)
+│   │   └── config.ts             # Content collection schema
+│   ├── layouts/Layout.astro
+│   ├── lib/posts.ts              # Post sorting, read time, date format
+│   ├── pages/
+│   └── styles/global.css
+├── astro.config.mjs
 └── package.json
 ```
 
+## Configuration
+
+Two values in `src/config/site.ts` start empty and turn features on:
+
+- `kitFormId`: the ID of the Kit form. When empty, the signup form is hidden and the pages link to the RSS feed instead.
+- `goatcounterCode`: the GoatCounter site code. When empty, or in a dev build, no analytics script is added.
+
 ## Design System
 
-The site uses a custom **dark-technical** palette built around near-black surfaces with a purple accent:
-
 ```css
---dt-bg:      #0a0a0f  /* Deepest background */
---dt-surface: #111118  /* Card / section surface */
---dt-border:  #1e1e2e  /* Hairline borders */
---dt-text:    #e8e8f0  /* Primary text */
---dt-mid:     #8888a0  /* Body copy */
---dt-muted:   #5a5a72  /* Metadata, labels */
---dt-accent:  #7c6aff  /* Purple accent: links, highlights */
---dt-green:   #6affb0  /* Success states */
---dt-red:     #ff6a6a  /* Error states */
---dt-orange:  #ff9f6a  /* Warning states */
+--dt-bg:            #0a0a0f  /* Deepest background */
+--dt-surface:       #111118  /* Card / section surface */
+--dt-border:        #1e1e2e  /* Decorative hairlines only */
+--dt-border-strong: #6a6a88  /* Input borders, screenshot frame */
+--dt-text:          #e8e8f0  /* Headings, strong text */
+--dt-mid:           #b4b4c8  /* Body copy */
+--dt-muted:         #8f8fa8  /* Labels, dates, tags */
+--dt-accent:        #7c6aff  /* Borders, fills, the italic word in headings */
+--dt-accent-text:   #9d8fff  /* Small purple text: eyebrows, links */
 ```
 
 ### Typography
@@ -128,133 +109,62 @@ The site uses a custom **dark-technical** palette built around near-black surfac
 | Token | Font | Usage |
 |-------|------|-------|
 | `--font-display` | Instrument Serif | Headings, titles |
-| `--font-body` | Space Grotesk | Body copy, paragraphs |
-| `--font-mono` | DM Mono | Code, eyebrows, labels, tags |
+| `--font-body` | Space Grotesk | Body copy |
+| `--font-mono` | DM Mono | Eyebrows, labels, tags |
 
 ### Key Utility Classes
 
-- `.dt-display` - Instrument Serif heading
-- `.dt-eyebrow` - DM Mono uppercase label
-- `.dt-body` - Space Grotesk body copy
-- `.dt-tag` - monospace pill tag
-- `.dt-card` - sharp-edged surface card
-- `.dt-btn-primary` / `.dt-btn-ghost` - button variants
-- `.dt-browser` - browser mockup frame
-- `.blog-article` - full blog post typography styles
+- `.dt-display` for Instrument Serif headings
+- `.dt-eyebrow` for DM Mono uppercase labels
+- `.dt-body` for body copy
+- `.dt-tag` for tags
+- `.dt-card` for surface cards
+- `.dt-btn-primary` and `.dt-btn-ghost` for buttons
+- `.blog-article` for blog post typography
 
 ## Adding Blog Posts
 
-Create a new Markdown file in `src/content/blog/`:
+Create a Markdown file in `src/content/blog/`:
 
 ```markdown
 ---
 title: "Your Post Title"
-description: "Brief description for SEO and preview cards"
+seoTitle: "Optional longer title for search results"
+description: "Short description for search results and the post list"
 date: "2025-01-16"
 thumbnail: "/images/thumbnails/example.jpg"
-readTime: "5 min read"
 tags: ["Rails", "Hotwire", "Docker"]
 ---
 
-Your content here using Markdown or MDX...
+Your content here.
 ```
 
 **Frontmatter fields:**
 
 - `title` (required): Post title
-- `description` (required): SEO description and card preview
+- `seoTitle` (optional): Used in the page `<title>` in place of `title`
+- `description` (required): Meta description and the text shown in the post list
 - `date` (required): Publication date
-- `thumbnail` (optional): Path to image in /public
-- `readTime` (required): Estimated reading duration
+- `thumbnail` (optional): Path to an image in `/public`, used as the social card for the post
 - `tags` (required): Array of topic tags
+- `archived` (optional, default `false`): Moves the post under "Older posts" on `/blog/`
 
-Posts automatically appear on `/blog` sorted by date.
+Read time is computed from the post body at 200 words a minute.
+
+## The check script
+
+`npm run check` builds the site, then scans text files in `dist/` for strings that should not appear, and for em dashes outside blog posts. Extra patterns can go in a `.forbidden.local` file, one per line. That file is ignored by git.
 
 ## Deployment
 
-### Netlify (Recommended)
-
-This site is configured for zero-config deployment on Netlify:
-
-1. **Connect your GitHub repository** to Netlify
-2. Netlify auto-detects Astro and uses:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-3. **Push to `main` branch** → automatic deployment
-
-**Custom Domain:**
-
-- Add `ambalong.dev` in Netlify domain settings
-- Update DNS records as instructed
-- Free SSL certificate provisioned automatically
-
-### Manual Build
-
-```bash
-npm run build
-# Deploy the dist/ folder to any static hosting service
-```
-
-## Tech Details
-
-### Astro Islands Architecture
-
-React components use Astro's partial hydration:
-
-```astro
-<Hero client:load />              <!-- Hydrate immediately -->
-<Projects client:visible />       <!-- Hydrate when visible -->
-<BlogCard client:visible />       <!-- Hydrate when visible -->
-```
-
-### Content Collections
-
-Type-safe blog posts with Zod validation:
-
-```typescript
-// src/content/config.ts
-const blog = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    date: z.date(),
-    tags: z.array(z.string()),
-    readTime: z.string(),
-  }),
-});
-```
-
-### Syntax Highlighting
-
-Shiki with the Vesper theme. The `pre` element background is overridden to `var(--dt-surface)` so code blocks integrate with the design system rather than using Vesper's default background. Copy buttons are injected client-side via a script in `[slug].astro`.
-
-### Tailwind v4 + Custom Classes
-
-All custom `.dt-*` and `.blog-article` classes are wrapped in `@layer components` in `global.css`, ensuring Tailwind utility classes always win in the cascade (e.g. `md:hidden` correctly hides the mobile menu button on desktop).
+The site deploys on Netlify with the build command `npm run build` and publish directory `dist`.
 
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-Feel free to use this as inspiration for your own portfolio, but please don't copy it verbatim. Create something unique that represents you!
-
 ## Connect
 
-- **Portfolio:** [ambalong.dev](https://ambalong.dev)
 - **GitHub:** [@jambalong](https://github.com/jambalong)
-- **LinkedIn:** [in/jambalong](https://linkedin.com/in/jambalong)
+- **X:** [@coldbootdev](https://x.com/coldbootdev)
 - **Email:** [johnalvin@ambalong.dev](mailto:johnalvin@ambalong.dev)
-
-## Acknowledgments
-
-- **Color Palette:** Custom dark-technical design system inspired by [Catppuccin](https://github.com/catppuccin/catppuccin) Mocha
-- **Framework:** [Astro](https://astro.build) for static site generation and excellent developer experience
-- **Icons:** [Lucide React](https://lucide.dev)
-- **Animations:** [Framer Motion](https://www.framer.com/motion/) for smooth interactions
-- **Syntax Highlighting:** [Shiki](https://shiki.style) with Vesper theme
-- **Hosting:** Deployed on [Netlify](https://netlify.com) with continuous deployment
-
----
-
-*Built with ❤️ and lots of 🍫*
