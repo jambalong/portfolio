@@ -61,7 +61,10 @@ const Navigation = () => {
                 transition: 'color 0.2s ease',
                 textTransform: 'uppercase',
                 letterSpacing: '0.12em',
-                fontSize: '10px',
+                fontSize: '13px',
+                minHeight: '40px',
+                display: 'inline-flex',
+                alignItems: 'center',
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--dt-text)'; }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--dt-muted)'; }}
@@ -74,7 +77,7 @@ const Navigation = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="dt-btn-ghost ml-3"
-            style={{ padding: '6px 14px', fontSize: '10px' }}
+            style={{ padding: '6px 14px' }}
           >
             Resume
           </a>
@@ -114,7 +117,7 @@ const Navigation = () => {
                     textDecoration: 'none',
                     textTransform: 'uppercase',
                     letterSpacing: '0.12em',
-                    fontSize: '11px',
+                    fontSize: '13px',
                     borderBottom: '1px solid var(--dt-border)',
                     transition: 'color 0.2s ease',
                   }}
@@ -130,7 +133,7 @@ const Navigation = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="dt-btn-ghost mt-4"
-                style={{ fontSize: '11px', textAlign: 'center' }}
+                style={{ textAlign: 'center' }}
               >
                 Resume
               </a>
