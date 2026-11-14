@@ -10,7 +10,7 @@ In May I added a farming advisor to Pangu Terminal. The optimizer page already w
 
 ## Give the Model Numbers
 
-I didn't want the model doing crafting math. It would sound sure of itself whether the answer was right or not. [The synthesis service](/blog/teaching-an-inventory-to-craft/) only looked one tier down, so I added a `chain_coverage` method that walks a whole material family from the bottom:
+I didn't want the model doing crafting math. A model can get arithmetic wrong and still write it up as if it were certain. [The synthesis service](/blog/teaching-an-inventory-to-craft/) only looked one tier down, so I added a `chain_coverage` method that walks a whole material family from the bottom:
 
 ```ruby
 # Walk bottom-up: pool represents units available at each tier
