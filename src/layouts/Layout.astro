@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import { SITE } from '@/config/site';
 
 interface Props {
   title?: string;
@@ -10,8 +11,8 @@ interface Props {
 }
 
 const {
-  title = "John Alvin Ambalong",
-  description = "I build software and write about it. Most of it is Rails and Postgres.",
+  title = SITE.name,
+  description = SITE.description,
   ogImage = "/og-image.png",
   canonicalURL = new URL(Astro.url.pathname, Astro.site).toString(),
   ogType = "website",
@@ -20,13 +21,9 @@ const {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "John Alvin Ambalong",
-  "url": "https://ambalong.dev",
-  "sameAs": [
-    "https://github.com/jambalong",
-    "https://www.linkedin.com/in/jambalong/",
-    "https://x.com/coldbootdev"
-  ],
+  "name": SITE.name,
+  "url": SITE.url,
+  "sameAs": [SITE.github, SITE.linkedin, SITE.x],
   "description": description,
   "knowsAbout": ["Ruby on Rails", "PostgreSQL", "Hotwire", "Docker", "Kamal", "DevOps", "Web Security"]
 };
@@ -47,6 +44,7 @@ const jsonLd = {
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalURL} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="John Alvin Ambalong" href={new URL('rss.xml', Astro.site)} />
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
@@ -62,8 +60,8 @@ const jsonLd = {
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@coldbootdev" />
-    <meta name="twitter:creator" content="@coldbootdev" />
+    <meta name="twitter:site" content={SITE.xHandle} />
+    <meta name="twitter:creator" content={SITE.xHandle} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
