@@ -8,6 +8,6 @@ export const SITE = {
   linkedin: 'https://www.linkedin.com/in/jambalong/',
   x: 'https://x.com/coldbootdev',
   xHandle: '@coldbootdev',
-  kitFormId: '', // John fills this in
+  kitFormId: '10191717',
   goatcounterCode: '', // John fills this in
 };
