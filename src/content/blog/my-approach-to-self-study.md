@@ -2,8 +2,7 @@
 title: "My Approach to Self-Study"
 description: "How I maintain focus, avoid burnout, and stay consistent using the Pomodoro technique and healthy environmental habits."
 date: "2025-04-23"
-thumbnail: '/images/thumbnails/study_books.jpg'
-readTime: "10 min read"
+archived: true
 tags: ["Learning", "Productivity", "Mindset"]
 ---
 

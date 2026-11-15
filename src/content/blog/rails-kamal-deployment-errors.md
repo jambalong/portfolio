@@ -3,8 +3,6 @@ title: "Rails + Kamal: Deployment Errors"
 seoTitle: "Deploying Rails 8 with Kamal 2: Every Error I Hit and How I Solved It"
 date: "2025-11-05"
 description: "Every error I hit deploying a Rails 8 app with Kamal on a DigitalOcean droplet, and what actually fixed them."
-thumbnail: "/images/thumbnails/rails_kamal_deployment.jpg"
-readTime: "6 min read"
 tags: ["Ruby on Rails", "DevOps", "Kamal", "PostgreSQL"]
 ---
 

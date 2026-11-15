@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# private forbidden-string list for scripts/check-dist.mjs
+.forbidden.local

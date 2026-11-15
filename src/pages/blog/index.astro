@@ -1,54 +1,50 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import BlogCard from "@/components/BlogCard.tsx";
-import { getCollection } from "astro:content";
+import Footer from "@/components/Footer.astro";
+import PostList from "@/components/PostList.astro";
+import { getPosts } from "@/lib/posts";
 
-const posts = await getCollection("blog");
-
-const sortedPosts = [...posts].sort((a, b) => {
-    const dateA = new Date(a.data.date).getTime();
-    const dateB = new Date(b.data.date).getTime();
-    return dateB - dateA;
-});
+const posts = await getPosts();
+const current = posts.filter((p) => !p.data.archived);
+const older = posts.filter((p) => p.data.archived);
 ---
 
-<Layout title="Blog | John Alvin Ambalong">
+<Layout
+    title="Writing | John Alvin Ambalong"
+    description="Posts about building and deploying Rails apps, by John Alvin Ambalong."
+>
     <div class="dt-bg min-h-screen">
-        <Navigation client:load />
+        <Navigation client:load pathname={Astro.url.pathname} />
 
         <main id="main-content">
-            <!-- Header -->
             <section
-                class="dt-surface pt-32 pb-16 px-6"
+                class="dt-surface pt-32 pb-12 px-6"
                 style="border-bottom: 1px solid var(--dt-border)"
             >
-                <div class="w-full max-w-4xl px-6 mx-auto">
+                <div class="w-full max-w-4xl mx-auto">
                     <p class="dt-eyebrow mb-3">Writing</p>
-                    <h1
-                        class="dt-display"
-                        style="font-size: clamp(32px, 5vw, 56px)"
-                    >
-                        Technical <em>Blog</em>
-                    </h1>
+                    <h1 class="dt-display mb-4 page-h1">All <em>posts</em></h1>
+                    <p class="dt-body">
+                        Things I've built and problems I got stuck on. Newest first.
+                        <a href="/rss.xml" class="subscribe-link ml-2">RSS feed</a>
+                    </p>
                 </div>
             </section>
 
-            <!-- Posts grid -->
-            <section class="dt-bg py-24 px-6">
-                <div class="w-full max-w-4xl px-6 mx-auto">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        {
-                            sortedPosts.map((post, index) => (
-                                <BlogCard
-                                    client:visible
-                                    post={post}
-                                    index={index}
-                                />
-                            ))
-                        }
-                    </div>
+            <section class="dt-bg dt-section px-6">
+                <div class="w-full max-w-4xl mx-auto">
+                    <h2 class="sr-only">Recent posts</h2>
+                    <PostList posts={current} />
+
+                    {
+                        older.length > 0 && (
+                            <>
+                                <h2 class="dt-display dt-h2 mt-16 mb-6">Older posts</h2>
+                                <PostList posts={older} compact />
+                            </>
+                        )
+                    }
                 </div>
             </section>
         </main>

@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import { SITE } from '@/config/site';
 
 interface Props {
   title?: string;
@@ -10,8 +11,8 @@ interface Props {
 }
 
 const {
-  title = "John Alvin Ambalong | Software Engineer",
-  description = "Software engineer based in Washington State. Building production Rails applications with a focus on backend, DevOps, and security. Available for work.",
+  title = SITE.name,
+  description = SITE.description,
   ogImage = "/og-image.png",
   canonicalURL = new URL(Astro.url.pathname, Astro.site).toString(),
   ogType = "website",
@@ -20,19 +21,11 @@ const {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "John Alvin Ambalong",
-  "url": "https://ambalong.dev",
-  "sameAs": [
-    "https://github.com/jambalong",
-    "https://www.linkedin.com/in/jambalong"
-  ],
-  "jobTitle": "Software Engineer",
+  "name": SITE.name,
+  "url": SITE.url,
+  "sameAs": [SITE.github, SITE.linkedin, SITE.x],
   "description": description,
-  "knowsAbout": ["Ruby on Rails", "PostgreSQL", "Hotwire", "Docker", "Kamal", "DevOps", "Web Security"],
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Walla Walla Community College"
-  }
+  "knowsAbout": ["Ruby on Rails", "PostgreSQL", "Hotwire", "Docker", "Kamal", "DevOps", "Web Security"]
 };
 ---
 
@@ -51,6 +44,7 @@ const jsonLd = {
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalURL} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="John Alvin Ambalong" href={new URL('rss.xml', Astro.site)} />
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
@@ -58,7 +52,7 @@ const jsonLd = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
-    <meta property="og:image:alt" content="John Alvin Ambalong — Software Engineer at ambalong.dev" />
+    <meta property="og:image:alt" content="John Alvin Ambalong, ambalong.dev" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="ambalong.dev" />
@@ -66,8 +60,8 @@ const jsonLd = {
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@jambalong_dev" />
-    <meta name="twitter:creator" content="@jambalong_dev" />
+    <meta name="twitter:site" content={SITE.xHandle} />
+    <meta name="twitter:creator" content={SITE.xHandle} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
@@ -90,6 +84,16 @@ const jsonLd = {
     <slot name="head" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <slot />
+    {
+      import.meta.env.PROD && SITE.goatcounterCode !== '' && (
+        <script
+          data-goatcounter={`https://${SITE.goatcounterCode}.goatcounter.com/count`}
+          async
+          src="//gc.zgo.at/count.js"
+        />
+      )
+    }
   </body>
 </html>

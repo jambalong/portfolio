@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>og-card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg: #0a0a0f; --text: #e8e8f0; --mid: #b4b4c8; --accent: #7c6aff; --accent-text: #9d8fff; --border: #1e1e2e; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; background: var(--bg); overflow: hidden; }
+  .card { position: relative; width: 1200px; height: 630px; background: radial-gradient(ellipse at 30% 40%, #0d0d1a 0%, var(--bg) 70%); }
+  .frame { position: absolute; inset: 30px; border: 1px solid #3a3a4e; }
+  .content { position: absolute; left: 93px; top: 190px; }
+  h1 { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 88px; line-height: 1; color: var(--text); letter-spacing: -0.01em; }
+  h1 em { color: var(--accent); }
+  .tagline { margin-top: 28px; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 30px; color: var(--mid); }
+  .rule { margin-top: 48px; width: 483px; height: 1px; background: var(--border); }
+  .tags { margin-top: 40px; display: flex; gap: 48px; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: var(--accent-text); }
+  .url { position: absolute; right: 70px; bottom: 56px; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; color: var(--mid); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="frame"></div>
+  <div class="content">
+    <h1>John Alvin <em>Ambalong</em></h1>
+    <p class="tagline">I build software and write about it.</p>
+    <div class="rule"></div>
+    <div class="tags"><span>/ Rails</span><span>/ Hotwire</span><span>/ C#</span><span>/ Washington State</span></div>
+  </div>
+  <div class="url">ambalong.dev</div>
+</div>
+</body>
+</html>

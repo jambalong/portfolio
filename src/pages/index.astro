@@ -1,28 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
-import FeaturedProject from '@/components/FeaturedProject';
-import Skills from '@/components/Skills';
-import Projects from '@/components/Projects';
-import About from '@/components/About';
-import CallToAction from '@/components/CallToAction';
-import Footer from '@/components/Footer';
+import Hero from '@/components/Hero.astro';
+import PostList from '@/components/PostList.astro';
+import Subscribe from '@/components/Subscribe.astro';
+import ProjectsSection from '@/components/ProjectsSection.astro';
+import Footer from '@/components/Footer.astro';
+import { getPosts, formatDate, readTime } from '@/lib/posts';
+
+const latest = (await getPosts()).slice(0, 3);
+const [newest, ...rest] = latest;
 ---
 
-<Layout
-  title="John Alvin Ambalong | Software Engineer"
-  description="Software engineer based in Washington State. Building production Rails applications with a focus on backend, DevOps, and security. Available for work."
->
-  <Navigation client:load />
+<Layout>
+  <Navigation client:load pathname={Astro.url.pathname} />
 
   <main id="main-content">
-    <Hero client:load />
-    <FeaturedProject client:load />
-    <Projects client:visible />
-    <Skills client:visible />
-    <About client:visible />
-    <CallToAction client:visible />
+    <Hero />
+
+    <section id="writing" class="dt-surface dt-section">
+      <div class="w-full max-w-4xl mx-auto px-6">
+        <div class="section-head">
+          <div>
+            <p class="dt-eyebrow mb-3">Writing</p>
+            <h2 class="dt-display dt-h2">Latest <em>posts</em></h2>
+          </div>
+          <span class="section-num" aria-hidden="true">01</span>
+        </div>
+
+        <article class="featured-post">
+          <p class="dt-mono">
+            <time datetime={newest.data.date.toISOString()}>{formatDate(newest.data.date)}</time>
+            · {readTime(newest)}
+          </p>
+          <h3 class="featured-post-title"><a href={`/blog/${newest.slug}/`}>{newest.data.title}</a></h3>
+          <p class="dt-body mb-4 max-w-2xl">{newest.data.description}</p>
+          <p class="dt-mono mb-6"><span class="post-tags">{newest.data.tags.join(' · ')}</span></p>
+          <a href={`/blog/${newest.slug}/`} class="dt-btn-primary">Read the post</a>
+        </article>
+
+        <PostList posts={rest} />
+        <p class="mt-8"><a href="/blog/" class="dt-btn-ghost">All posts</a></p>
+      </div>
+    </section>
+
+    <Subscribe variant="section" />
+
+    <ProjectsSection />
   </main>
 
   <Footer />

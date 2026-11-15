@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer.astro';
+import { SITE } from '../config/site';
+---
+
+<Layout title="About | John Alvin Ambalong" description="A short introduction and how to reach me.">
+  <Navigation client:load pathname={Astro.url.pathname} />
+
+  <main id="main-content" class="dt-bg page-main">
+    <article class="page-column">
+      <p class="dt-eyebrow mb-3">About</p>
+      <h1 class="dt-display mb-8 page-h1">About <em>John</em></h1>
+
+      <div class="flex flex-col gap-5 prose-links">
+        <p class="dt-body">I'm John. I live in Washington state. I build software and write about it.</p>
+        <p class="dt-body">Most of what I build is Rails with Hotwire. I also write C# and PowerShell.</p>
+        <p class="dt-body">
+          I studied software design at community college and finished in 2026. Most of what I know came from building things on my own, outside of class.
+        </p>
+        <p class="dt-body">
+          The biggest thing I've finished is <a href="/projects/pangu-terminal/">Pangu Terminal</a>, a planner for the game Wuthering Waves. Right now I'm building <a href="https://lunr.fast">LunrFast</a>, an intermittent fasting app. It's in early testing.
+        </p>
+        <p class="dt-body">
+          The posts here are about things I've built and the errors I hit. The one about <a href="/blog/rails-kamal-deployment-errors/">Kamal deployment errors</a> is a good example.
+        </p>
+      </div>
+
+      <h2 class="dt-display page-h2">Contact</h2>
+      <ul class="page-list dt-body">
+        <li>Email is the best way to reach me: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</li>
+        <li>I'm also on <a href={SITE.github}>GitHub</a> and <a href={SITE.x}>X</a>.</li>
+        <li>My résumé is <a href="/resume.pdf">here as a PDF</a>, and I'm on <a href={SITE.linkedin}>LinkedIn</a>.</li>
+      </ul>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>

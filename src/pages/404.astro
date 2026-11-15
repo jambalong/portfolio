@@ -1,16 +1,16 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer.astro';
 
 const pathname = Astro.url.pathname;
 ---
 
 <Layout title="404 | John Alvin Ambalong">
   <div class="dt-bg min-h-screen flex flex-col">
-    <Navigation client:load />
+    <Navigation client:load pathname={pathname} />
 
-    <main class="flex-1 flex items-center justify-center px-6">
+    <main id="main-content" class="flex-1 flex items-center justify-center px-6">
       <div class="w-full max-w-4xl mx-auto">
 
         <p class="dt-eyebrow mb-4" style="color: var(--dt-red)">404</p>
@@ -21,7 +21,7 @@ const pathname = Astro.url.pathname;
 
         <div class="dt-rule mb-8" style="max-width: 320px; background: linear-gradient(90deg, var(--dt-border), rgba(255,106,106,0.35), var(--dt-border))" />
 
-        <p class="dt-body mb-3" style="font-size: 14px">
+        <p class="dt-body mb-3">
           The path you're looking for doesn't exist or has been moved.
         </p>
         <p class="dt-mono mb-10" style="color: var(--dt-red)">

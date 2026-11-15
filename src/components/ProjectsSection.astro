@@ -1,0 +1,82 @@
+---
+import { Image } from 'astro:assets';
+import panguDialog from '../assets/pangu-plan-dialog.png';
+import lunrPhone from '../assets/lunrfast-phone-dark.png';
+---
+
+<section id="projects" class="dt-surface dt-section">
+  <div class="w-full max-w-4xl mx-auto px-6">
+    <div class="section-head">
+      <div>
+        <p class="dt-eyebrow mb-3">Projects</p>
+        <h2 class="dt-display dt-h2">Things I've <em>built</em></h2>
+      </div>
+      <span class="section-num" aria-hidden="true">03</span>
+    </div>
+
+    <article class="dt-card dt-card-on-surface proj project-feature">
+      <a href="/projects/pangu-terminal/" class="project-feature-img block">
+        <Image
+          src={panguDialog}
+          alt="Pangu Terminal plan dialog for the character Shorekeeper, with level set from 1 to 90 and five skill sliders."
+          width={498}
+          class="shot"
+        />
+      </a>
+      <div class="project-feature-body">
+        <p class="dt-eyebrow mb-3">Rails · Finished 2026</p>
+        <h3 class="dt-display mb-4 project-title"><a href="/projects/pangu-terminal/" class="proj-title-link">Pangu Terminal</a></h3>
+        <p class="dt-body mb-6">
+          A planner for the game Wuthering Waves. You pick the characters and weapons you want to level up and enter what you already have. It works out what you still need and what you could craft instead of farming. Then it estimates how many runs the rest will take. This was my community college capstone. It's finished, and I'm not adding features.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://panguterminal.ambalong.dev" target="_blank" rel="noopener noreferrer" class="dt-btn-primary">Live demo</a>
+          <a href="/projects/pangu-terminal/" class="dt-btn-ghost">How it works</a>
+          <a href="https://github.com/jambalong/pangu-terminal" target="_blank" rel="noopener noreferrer" class="dt-btn-ghost">Code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="dt-card dt-card-on-surface proj proj-blue lunr-feature mt-6">
+      <div>
+        <p class="dt-eyebrow mb-3">In progress</p>
+        <h3 class="dt-display mb-4 project-title">LunrFast</h3>
+        <p class="dt-body mb-6">
+          Right now I'm building LunrFast, an intermittent fasting app. It's in early testing.
+        </p>
+        <a href="https://lunr.fast" target="_blank" rel="noopener noreferrer" class="dt-btn-ghost">lunr.fast</a>
+      </div>
+      <div class="phone-clip">
+        <img
+          src={lunrPhone.src}
+          alt="LunrFast app screen showing a fasting timer at 11 hours 42 minutes toward a 16 hour goal, with an End fast button."
+          width="1440"
+          height="2720"
+          loading="lazy"
+        />
+      </div>
+    </article>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-6">
+      <article class="dt-card dt-card-on-surface proj proj-orange p-6 flex flex-col">
+        <p class="dt-eyebrow mb-3">PowerShell</p>
+        <p class="dt-body mb-6 flex-1">
+          A PowerShell script that checks whether a PC's boot manager is signed with the Windows UEFI CA 2023 certificate. PowerShell's built-in signature commands report the wrong issuer for EFI files, so the script reads the certificate another way.
+        </p>
+        <div>
+          <a href="https://github.com/jambalong/efi-bootmgr-cert-check" target="_blank" rel="noopener noreferrer" class="dt-btn-ghost">Code</a>
+        </div>
+      </article>
+
+      <article class="dt-card dt-card-on-surface proj proj-pink p-6 flex flex-col">
+        <p class="dt-eyebrow mb-3">Ruby</p>
+        <p class="dt-body mb-6 flex-1">
+          Two-player chess in the terminal, written in plain Ruby. To test for checkmate it copies the board and tries each possible move.
+        </p>
+        <div>
+          <a href="https://github.com/jambalong/chess" target="_blank" rel="noopener noreferrer" class="dt-btn-ghost">Code</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

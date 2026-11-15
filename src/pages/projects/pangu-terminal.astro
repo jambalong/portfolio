@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer.astro';
+import panguDialog from '../../assets/pangu-plan-dialog.png';
+
+const tags = ['Ruby on Rails 8.1', 'Hotwire', 'PostgreSQL', 'Docker', 'Kamal 2', 'RubyLLM', 'GitHub Actions'];
+---
+
+<Layout
+  title="Pangu Terminal | John Alvin Ambalong"
+  description="A progression planner for the game Wuthering Waves, built with Rails 8. What it does and how it is built."
+>
+  <Navigation client:load pathname={Astro.url.pathname} />
+
+  <main id="main-content" class="dt-bg page-main">
+    <article class="page-column">
+      <p class="dt-eyebrow mb-3">Project</p>
+      <h1 class="dt-display mb-4 page-h1">Pangu <em>Terminal</em></h1>
+      <p class="dt-body mb-8">
+        A progression planner for Wuthering Waves. Community college capstone, finished in 2026.
+      </p>
+
+      <Image
+        src={panguDialog}
+        alt="Pangu Terminal plan dialog for the character Shorekeeper, with level set from 1 to 90 and five skill sliders."
+        width={498}
+        class="shot mb-10"
+      />
+
+      <h2 class="dt-display page-h2">What it does</h2>
+      <p class="dt-body mb-4">
+        Wuthering Waves makes you collect a lot of different materials to level up a character or a weapon. Pangu Terminal does the arithmetic.
+      </p>
+      <ul class="page-list dt-body">
+        <li><strong>Plans.</strong> You choose a character or weapon and the level you want. The app adds up every material that upgrade costs.</li>
+        <li><strong>Inventory.</strong> You enter what you own. The app subtracts it and shows what is missing. If you have spare lower-tier materials, it counts what you could craft from them at three to one.</li>
+        <li><strong>Farming.</strong> For each missing material it estimates how many runs you need. The drop rates come from a community spreadsheet, not from official game data.</li>
+        <li><strong>Advice.</strong> It can send a plan's numbers to a language model and get back a short suggestion for what to farm first.</li>
+      </ul>
+
+      <h2 class="dt-display page-h2">How it's built</h2>
+      <ul class="page-list dt-body">
+        <li>Rails 8.1 with Hotwire. Changing an inventory amount re-renders the affected rows with Turbo Streams. There is no page reload and no front-end framework.</li>
+        <li>The game rules live in service objects, outside the controllers, so each rule can be tested on its own.</li>
+        <li>PostgreSQL. Plan results are stored as JSONB. I wrote about <a href="/blog/building-the-pangu-terminal-schema/">the schema</a>.</li>
+        <li>A versioned REST API with seven endpoints. API keys are bearer tokens. Only a SHA-256 hash of each key is stored, so a key is shown once, when you create it. Each key is limited to 60 requests a minute.</li>
+        <li>The capstone was deployed with Docker and Kamal 2 on a DigitalOcean droplet. I wrote about <a href="/blog/rails-kamal-deployment-errors/">the deployment errors</a>. The demo is hosted on Render now.</li>
+        <li>Tests run in GitHub Actions on every pull request.</li>
+        <li>The advice feature uses the RubyLLM gem.</li>
+      </ul>
+
+      <div class="flex flex-wrap gap-2 mt-6 mb-10">
+        {tags.map((t) => <span class="dt-tag">{t}</span>)}
+      </div>
+
+      <h2 class="dt-display page-h2">Links</h2>
+      <ul class="page-list dt-body">
+        <li><a href="https://github.com/jambalong/pangu-terminal" target="_blank" rel="noopener noreferrer">Code on GitHub</a></li>
+        <li><a href="https://panguterminal.ambalong.dev" target="_blank" rel="noopener noreferrer">Live demo</a></li>
+        <li><a href="/blog/wuthering-waves-planner-rails-postgresql/">Why I picked this project</a></li>
+      </ul>
+
+      <p class="dt-body mt-10">The project is finished. I'm not adding features.</p>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>
