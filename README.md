@@ -18,7 +18,7 @@ My personal site: a blog, a few projects, and an email signup. Built with Astro,
 
 ## Pages
 
-- `/` home: hero, latest three posts, email signup, projects
+- `/` home: hero, the newest post featured above the next two, email signup, projects
 - `/blog/` every post, newest first, with older posts grouped at the bottom
 - `/blog/<slug>/` one post, with a signup block at the end
 - `/about/` a short introduction and contact links
@@ -29,7 +29,7 @@ My personal site: a blog, a few projects, and an email signup. Built with Astro,
 
 ### Prerequisites
 
-- Node.js 24+
+- Node.js 24 (see `.node-version`)
 - npm
 
 ### Local Development
@@ -85,10 +85,12 @@ Visit `http://localhost:4321` to see your local site.
 
 ## Configuration
 
-Two values in `src/config/site.ts` start empty and turn features on:
+Two values in `src/config/site.ts` turn features on. Both are set for the live site:
 
 - `kitFormId`: the ID of the Kit form. When empty, the signup form is hidden and the pages link to the RSS feed instead.
 - `goatcounterCode`: the GoatCounter site code. When empty, or in a dev build, no analytics script is added.
+
+The signup form posts straight to Kit with no JavaScript, so a new subscriber lands on a page hosted by Kit. The confirmation email and that page are edited in Kit.
 
 ## Design System
 
@@ -102,7 +104,14 @@ Two values in `src/config/site.ts` start empty and turn features on:
 --dt-muted:         #8f8fa8  /* Labels, dates, tags */
 --dt-accent:        #7c6aff  /* Borders, fills, the italic word in headings */
 --dt-accent-text:   #9d8fff  /* Small purple text: eyebrows, links */
+--dt-green:         #6affb0  /* Subscribe button, code values */
+--dt-orange:        #ff9f6a  /* Per-project accent */
+--dt-blue:          #8fbbea  /* Per-project accent */
+--dt-pink:          #ff8fd0  /* Per-project accent */
+--dt-red:           #ff6a6a  /* Window dots in the hero code card */
 ```
+
+The hero also has a faint grid texture (`.hero-texture`) and a purple glow (`.hero-glow-xl`) behind the name.
 
 ### Typography
 
@@ -156,7 +165,7 @@ Read time is computed from the post body at 200 words a minute.
 
 ## Deployment
 
-The site deploys on Netlify with the build command `npm run build` and publish directory `dist`.
+The site deploys on Netlify with the build command `npm run build` and publish directory `dist`. Every push to `main` triggers a deploy. Netlify runs the plain build and not `npm run check`, so run the check locally before pushing.
 
 ## License
 
