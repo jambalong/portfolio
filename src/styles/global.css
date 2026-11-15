@@ -99,6 +99,12 @@ body {
   outline-offset: 2px;
 }
 
+/* Tailwind v4 resets buttons to the default arrow cursor. */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
 .skip-link {
   position: absolute;
   left: 16px;
