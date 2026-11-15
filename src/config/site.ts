@@ -9,5 +9,5 @@ export const SITE = {
   x: 'https://x.com/coldbootdev',
   xHandle: '@coldbootdev',
   kitFormId: '10191717',
-  goatcounterCode: '', // John fills this in
+  goatcounterCode: 'jambalong',
 };
