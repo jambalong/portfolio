@@ -66,3 +66,36 @@ const inputId = `email-${variant}`;
     </aside>
   )
 }
+
+<script>
+  // Submit in the background so visitors stay on this site. If anything fails,
+  // fall back to the normal form post, which takes them to Kit's page.
+  document.querySelectorAll<HTMLFormElement>('.subscribe-form').forEach((form) => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      if (button) button.disabled = true;
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        let data: { status?: string } | null = null;
+        try {
+          data = await response.json();
+        } catch {}
+        if (!response.ok || data?.status === 'error') throw new Error('Subscribe failed');
+        const message = document.createElement('p');
+        message.className = 'dt-body';
+        message.setAttribute('role', 'status');
+        message.tabIndex = -1;
+        message.textContent = 'Check your email to confirm your subscription. It can take a minute to arrive.';
+        form.replaceWith(message);
+        message.focus();
+      } catch {
+        form.submit();
+      }
+    });
+  });
+</script>
