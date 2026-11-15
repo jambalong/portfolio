@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface Props {
@@ -20,6 +20,20 @@ const Navigation = ({ pathname = '' }: Props) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [isMobileMenuOpen]);
 
   return (
     <header
@@ -65,6 +79,7 @@ const Navigation = ({ pathname = '' }: Props) => {
 
         {/* Mobile menu button */}
         <button
+          ref={menuButtonRef}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="nav-mobile-btn dt-icon-link"
           aria-label="Toggle menu"

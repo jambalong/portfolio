@@ -82,6 +82,14 @@ const jsonLd = {
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <meta name="generator" content={Astro.generator} />
     <slot name="head" />
+    <noscript>
+      <style>
+        /* Without JavaScript the phone menu button does nothing, so show the links. */
+        nav[aria-label="Main"] { flex-wrap: wrap; gap: 8px; }
+        .nav-desktop { display: flex !important; flex-wrap: wrap; }
+        .nav-mobile-btn { display: none !important; }
+      </style>
+    </noscript>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
