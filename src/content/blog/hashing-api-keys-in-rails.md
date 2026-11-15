@@ -116,3 +116,16 @@ end
 Each token gets its own bucket of 60 requests a minute. My first version of that block called `req.start_with?("/api")`. `start_with?` is a String method and `req` is a request object, so the limiter crashed. The fix was five characters: `req.path`.
 
 The same day I lowered the number of keys a user can hold from five to three.
+
+## The Limiter Undid It
+
+In November I found a problem with that last block. The throttle's discriminator becomes part of the cache key, so the raw token was in the key. Production caches in the database through Solid Cache, which stores keys in a readable column. I confirmed it locally with a real request: the stored key ended in the token, lowercased by Rack::Attack's default normalizer. I didn't look at production's table, but it runs the same setup.
+
+So the database was holding raw tokens again, just in a different table. The throttle now keys on the digest, the same value the `api_keys` table stores:
+
+```ruby
+token = req.get_header("HTTP_AUTHORIZATION")&.delete_prefix("Bearer ")
+Digest::SHA256.hexdigest(token) if token
+```
+
+A new test fails if the raw token appears in the cache key, and it failed before the fix. The old rows age out of the cache table in about two weeks. I also added a line to my architecture notes: nothing secret goes into a throttle key. Hashing a token in one place doesn't help if another place writes it down.
