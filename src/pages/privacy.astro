@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer.astro';
+import { SITE } from '../config/site';
+---
+
+<Layout title="Privacy | John Alvin Ambalong" description="What this site collects, who handles it, and how to ask me to delete it.">
+  <Navigation client:load pathname={Astro.url.pathname} />
+
+  <main id="main-content" class="dt-bg page-main">
+    <article class="page-column">
+      <p class="dt-eyebrow mb-3">Privacy</p>
+      <h1 class="dt-display mb-8 page-h1">What this site <em>collects</em></h1>
+
+      <div class="flex flex-col gap-5 prose-links">
+        <p class="dt-body">This is a personal site, and it collects very little. This page says what it does collect and who handles it.</p>
+      </div>
+
+      <h2 class="dt-display page-h2">Email signup</h2>
+      <div class="flex flex-col gap-5 prose-links">
+        <p class="dt-body">
+          If you subscribe, you give me your email address. It goes to <a href="https://kit.com/">Kit</a>, the service that sends my emails. Kit stores it, sends you a message to confirm, and sends the posts I choose to email.
+        </p>
+        <p class="dt-body">
+          I use your address only to email you about new posts and things I've built. I don't sell it or share it. Every email has an unsubscribe link. Unsubscribing stops the emails. If you want your address deleted as well, write to me and I'll remove it. Kit's own policy is at <a href="https://kit.com/privacy">kit.com/privacy</a>.
+        </p>
+      </div>
+
+      <h2 class="dt-display page-h2">Visit counts</h2>
+      <div class="flex flex-col gap-5 prose-links">
+        <p class="dt-body">
+          I use <a href="https://www.goatcounter.com/">GoatCounter</a> to count visits. It records which pages get read and where visitors came from, along with basic details like browser and screen size. It sets no cookies and doesn't follow you to other sites. I use the numbers to see which posts people read.
+        </p>
+      </div>
+
+      <h2 class="dt-display page-h2">Other companies that handle a visit</h2>
+      <div class="flex flex-col gap-5 prose-links">
+        <p class="dt-body">
+          The site is hosted on Netlify, which keeps ordinary server logs.
+        </p>
+        <p class="dt-body">
+          The fonts come from Google Fonts, so your browser asks Google for them and Google sees your IP address when it does. Two older posts embed Figma prototypes, which load from Figma only on those pages.
+        </p>
+        <p class="dt-body">
+          The site has no ads and no social media tracking pixels.
+        </p>
+      </div>
+
+      <h2 class="dt-display page-h2">Questions or deletion requests</h2>
+      <ul class="page-list dt-body">
+        <li>Email me at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</li>
+      </ul>
+
+      <p class="dt-mono mt-10">Last updated November 15, 2026.</p>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>

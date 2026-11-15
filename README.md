@@ -22,6 +22,7 @@ My personal site: a blog, a few projects, and an email signup. Built with Astro,
 - `/blog/` every post, newest first, with older posts grouped at the bottom
 - `/blog/<slug>/` one post, with a signup block at the end
 - `/about/` a short introduction and contact links
+- `/privacy/` what the site collects (Kit signup, GoatCounter) and how to ask for deletion
 - `/projects/pangu-terminal/` what the project does and how it is built
 - `/rss.xml` feed of all posts
 
