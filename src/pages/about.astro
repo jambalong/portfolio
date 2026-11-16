@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer.astro';
 import { SITE } from '../config/site';
+import { Image } from 'astro:assets';
+import profile from '../assets/profile.jpg';
 ---
 
 <Layout title="About | John Alvin Ambalong" description="A short introduction and how to reach me.">
@@ -11,10 +13,18 @@ import { SITE } from '../config/site';
   <main id="main-content" class="dt-bg page-main">
     <article class="page-column">
       <p class="dt-eyebrow mb-3">About</p>
-      <h1 class="dt-display mb-8 page-h1">About <em>John</em></h1>
+      <h1 class="dt-display mb-8 page-h1">You found <em>me.</em></h1>
+
+      <Image
+        src={profile}
+        alt="Portrait of John Alvin, smiling, wearing dark-framed glasses and a black sweater."
+        width={480}
+        class="about-photo"
+        loading="eager"
+      />
 
       <div class="flex flex-col gap-5 prose-links">
-        <p class="dt-body">I'm John. I live in Washington state. I build software and write about it.</p>
+        <p class="dt-body">I'm John Alvin. I live in Washington state. I build software and write about it.</p>
         <p class="dt-body">Most of what I build is Rails with Hotwire. I also write C# and PowerShell.</p>
         <p class="dt-body">
           I studied software design at community college and finished in 2026. Most of what I know came from building things on my own, outside of class.
@@ -30,8 +40,12 @@ import { SITE } from '../config/site';
       <h2 class="dt-display page-h2">Contact</h2>
       <ul class="page-list dt-body">
         <li>Email is the best way to reach me: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</li>
-        <li>I'm also on <a href={SITE.github}>GitHub</a> and <a href={SITE.x}>X</a>.</li>
-        <li>My résumé is <a href="/resume.pdf">here as a PDF</a>, and I'm on <a href={SITE.linkedin}>LinkedIn</a>.</li>
+      </ul>
+
+      <h2 class="dt-display page-h2">Elsewhere</h2>
+      <ul class="page-list dt-body">
+        <li>Code and work: <a href={SITE.github}>GitHub</a>, <a href={SITE.linkedin}>LinkedIn</a>.</li>
+        <li>Posts and video: <a href={SITE.x}>X</a>, <a href={SITE.youtube}>YouTube</a>.</li>
       </ul>
     </article>
   </main>

@@ -7,6 +7,7 @@ export const SITE = {
   github: 'https://github.com/jambalong',
   linkedin: 'https://www.linkedin.com/in/jambalong/',
   x: 'https://x.com/coldbootdev',
+  youtube: 'https://www.youtube.com/@coldbootdev',
   xHandle: '@coldbootdev',
   kitFormId: '10191717',
   goatcounterCode: 'jambalong',

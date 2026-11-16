@@ -506,6 +506,17 @@ button:not(:disabled),
 .page-h1 {
   font-size: clamp(40px, 7vw, 64px);
 }
+.about-photo {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 12px;
+  margin: 0 0 32px;
+}
 .page-h2 {
   font-size: clamp(28px, 4vw, 40px);
   margin: 48px 0 16px;

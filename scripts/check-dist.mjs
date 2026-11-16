@@ -4,7 +4,7 @@ import { join, extname, relative } from 'node:path';
 const DIST = 'dist';
 const TEXT = new Set(['.html', '.xml', '.js', '.css', '.json', '.txt', '.svg']);
 // Private patterns, one per line, in a file that is never committed.
-// John's employer name lives there so it is not written anywhere in the repo.
+// John Alvin's employer name lives there so it is not written anywhere in the repo.
 const LOCAL = '.forbidden.local';
 const localPatterns = existsSync(LOCAL)
   ? readFileSync(LOCAL, 'utf8').split(/\r?\n/).map((l) => l.trim()).filter(Boolean)
@@ -20,7 +20,7 @@ const FORBIDDEN = [
 ];
 // An old post addresses "aspiring software engineers" as a group. See SPEC 0.5.
 const ALLOW = [{ file: 'blog/my-approach-to-self-study/index.html', pattern: /software engineer/i }];
-// Em dashes are banned in site copy. Individual posts are John's own writing and are skipped.
+// Em dashes are banned in site copy. Individual posts are John Alvin's own writing and are skipped.
 const isPost = (f) => /^blog\/[^/]+\/index\.html$/.test(f);
 
 const walk = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
